@@ -3,6 +3,7 @@
 An addressables sample for FishNet in Unity created by Shadowfinder Studios.
 Walk to the right to trip the loadable area.
 When the next scene loads, you can press Spacebar to spawn trees.
+Trees cannot be spawned in the main scene until you walk into the next scene because that's when the addressables load.
 Press 1 or 2 or click the tree icons at the bottom of the screen to switch between tree types.
 
 Still a work in progress and has some bugs.
