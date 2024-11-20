@@ -5,11 +5,15 @@ using FishNet.Object.Synchronizing;
 
 public class SceneLoader : NetworkBehaviour
 {
+    [SerializeField] MapManager _mapManager;
     [SerializeField] string _sceneName;
 
     readonly SyncVar<bool> _areaEntered = new(false);
 
-    //[ServerRpc] void LoadGlobalSceneServerRpc() => LoadGlobalScene(_sceneName);
+    private void Awake()
+    {
+        _mapManager = FindFirstObjectByType<MapManager>();
+    }
 
     void LoadConnectionScene(string name, GameObject player)
     {
@@ -51,18 +55,7 @@ public class SceneLoader : NetworkBehaviour
         if (!_areaEntered.Value && other.CompareTag("Player"))
         {
             _areaEntered.Value = true;
-            Debug.Log("Player entered area");
-
-            //if (other.gameObject.GetComponent<NetworkObject>().IsServerInitialized)
-            //{
-            //    Debug.Log("On server");
-                LoadGlobalScene(_sceneName, other.gameObject);
-            //}
-            //else
-            //{
-            //    Debug.Log("On Client");
-            //    LoadGlobalSceneServerRpc();
-            //}
+            LoadGlobalScene(_sceneName, other.gameObject);
         }
     }
 }

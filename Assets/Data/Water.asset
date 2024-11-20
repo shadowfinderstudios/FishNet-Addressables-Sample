@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865b6a6bafa097b48894b07eb76e498a, type: 3}
+  m_Name: Water
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: cd86db5f6e5905840810d25e166d2747, type: 2}
+  clip: []
+  floorType: 9

@@ -7,10 +7,8 @@ using FishNet.Managing.Object;
 using GameKit.Dependencies.Utilities;
 using System.Collections;
 using FishNet.Managing;
-using Random = UnityEngine.Random;
 using UnityEngine.UI;
 using FishNet.Object;
-using System;
 
 public class PlayerMovement : TickNetworkBehaviour
 {
@@ -23,7 +21,6 @@ public class PlayerMovement : TickNetworkBehaviour
     [SerializeField] NetworkAnimator _netBodyAnim;
     [SerializeField] string _spawnTreesId;
     [SerializeField] GameObject _spellPrefab;
-    [SerializeField] AudioClip[] _audioGrassFootsteps;
 
     #endregion
 
@@ -37,7 +34,6 @@ public class PlayerMovement : TickNetworkBehaviour
     Vector3 _lastdir = Vector3.zero;
     Rigidbody2D _rigidbody;
     Vector3 _lastpos = Vector3.zero;
-    AudioSource _audioSource;
 
     #endregion
 
@@ -130,15 +126,6 @@ public class PlayerMovement : TickNetworkBehaviour
         _canMove = true;
     }
 
-    public void OnFootstep()
-    {
-        if (_audioSource != null && _audioGrassFootsteps != null && _audioGrassFootsteps.Length > 0)
-        {
-            _audioSource.PlayOneShot(_audioGrassFootsteps[Random.Range(0, _audioGrassFootsteps.Length)]);
-            // TODO: replicate the sound on all the clients
-        }
-    }
-
     #endregion
 
     #region Tick
@@ -207,7 +194,6 @@ public class PlayerMovement : TickNetworkBehaviour
 
         if (base.Owner.IsLocalClient)
         {
-            _audioSource = GetComponent<AudioSource>();
             _rigidbody = GetComponent<Rigidbody2D>();
 
             _camera = FindFirstObjectByType<CinemachineCamera>();
