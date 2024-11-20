@@ -120,9 +120,11 @@ public class PlayerMovement : TickNetworkBehaviour
 
         ushort id = _spawnTreesId.GetStableHashU16();
         var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
-        var prefab = spawnables.Prefabs[index];
-
-        ServerSummonTree(index, position);
+        if (spawnables != null && index < spawnables.Prefabs.Count)
+        {
+            var prefab = spawnables.Prefabs[index];
+            ServerSummonTree(index, position);
+        }
 
         _lastpos = transform.position; // BUGFIX: This prevents walking after casting if idling after a walk cast
         _canMove = true;
