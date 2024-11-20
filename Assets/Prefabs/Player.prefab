@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3891381169627373308}
   - component: {fileID: 5722156264176189790}
   - component: {fileID: 7624202032531758413}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -458,19 +458,6 @@ MonoBehaviour:
   _netBodyAnim: {fileID: 3891381169627373308}
   _spawnTreesId: AddressableTrees
   _spellPrefab: {fileID: 2667890734758021457, guid: e5752ae08cc3ffa468a21c1e4232b310, type: 3}
-  _audioGrassFootsteps:
-  - {fileID: 8300000, guid: b10620bbbaad900478c3895cbd8d58a3, type: 3}
-  - {fileID: 8300000, guid: db80e6b0326ab094c98414258f8cc795, type: 3}
-  - {fileID: 8300000, guid: 9bc51326291d8104f9c3a944050a8cd2, type: 3}
-  - {fileID: 8300000, guid: 002308087abe13a4bb4c38cab94cf3ca, type: 3}
-  - {fileID: 8300000, guid: 90b9f2420a1eb764ca17246fdd32cedc, type: 3}
-  - {fileID: 8300000, guid: fd39794133513a140891964672ca1b2f, type: 3}
-  - {fileID: 8300000, guid: b2ee90aea6227204895fe41ce28c14b5, type: 3}
-  - {fileID: 8300000, guid: ace0f03d34187bb4796a904bc0376d52, type: 3}
-  - {fileID: 8300000, guid: 9e8880169fb82e548947b9239e59c297, type: 3}
-  - {fileID: 8300000, guid: 128b1f9cf3f910e46b1327ed05b259aa, type: 3}
-  - {fileID: 8300000, guid: d3a47400763ef51488050578086d7a28, type: 3}
-  - {fileID: 8300000, guid: 8bd81b1bf94dbff45b30c5cae8670e93, type: 3}
 --- !u!114 &7624202032531758413
 MonoBehaviour:
   m_ObjectHideFlags: 0
