@@ -41,7 +41,7 @@ Awaking of Magic
 CCBY3 By Tausdei
 https://opengameart.org/content/awaking-of-magic
 
-Knight'ss Forest Footsteps
+Knight's Forest Footsteps
 Public Domain By Ali_6868 
 https://freesound.org/people/Ali_6868/
 
