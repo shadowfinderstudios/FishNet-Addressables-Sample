@@ -1,6 +1,6 @@
 # FishNet-Addressables-Sample
 
-An addressables sample for FishNet in Unity created by Shadowfinder Studios.
+An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios.
 
 Walk to the right to trip the loadable area.
 
