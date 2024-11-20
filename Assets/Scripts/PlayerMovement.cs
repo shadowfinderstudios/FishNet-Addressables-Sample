@@ -106,9 +106,9 @@ public class PlayerMovement : TickNetworkBehaviour
         ushort id = _spawnTreesId.GetStableHashU16();
         var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
         var prefab = spawnables.Prefabs[index];
-
-        var obj = Instantiate(prefab, position, Quaternion.identity);
-        InstanceFinder.ServerManager.Spawn(obj);
+        var nob = Instantiate(prefab, position, Quaternion.identity);
+        InstanceFinder.ServerManager.Spawn(nob);
+        InstanceFinder.SceneManager.AddOwnerToDefaultScene(nob);
     }
 
     IEnumerator SummonTreeSpell(NetworkManager nm, Vector3 position, int index, float delayTime)
