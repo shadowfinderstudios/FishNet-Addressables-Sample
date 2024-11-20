@@ -2,6 +2,7 @@ using UnityEngine;
 using FishNet.Object;
 using FishNet.Managing.Scened;
 using FishNet.Object.Synchronizing;
+using FishNet.Connection;
 
 public class SceneLoader : NetworkBehaviour
 {
@@ -41,13 +42,21 @@ public class SceneLoader : NetworkBehaviour
         {
             SceneLookupDatas = new SceneLookupData[] { slud },
             MovedNetworkObjects = new NetworkObject[] { nob },
-            Options = new LoadOptions()
-            {
-                AllowStacking = false,
-                Addressables = true
-            }
+            Options = new LoadOptions() { Addressables = true }
         };
         base.SceneManager.LoadGlobalScenes(sld);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    void ServerLoadScene(string name, GameObject player, NetworkConnection conn = null)
+    {
+        SceneChangeObserversRpc(name, player);
+    }
+
+    [ObserversRpc]
+    void SceneChangeObserversRpc(string sceneName, GameObject player)
+    {
+        LoadGlobalScene(_sceneName, player);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -55,7 +64,7 @@ public class SceneLoader : NetworkBehaviour
         if (!_areaEntered.Value && other.CompareTag("Player"))
         {
             _areaEntered.Value = true;
-            LoadGlobalScene(_sceneName, other.gameObject);
+            ServerLoadScene(_sceneName, other.gameObject);
         }
     }
 }

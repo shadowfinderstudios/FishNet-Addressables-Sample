@@ -14,7 +14,7 @@ Still a work in progress.
 
 Known bugs:
 
-- For some reason the client can't load the Village 2 scene until the server walks into it.
+- None yet.
 
 
 Art and Sound Credits:
