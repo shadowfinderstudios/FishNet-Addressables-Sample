@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overrideType: 2
+  _overrideType: 3
   _updateHostVisibility: 1
   _observerConditions:
   - {fileID: 11400000, guid: 2033f54fd2794464bae08fa5a55c8996, type: 2}
@@ -467,4 +467,3 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 128b1f9cf3f910e46b1327ed05b259aa, type: 3}
   - {fileID: 8300000, guid: d3a47400763ef51488050578086d7a28, type: 3}
   - {fileID: 8300000, guid: 8bd81b1bf94dbff45b30c5cae8670e93, type: 3}
-  _audioSummonTreeSpell: {fileID: 8300000, guid: 448d902c62053b84781463fd0baa83a7, type: 3}

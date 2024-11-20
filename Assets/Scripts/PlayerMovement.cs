@@ -9,6 +9,8 @@ using System.Collections;
 using FishNet.Managing;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
+using FishNet.Object;
+using System;
 
 public class PlayerMovement : TickNetworkBehaviour
 {
@@ -22,7 +24,6 @@ public class PlayerMovement : TickNetworkBehaviour
     [SerializeField] string _spawnTreesId;
     [SerializeField] GameObject _spellPrefab;
     [SerializeField] AudioClip[] _audioGrassFootsteps;
-    [SerializeField] AudioClip _audioSummonTreeSpell;
 
     #endregion
 
@@ -37,7 +38,6 @@ public class PlayerMovement : TickNetworkBehaviour
     Rigidbody2D _rigidbody;
     Vector3 _lastpos = Vector3.zero;
     AudioSource _audioSource;
-    AddrPrefabSpawner _addrPrefabSpawner;
 
     #endregion
 
@@ -54,14 +54,6 @@ public class PlayerMovement : TickNetworkBehaviour
     #endregion
 
     #region Updates
-
-    public void OnFootstep()
-    {
-        if (_audioSource != null && _audioGrassFootsteps != null && _audioGrassFootsteps.Length > 0)
-        {
-            _audioSource.PlayOneShot(_audioGrassFootsteps[Random.Range(0, _audioGrassFootsteps.Length)]);
-        }
-    }
 
     void Update()
     {
@@ -81,12 +73,7 @@ public class PlayerMovement : TickNetworkBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            var spawner = GameObject.Find("AddrPrefabSpawner");
-            if (spawner != null)
-            {
-                _addrPrefabSpawner = spawner.GetComponent<AddrPrefabSpawner>();
-                SpawnTree(_treeType);
-            }
+            SpawnTree(_treeType);
         }
     }
     public void SetTree(int type)
@@ -107,28 +94,47 @@ public class PlayerMovement : TickNetworkBehaviour
         }
     }
 
+    [ServerRpc] void ServerCastSpell(Vector3 position, float delayTime)
+    {
+        // Spawn the spell effect.
+        var go = Instantiate(_spellPrefab, position, Quaternion.identity);
+        InstanceFinder.ServerManager.Spawn(go);
+    }
+
+    [ServerRpc] void ServerSummonTree(int index, Vector3 position)
+    {
+        ushort id = _spawnTreesId.GetStableHashU16();
+        var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
+        var prefab = spawnables.Prefabs[index];
+
+        var obj = Instantiate(prefab, position, Quaternion.identity);
+        InstanceFinder.ServerManager.Spawn(obj);
+    }
+
     IEnumerator SummonTreeSpell(NetworkManager nm, Vector3 position, int index, float delayTime)
     {
         // Wait for the player casting animation.
         yield return new WaitForSeconds(delayTime);
 
-        _audioSource.PlayOneShot(_audioSummonTreeSpell);
+        ServerCastSpell(position, delayTime);
 
-        // Spawn the spell effect.
-        var go = Instantiate(_spellPrefab, position, Quaternion.identity);
-        InstanceFinder.ServerManager.Spawn(go);
-
-        // Wait for the spell effect animation then despawn the effect.
-        yield return new WaitForSeconds(delayTime);
-        InstanceFinder.ServerManager.Despawn(go);
-
-        // Spawn the tree.
         ushort id = _spawnTreesId.GetStableHashU16();
-        var spawnables = (SinglePrefabObjects)nm.GetPrefabObjects<SinglePrefabObjects>(id, true);
-        _addrPrefabSpawner.Spawn(base.Owner, spawnables.Prefabs[index], position);
+        var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
+        var prefab = spawnables.Prefabs[index];
 
-        _lastpos = transform.position; // BUGFIX: prevents walking after casting if idling after a walk cast
+        ServerSummonTree(index, position);
+
+        _lastpos = transform.position; // BUGFIX: This prevents walking after casting if idling after a walk cast
         _canMove = true;
+    }
+
+    public void OnFootstep()
+    {
+        if (_audioSource != null && _audioGrassFootsteps != null && _audioGrassFootsteps.Length > 0)
+        {
+            _audioSource.PlayOneShot(_audioGrassFootsteps[Random.Range(0, _audioGrassFootsteps.Length)]);
+            // TODO: replicate the sound on all the clients
+        }
     }
 
     #endregion
