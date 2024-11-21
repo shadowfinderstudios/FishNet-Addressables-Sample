@@ -21,3 +21,13 @@ https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
 Nature Magic Effect
 CC0 By Cethiel
 https://opengameart.org/content/nature-magic-effect
+
+RPG Tiles: Cobble Stone Paths & Town Objects
+CCBYSA By daneeklu, Jetrel, Hyptosis, Redshrike, Bertram
+http://creativecommons.org/licenses/by-sa/3.0/
+https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
+
+North-South Rowboat modifications
+CCBYSA By Shadowfinder Studios
+https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
+

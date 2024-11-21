@@ -530,7 +530,7 @@ namespace FishNet.Object
             void NetworkBehaviour_OnDestroy()
             {
                 foreach (NetworkBehaviour nb in NetworkBehaviours)
-                    nb.NetworkBehaviour_OnDestroy();
+                    if (nb != null) nb.NetworkBehaviour_OnDestroy();
             }
         }
 

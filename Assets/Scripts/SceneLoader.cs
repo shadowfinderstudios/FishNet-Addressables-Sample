@@ -1,38 +1,32 @@
 using UnityEngine;
 using FishNet.Object;
 using FishNet.Managing.Scened;
-using FishNet.Object.Synchronizing;
 using FishNet.Connection;
+using FishNet.Managing;
+using FishNet;
+using System;
 
 public class SceneLoader : NetworkBehaviour
 {
-    [SerializeField] MapManager _mapManager;
     [SerializeField] string _sceneName;
 
-    readonly SyncVar<bool> _areaEntered = new(false);
-
-    private void Awake()
-    {
-        _mapManager = FindFirstObjectByType<MapManager>();
-    }
-
-    void LoadConnectionScene(string name, GameObject player)
-    {
-        var slud = new SceneLookupData() { Handle = 0, Name = name };
-        var nob = player.GetComponent<NetworkObject>();
-        var sld = new SceneLoadData()
-        {
-            SceneLookupDatas = new SceneLookupData[] { slud },
-            MovedNetworkObjects = new NetworkObject[] { nob },
-            Options = new LoadOptions()
-            {
-                AutomaticallyUnload = true,
-                AllowStacking = false,
-                Addressables = true
-            }
-        };
-        base.SceneManager.LoadConnectionScenes(nob.Owner, sld);
-    }
+    //void LoadConnectionScene(string name, GameObject player)
+    //{
+    //    var slud = new SceneLookupData() { Handle = 0, Name = name };
+    //    var nob = player.GetComponent<NetworkObject>();
+    //    var sld = new SceneLoadData()
+    //    {
+    //        SceneLookupDatas = new SceneLookupData[] { slud },
+    //        MovedNetworkObjects = new NetworkObject[] { nob },
+    //        Options = new LoadOptions()
+    //        {
+    //            AutomaticallyUnload = true,
+    //            AllowStacking = false,
+    //            Addressables = true
+    //        }
+    //    };
+    //    base.SceneManager.LoadConnectionScenes(nob.Owner, sld);
+    //}
 
     void LoadGlobalScene(string name, GameObject player)
     {
@@ -47,23 +41,22 @@ public class SceneLoader : NetworkBehaviour
         base.SceneManager.LoadGlobalScenes(sld);
     }
 
+    //[ObserversRpc]
+    //void SceneChangeObserversRpc(string sceneName, GameObject player)
+    //{
+    //    LoadGlobalScene(sceneName, player);
+    //}
+
     [ServerRpc(RequireOwnership = false)]
     void ServerLoadScene(string name, GameObject player, NetworkConnection conn = null)
     {
-        SceneChangeObserversRpc(name, player);
-    }
-
-    [ObserversRpc]
-    void SceneChangeObserversRpc(string sceneName, GameObject player)
-    {
-        LoadGlobalScene(_sceneName, player);
+        LoadGlobalScene(name, player);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!_areaEntered.Value && other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            _areaEntered.Value = true;
             ServerLoadScene(_sceneName, other.gameObject);
         }
     }

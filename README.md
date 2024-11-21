@@ -1,20 +1,22 @@
 # FishNet-Addressables-Sample
+An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios. Still a work in progress.
 
-An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios.
+Features:
+* Scene loaded at runtime when an object is collided by a player.
+* Addressable trees loaded with that global scene.
+* Rideable rowboat.
 
-Walk to the right to trip the loadable area.
+Instructions to play:
 
-When the next scene loads, you can press Spacebar to spawn trees.
+1. Walk to the right to trip the loadable area.
 
-Trees cannot be spawned in the main scene until you walk into the next scene because that's when the addressables load.
+2. When the next scene loads, you can press Spacebar to spawn trees.
 
-Press 1 or 2 or click the tree icons at the bottom of the screen to switch between tree types.
+3. Trees cannot be spawned in the main scene until you walk into the next scene because that's when the addressables load.
 
-Still a work in progress.
+4. Press 1 or 2 or click the tree icons at the bottom of the screen to switch between tree types.
 
-Known bugs:
-
-- None yet.
+5. Press E near the boat to ride it and E again to dismount.
 
 
 Art and Sound Credits:
@@ -54,5 +56,20 @@ Knight's Forest Footsteps
 Public Domain By Ali_6868 
 https://freesound.org/people/Ali_6868/
 
+RPG Tiles: Cobble Stone Paths & Town Objects
+CCBYSA By daneeklu, Jetrel, Hyptosis, Redshrike, Bertram
+http://creativecommons.org/licenses/by-sa/3.0/
+https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
+
+Ships with Ripple Effect
+CCBY By chabull
+https://opengameart.org/content/ships-with-ripple-effect
+
+North-South Rowboat modifications
+CCBYSA By Shadowfinder Studios
+https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
+
 surfaces_tileset
-Public Domain by me
+CCBYSA By Shadowfinder Studios
+https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
+

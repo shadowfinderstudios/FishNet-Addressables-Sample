@@ -34,7 +34,7 @@ public class NetSceneProcessor : DefaultSceneProcessor
     /// <summary>
     /// Whether addressables have been loaded.
     /// </summary>
-    private bool _addressablesAreLoaded;
+    public bool _addressablesAreLoaded;
 
     /// <summary>
     /// Reference to your NetworkManager.

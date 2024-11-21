@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Surface
+  - Boat
+  - SceneLoader
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Characters
   - Trees
-  - 
+  - Vehicles
   - 
   - 
   - 

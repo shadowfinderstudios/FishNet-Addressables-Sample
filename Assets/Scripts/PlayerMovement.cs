@@ -9,9 +9,28 @@ using System.Collections;
 using FishNet.Managing;
 using UnityEngine.UI;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
+using System.Collections.Generic;
+using FishNet.Connection;
+using FishNet.Component.Transforming;
+using static PlayerMovement;
 
 public class PlayerMovement : TickNetworkBehaviour
 {
+    const float MountOffsetY = 0.5f;
+
+    #region Network Update Data
+    
+    [System.Serializable]
+    public class VehicleUpdate
+    {
+        public bool isMounted = false;
+        public Transform vehicleTransform = null;
+        public List<Transform> guestTransforms = new();
+    }
+    
+    #endregion
+
     #region Properties
 
     [Header("General")]
@@ -30,6 +49,7 @@ public class PlayerMovement : TickNetworkBehaviour
     bool _isWalking = false;
     bool _canMove = true;
     float _spawnTest = 0f;
+    float _sailTimer = 0f;
     int _treeType = 1;
     Vector3 _lastdir = Vector3.zero;
     Rigidbody2D _rigidbody;
@@ -37,14 +57,69 @@ public class PlayerMovement : TickNetworkBehaviour
 
     #endregion
 
+    #region SyncVars
+
+    readonly SyncVar<VehicleUpdate> _vehicleUpdate = new SyncVar<VehicleUpdate>(new VehicleUpdate());
+    [ServerRpc] private void SetVehicle(VehicleUpdate value) => _vehicleUpdate.Value = value;
+
+    #endregion
+
+    #region RPC
+
+    void OnVehicleChanged(VehicleUpdate oldValue, VehicleUpdate newValue, bool asServer)
+    {
+        var vt = newValue.vehicleTransform;
+
+        if (newValue.isMounted)
+        {
+            var sr = vt.GetComponent<SpriteRenderer>();
+            sr.sortingOrder = -1;
+
+            newValue.guestTransforms[0].position = vt.position + new Vector3(0, sr.bounds.extents.y * MountOffsetY, 0);
+
+            foreach (var tr in newValue.guestTransforms)
+            {
+                tr.GetComponent<Collider2D>().enabled = false;
+                tr.GetComponent<NetworkTransform>().enabled = false;
+                tr.GetComponent<Rigidbody2D>().simulated = false;
+                tr.parent = vt.transform;
+            }
+
+            vt.gameObject.SendMessage("Mount");
+        }
+        else
+        {
+            var sr = vt.GetComponent<SpriteRenderer>();
+
+            foreach (var tr in newValue.guestTransforms)
+            {
+                tr.parent = null;
+                tr.GetComponent<Collider2D>().enabled = true;
+                tr.GetComponent<NetworkTransform>().enabled = true;
+                tr.GetComponent<Rigidbody2D>().simulated = true;
+            }
+
+            newValue.guestTransforms[0].position = vt.position + new Vector3(0, sr.bounds.extents.y * MountOffsetY, 0);
+
+            sr.sortingOrder = 0;
+            vt.gameObject.SendMessage("Unmount");
+
+            if (asServer) vt.GetComponent<NetworkObject>().RemoveOwnership();
+        }
+    }
+
+    #endregion
+
     #region Setup
 
     void OnEnable()
     {
+        _vehicleUpdate.OnChange += OnVehicleChanged;
     }
 
     void OnDisable()
     {
+        _vehicleUpdate.OnChange -= OnVehicleChanged;
     }
 
     #endregion
@@ -71,10 +146,60 @@ public class PlayerMovement : TickNetworkBehaviour
         {
             SpawnTree(_treeType);
         }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            UseVehicle();
+        }
     }
+
     public void SetTree(int type)
     {
         _treeType = type;
+    }
+
+    [ServerRpc] void VehicleTakeOwnership(NetworkObject nob, NetworkConnection connection)
+    {
+        nob.GiveOwnership(connection);
+    }
+
+    void UseVehicle()
+    {
+        if (Time.fixedTime - _sailTimer > 1.5f)
+        {
+            _sailTimer = Time.fixedTime;
+
+            if (_vehicleUpdate.Value.isMounted)
+            {
+                foreach (var tr in _vehicleUpdate.Value.guestTransforms)
+                {
+                    if (tr == transform)
+                    {
+                        AnimSetBool(_bodyAnim, "Sail", false);
+                        _vehicleUpdate.Value.isMounted = false;
+                        SetVehicle(_vehicleUpdate.Value);
+                        break;
+                    }
+                }
+            }
+            else if (transform.parent == null)
+            {
+                Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f);
+                foreach (Collider2D hit in hits)
+                {
+                    if (hit.CompareTag("Boat"))
+                    {
+                        VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
+                        AnimSetBool(_bodyAnim, "Sail", true);
+                        _vehicleUpdate.Value.isMounted = true;
+                        _vehicleUpdate.Value.vehicleTransform = hit.transform;
+                        _vehicleUpdate.Value.guestTransforms.Clear(); // TODO: handle multiple passengers
+                        _vehicleUpdate.Value.guestTransforms.Add(transform);
+                        SetVehicle(_vehicleUpdate.Value);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     void SpawnTree(int index)
@@ -104,7 +229,6 @@ public class PlayerMovement : TickNetworkBehaviour
         var prefab = spawnables.Prefabs[index];
         var nob = Instantiate(prefab, position, Quaternion.identity);
         InstanceFinder.ServerManager.Spawn(nob);
-        InstanceFinder.SceneManager.AddOwnerToDefaultScene(nob);
     }
 
     IEnumerator SummonTreeSpell(NetworkManager nm, Vector3 position, int index, float delayTime)
@@ -152,7 +276,19 @@ public class PlayerMovement : TickNetworkBehaviour
         else if (Mathf.Abs(axisy) > deadzone) dy = Mathf.Sign(axisy);
         else keepDirState = true;
 
-        _rigidbody.linearVelocity = new Vector2(axisx * _speed * 25 * Time.fixedDeltaTime, axisy * _speed * 25 * Time.fixedDeltaTime);
+        if (!_vehicleUpdate.Value.isMounted)
+        {
+            _rigidbody.linearVelocity = new Vector2(axisx * _speed * 25 * Time.fixedDeltaTime, axisy * _speed * 25 * Time.fixedDeltaTime);
+        }
+        else
+        {
+            if (!keepDirState)
+            {
+                AnimSetFloat(_bodyAnim, "DX", dx);
+                AnimSetFloat(_bodyAnim, "DY", dy);
+            }
+            return;
+        }
 
         if (_lastpos != transform.position)
         {
@@ -165,11 +301,11 @@ public class PlayerMovement : TickNetworkBehaviour
                 _lastdir = new Vector3(dx, dy);
             }
 
-            if (!_isWalking) AnimSetBool(_bodyAnim, "Walk", _isWalking=true);
+            if (!_isWalking && !_vehicleUpdate.Value.isMounted) AnimSetBool(_bodyAnim, "Walk", _isWalking=true);
         }
         else
         {
-            if (_isWalking) AnimSetBool(_bodyAnim, "Walk", _isWalking=false);
+            if (_isWalking && !_vehicleUpdate.Value.isMounted) AnimSetBool(_bodyAnim, "Walk", _isWalking=false);
         }
     }
 
