@@ -65,8 +65,7 @@ Ships with Ripple Effect
 CCBY By chabull
 https://opengameart.org/content/ships-with-ripple-effect
 
-surfaces_tileset
-North-South Rowboat modifications
+surfaces_tileset & North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
 https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
 
