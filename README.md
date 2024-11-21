@@ -1,5 +1,5 @@
 # FishNet-Addressables-Sample
-An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios. Still a work in progress.
+An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios. WIP
 
 Features:
 * Scene loaded at runtime when an object is collided by a player.
@@ -65,11 +65,8 @@ Ships with Ripple Effect
 CCBY By chabull
 https://opengameart.org/content/ships-with-ripple-effect
 
-North-South Rowboat modifications
-CCBYSA By Shadowfinder Studios
-https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
-
 surfaces_tileset
+North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
 https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
 
