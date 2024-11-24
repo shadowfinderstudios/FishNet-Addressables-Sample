@@ -1,12 +1,16 @@
-# FishNet-Addressables-Sample
-An addressables 2D URP sample for FishNet in Unity created by Shadowfinder Studios. WIP
+# FishNet-Addressables-Showcase
+A W.I.P. 2D URP showcase for FishNet in Unity created by Shadowfinder Studios.
 
-Features:
-* Scene loaded at runtime when an object is collided by a player.
-* Addressable trees loaded with that global scene.
-* Rideable rowboat.
+This sample showcases different topics, among them:
+* Addressables
+* Scene loading; global, with addressable loading
+* Rideable vehicles; rowboat.
+
+The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 
 Instructions to play:
+
+Showcase 1 - Scene loading and addressables
 
 1. Walk to the right to trip the loadable area.
 
@@ -16,8 +20,15 @@ Instructions to play:
 
 4. Press 1 or 2 or click the tree icons at the bottom of the screen to switch between tree types.
 
-5. Press E near the boat to ride it and E again to dismount.
+Showcase 2 - Rideables
 
+1. Press E near the boat to ride it and E again to dismount.
+
+2. Move around after using the boat to ride it around.
+
+3. The boat cannot pass thru the ground, but can pass through the water due to tilemap colliders.
+
+TODO: More showcases.
 
 Art and Sound Credits:
 
@@ -67,5 +78,6 @@ https://opengameart.org/content/ships-with-ripple-effect
 
 surfaces_tileset & North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
+https://creativecommons.org/licenses/by-sa/4.0/
 https://github.com/shadowfinderstudios/FishNet-Addressables-Sample
 
