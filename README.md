@@ -79,5 +79,5 @@ https://opengameart.org/content/ships-with-ripple-effect
 surfaces_tileset & North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
 https://creativecommons.org/licenses/by-sa/4.0/
-https://opengameart.org/content/lpc-topdown-rowboat-4-directional-recolor-for-rpg
+https://opengameart.org/content/lpc-rowboat-topdown-4-directional-recolor-for-rpg
 
