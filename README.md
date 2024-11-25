@@ -28,6 +28,16 @@ Showcase 2 - Rideables
 
 3. The boat cannot pass thru the ground, but can pass through the water due to tilemap colliders.
 
+Showcase 3 - Mineable Rocks
+
+1. Walk up to a rock.
+
+2. Press E near the rock to swing the pickaxe at it.
+
+3. Keep hitting the rock until it turns to rubble.
+
+4. ???
+
 TODO: More showcases.
 
 Art and Sound Credits:
