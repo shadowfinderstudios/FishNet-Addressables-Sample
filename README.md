@@ -8,6 +8,7 @@ This sample showcases different topics, among them:
 * Rideable vehicles; rowboat.
 * Mineable resources: rocks.
 * Network switchable Character
+* Proximity radio using an observable distance condition and trigger
 
 The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 
@@ -46,6 +47,15 @@ Showcase 4 - Switchable Character
 1. Press the C key to switch the character.
 
 2. Character can now be switched using a SpriteLibrary over the network.
+
+Showcase 5 - Proximity radio
+
+1. The music won't play until you're within distance of the northern radio.
+
+2. If you walk outside the range of the radio it will pause.
+
+3. This is network aware and an observer is used to manage visibility as well.
+
 
 TODO: More showcases.
 
@@ -116,4 +126,8 @@ http://darkwalllke.com/
 LPC Rocks
 https://opengameart.org/content/lpc-rocks
 CCBYSA By bluecarrot16, Johann Charlot, Yar, Hyptosis, Evert, Lanea Zimmerman (Sharm), Guillaume Lecollinet, Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Jetrel, Hyptosis, Redshrike, Rayane Félix (RayaneFLX), Michele Bucelli (Buch)
+
+Retro Stereo
+CC0 By inog
+https://opengameart.org/content/retro-stereo-sprite
 
