@@ -67,6 +67,14 @@ Knight's Forest Footsteps
 Public Domain By Ali_6868 
 https://freesound.org/people/Ali_6868/
 
+Pickaxe sounds
+CCBY4 By TechspiredMinds
+https://freesound.org/people/TechspiredMinds/sounds/728756/
+
+Rocks breaking
+CC0 By SoundCollectah
+https://freesound.org/people/SoundCollectah/sounds/109360/
+
 RPG Tiles: Cobble Stone Paths & Town Objects
 CCBYSA By daneeklu, Jetrel, Hyptosis, Redshrike, Bertram
 http://creativecommons.org/licenses/by-sa/3.0/
@@ -80,4 +88,13 @@ surfaces_tileset & North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
 https://creativecommons.org/licenses/by-sa/4.0/
 https://opengameart.org/content/lpc-rowboat-topdown-4-directional-recolor-for-rpg
+
+LPC Pickaxe
+CCBYSA Based on art originally by Tuomo Untinen. Adapted by Darkwall LKE.
+http://creativecommons.org/licenses/by-sa/3.0/
+http://darkwalllke.com/
+
+LPC Rocks
+https://opengameart.org/content/lpc-rocks
+CCBYSA By bluecarrot16, Johann Charlot, Yar, Hyptosis, Evert, Lanea Zimmerman (Sharm), Guillaume Lecollinet, Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Jetrel, Hyptosis, Redshrike, Rayane Félix (RayaneFLX), Michele Bucelli (Buch)
 

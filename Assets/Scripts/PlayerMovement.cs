@@ -20,7 +20,7 @@ public class PlayerMovement : TickNetworkBehaviour
     const float MountOffsetY = 0.5f;
 
     #region Network Update Data
-    
+
     [System.Serializable]
     public class VehicleUpdate
     {
@@ -28,7 +28,7 @@ public class PlayerMovement : TickNetworkBehaviour
         public Transform vehicleTransform = null;
         public List<Transform> guestTransforms = new();
     }
-    
+
     #endregion
 
     #region Properties
@@ -40,6 +40,11 @@ public class PlayerMovement : TickNetworkBehaviour
     [SerializeField] NetworkAnimator _netBodyAnim;
     [SerializeField] string _spawnTreesId;
     [SerializeField] GameObject _spellPrefab;
+    [SerializeField] AudioSource _audioSource;
+
+    [Header("Mining")]
+    [SerializeField] AudioClip _destroyRockSound;
+    [SerializeField] AudioClip[] _pickaxeSounds;
 
     #endregion
 
@@ -148,7 +153,38 @@ public class PlayerMovement : TickNetworkBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            UseVehicle();
+            if (!UseVehicle())
+            {
+                // If we didn't enter a vehicle, then we activated our pickaxe instead.
+                AnimSetTrigger(_netBodyAnim, "Slash");
+            }
+        }
+    }
+
+    public void Slash()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f);
+        foreach (Collider2D hit in hits)
+        {
+            if (hit.CompareTag("Rock"))
+            {
+                var mrock = hit.GetComponent<MineableRock>();
+                var rock = mrock as IMineable;
+                if (rock != null)
+                {
+                    int rockHealth = rock.MineResource(10);
+                    if (rockHealth <= 0)
+                    {
+                        _audioSource.PlayOneShot(_destroyRockSound);
+                        //TODO: give player ore
+                    }
+                    else
+                    {
+                        _audioSource.PlayOneShot(_pickaxeSounds[Random.Range(0, _pickaxeSounds.Length)]);
+                    }
+                }
+                break;
+            }
         }
     }
 
@@ -162,22 +198,22 @@ public class PlayerMovement : TickNetworkBehaviour
         nob.GiveOwnership(connection);
     }
 
-    void UseVehicle()
+    bool UseVehicle()
     {
         if (Time.fixedTime - _sailTimer > 1.5f)
         {
-            _sailTimer = Time.fixedTime;
-
             if (_vehicleUpdate.Value.isMounted)
             {
                 foreach (var tr in _vehicleUpdate.Value.guestTransforms)
                 {
                     if (tr == transform)
                     {
+                        _sailTimer = Time.fixedTime;
+
                         AnimSetBool(_bodyAnim, "Sail", false);
                         _vehicleUpdate.Value.isMounted = false;
                         SetVehicle(_vehicleUpdate.Value);
-                        break;
+                        return true;
                     }
                 }
             }
@@ -188,6 +224,8 @@ public class PlayerMovement : TickNetworkBehaviour
                 {
                     if (hit.CompareTag("Boat"))
                     {
+                        _sailTimer = Time.fixedTime;
+
                         VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
                         AnimSetBool(_bodyAnim, "Sail", true);
                         _vehicleUpdate.Value.isMounted = true;
@@ -195,11 +233,12 @@ public class PlayerMovement : TickNetworkBehaviour
                         _vehicleUpdate.Value.guestTransforms.Clear(); // TODO: handle multiple passengers
                         _vehicleUpdate.Value.guestTransforms.Add(transform);
                         SetVehicle(_vehicleUpdate.Value);
-                        break;
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 
     void SpawnTree(int index)
@@ -330,6 +369,7 @@ public class PlayerMovement : TickNetworkBehaviour
 
         if (base.Owner.IsLocalClient)
         {
+            _audioSource = GetComponent<AudioSource>();
             _rigidbody = GetComponent<Rigidbody2D>();
 
             _camera = FindFirstObjectByType<CinemachineCamera>();
@@ -363,6 +403,16 @@ public class PlayerMovement : TickNetworkBehaviour
     #endregion
 
     #region Animations
+
+    void AnimSetTrigger(NetworkAnimator anim, string name)
+    {
+        if (anim == null) return;
+        if (anim.gameObject.activeSelf)
+        {
+            anim.SetTrigger(name);
+        }
+    }
+
     void AnimSetBool(Animator anim, string name, bool value)
     {
         if (anim == null) return;
@@ -380,6 +430,7 @@ public class PlayerMovement : TickNetworkBehaviour
             anim.SetFloat(name, value);
         }
     }
+
     #endregion
 }
 

@@ -320,9 +320,9 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
-  - {fileID: 0}
   - {fileID: 3891381169627373308}
   - {fileID: 5722156264176189790}
+  - {fileID: 2730194545167096966}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
@@ -348,7 +348,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 0.5
-  <PrefabId>k__BackingField: 1
+  <PrefabId>k__BackingField: 2
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 7807759643866311769
   <SceneId>k__BackingField: 0
@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cac635f24954048aad3a6ff9110beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 9028371821068032533}
   _networkObjectCache: {fileID: 9028371821068032533}
   IgnoredParameters: []
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50719bf11e662524cadef1eb9b49425c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 9028371821068032533}
   _networkObjectCache: {fileID: 9028371821068032533}
   _tickCallbacks: 6
@@ -435,6 +435,14 @@ MonoBehaviour:
   _netBodyAnim: {fileID: 3891381169627373308}
   _spawnTreesId: AddressableTrees
   _spellPrefab: {fileID: 2667890734758021457, guid: e5752ae08cc3ffa468a21c1e4232b310, type: 3}
+  _audioSource: {fileID: 2766435150726387229}
+  _sparksParticles: {fileID: 2902237288934481231, guid: ec9ddc63fda27614d9c2220a02619869, type: 3}
+  _destroyRockSound: {fileID: 8300000, guid: 01c6971f48e514c4399e8e5a706f9ad7, type: 3}
+  _pickaxeSounds:
+  - {fileID: 8300000, guid: 99194faa7edec8c40b3eff615d781625, type: 3}
+  - {fileID: 8300000, guid: 4d0a3fafdc059e54a9adde2a34b12548, type: 3}
+  - {fileID: 8300000, guid: 04c88af87273bbf49a30c697f7a734b7, type: 3}
+  - {fileID: 8300000, guid: 868e126d84d40c84cb9c506d9dc4229f, type: 3}
 --- !u!114 &7624202032531758413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,9 +469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 9028371821068032533}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 9028371821068032533}
   _componentConfiguration: 3
   _synchronizeParent: 0
   _packing:

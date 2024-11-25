@@ -7,6 +7,7 @@ TagManager:
   - Surface
   - Boat
   - SceneLoader
+  - Rock
   layers:
   - Default
   - TransparentFX
