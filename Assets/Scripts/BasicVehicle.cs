@@ -1,5 +1,6 @@
 using FishNet.Utility.Template;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BasicVehicle : TickNetworkBehaviour
 {
@@ -12,6 +13,7 @@ public class BasicVehicle : TickNetworkBehaviour
     float _speed = 20f;
     Vector3 _lastpos = Vector3.zero;
     Rigidbody2D _rigidbody;
+    float _braketime = 0f;
 
     private void OnEnable()
     {
@@ -69,6 +71,15 @@ public class BasicVehicle : TickNetworkBehaviour
         else keepDirState = true;
 
         _rigidbody.linearVelocity = new Vector2(axisx * _speed * 25 * Time.fixedDeltaTime, axisy * _speed * 25 * Time.fixedDeltaTime);
+
+        if (Time.fixedTime - _braketime > 0.5f)
+        {
+            if (0f == axisx && 0f == axisy)
+            {
+                _braketime = Time.fixedTime;
+                _rigidbody.linearVelocity = Vector2.zero;
+            }
+        }
 
         if (_lastpos != transform.position)
         {

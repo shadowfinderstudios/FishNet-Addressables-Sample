@@ -1,10 +1,13 @@
 # FishNet-Addressables-Showcase
 A W.I.P. 2D URP showcase for FishNet in Unity created by Shadowfinder Studios.
+With 2D navmesh agent support using NavMeshPlus.
 
 This sample showcases different topics, among them:
 * Addressables
 * Scene loading; global, with addressable loading
 * Rideable vehicles; rowboat.
+* Mineable resources: rocks.
+* Network switchable Character
 
 The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 

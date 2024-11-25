@@ -12567,6 +12567,7 @@ GameObject:
   - component: {fileID: 1063962510}
   - component: {fileID: 1063962512}
   - component: {fileID: 1063962511}
+  - component: {fileID: 1063962513}
   m_Layer: 0
   m_Name: GroundTilemap
   m_TagString: Untagged
@@ -24943,6 +24944,22 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1063962513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063962509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 0
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

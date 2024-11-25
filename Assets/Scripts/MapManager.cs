@@ -1,12 +1,16 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using FishNet.Object;
 using FishNet.Managing.Scened;
 using FishNet;
+using NavMeshPlus.Components;
+using UnityEngine.AI;
 
 public class MapManager : NetworkBehaviour
 {
+    [SerializeField] NavMeshSurface _surface2D;
     [SerializeField] List<GameObject> _surfaceMaps;
     [SerializeField] List<TileDatas> _tileDatas;
 
@@ -49,5 +53,33 @@ public class MapManager : NetworkBehaviour
     public void FindSurfaces()
     {
         GameObject.FindGameObjectsWithTag("Surface", _surfaceMaps);
+    }
+
+    public void UpdateNavMesh()
+    {
+        if (_surface2D != null)
+        {
+            var objs = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
+
+            foreach (var item in objs) item.SetNav(false);
+
+            _surface2D.UpdateNavMesh(_surface2D.navMeshData);
+
+            foreach (var item in objs) item.SetNav(true);
+        }
+    }
+
+    public IEnumerator UpdateNavMeshAsync()
+    {
+        if (_surface2D != null)
+        {
+            var objs = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
+
+            foreach (var item in objs) item.SetNav(false);
+
+            yield return _surface2D.BuildNavMeshAsync();
+
+            foreach (var item in objs) item.SetNav(true);
+        }
     }
 }

@@ -13,9 +13,8 @@ using FishNet.Object.Synchronizing;
 using System.Collections.Generic;
 using FishNet.Connection;
 using FishNet.Component.Transforming;
-using static PlayerMovement;
 using UnityEngine.U2D.Animation;
-using UnityEditor.U2D.Animation;
+using UnityEngine.AI;
 
 public class PlayerMovement : TickNetworkBehaviour
 {
@@ -36,7 +35,6 @@ public class PlayerMovement : TickNetworkBehaviour
     #region Properties
 
     [Header("General")]
-    [SerializeField] float _speed = 6f;
     [SerializeField] CinemachineCamera _camera;
     [SerializeField] Animator _bodyAnim;
     [SerializeField] NetworkAnimator _netBodyAnim;
@@ -61,8 +59,9 @@ public class PlayerMovement : TickNetworkBehaviour
     float _charChangeTimer = 0f;
     int _treeType = 1;
     Vector3 _lastdir = Vector3.zero;
-    Rigidbody2D _rigidbody;
     Vector3 _lastpos = Vector3.zero;
+    MapManager _mapManager;
+    NavMeshAgent _navMeshAgent;
 
     #endregion
 
@@ -98,6 +97,7 @@ public class PlayerMovement : TickNetworkBehaviour
             }
 
             vt.gameObject.SendMessage("Mount");
+            _navMeshAgent.enabled = false;
         }
         else
         {
@@ -115,6 +115,7 @@ public class PlayerMovement : TickNetworkBehaviour
 
             sr.sortingOrder = 0;
             vt.gameObject.SendMessage("Unmount");
+            _navMeshAgent.enabled = true;
 
             if (asServer) vt.GetComponent<NetworkObject>().RemoveOwnership();
         }
@@ -132,8 +133,16 @@ public class PlayerMovement : TickNetworkBehaviour
 
     void OnEnable()
     {
+        _mapManager = FindFirstObjectByType<MapManager>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
         _vehicleUpdate.OnChange += OnVehicleChanged;
         _spriteLibraryIndex.OnChange += OnSpriteLibraryIndexChanged;
+
+        // If you don't set the following, the 2d navmeshagent will fall over.
+        _navMeshAgent.enabled = true;
+        _navMeshAgent.updateRotation = false;
+        _navMeshAgent.updateUpAxis = false;
+        _navMeshAgent.autoRepath = true;
     }
 
     void OnDisable()
@@ -237,6 +246,7 @@ public class PlayerMovement : TickNetworkBehaviour
                         AnimSetBool(_bodyAnim, "Sail", false);
                         _vehicleUpdate.Value.isMounted = false;
                         SetVehicle(_vehicleUpdate.Value);
+                        _navMeshAgent.enabled = true;
                         return true;
                     }
                 }
@@ -316,6 +326,22 @@ public class PlayerMovement : TickNetworkBehaviour
 
     #endregion
 
+    #region Agent
+
+    public void SetNav(bool state)
+    {
+        if (_vehicleUpdate.Value.isMounted) return;
+        _navMeshAgent.enabled = state;
+    }
+
+    void SetDest(Vector3 pos)
+    {
+        if (_navMeshAgent.enabled)
+            _navMeshAgent.SetDestination(pos);
+    }
+
+    #endregion
+
     #region Tick
 
     protected override void TimeManager_OnTick()
@@ -342,7 +368,8 @@ public class PlayerMovement : TickNetworkBehaviour
 
         if (!_vehicleUpdate.Value.isMounted)
         {
-            _rigidbody.linearVelocity = new Vector2(axisx * _speed * 25 * Time.fixedDeltaTime, axisy * _speed * 25 * Time.fixedDeltaTime);
+            if (0f != axisx || 0f != axisy)
+                SetDest(transform.position + new Vector3(axisx, axisy));
         }
         else
         {
@@ -385,7 +412,6 @@ public class PlayerMovement : TickNetworkBehaviour
     public override void OnStartServer()
     {
         base.OnStartServer();
-        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     public override void OnStartClient()
@@ -395,7 +421,6 @@ public class PlayerMovement : TickNetworkBehaviour
         if (base.Owner.IsLocalClient)
         {
             _audioSource = GetComponent<AudioSource>();
-            _rigidbody = GetComponent<Rigidbody2D>();
 
             _camera = FindFirstObjectByType<CinemachineCamera>();
             if (_camera != null)
@@ -409,6 +434,8 @@ public class PlayerMovement : TickNetworkBehaviour
             {
                 canvas.gameObject.GetComponent<SpawnManager>().playerPrefab = gameObject;
             }
+
+            StartCoroutine(_mapManager.UpdateNavMeshAsync());
         }
     }
 

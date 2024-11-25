@@ -15,6 +15,7 @@ using FishNet.Managing.Object;
 
 using GameKit.Dependencies.Utilities;
 using System;
+using UnityEngine.AI;
 
 [Serializable]
 public class AddressablePackage
@@ -45,6 +46,8 @@ public class NetSceneProcessor : DefaultSceneProcessor
     /// Used to load and unload addressables in async.
     /// </summary>
     private AsyncOperationHandle<IList<GameObject>> _asyncHandle;
+
+    private MapManager _mapManager;
 
     /// <summary>
     /// Loads an addressables package by string.
@@ -92,6 +95,8 @@ public class NetSceneProcessor : DefaultSceneProcessor
     /// <param name="sceneName">Scene name to load.</param>
     public override void BeginLoadAsync(string sceneName, UnityEngine.SceneManagement.LoadSceneParameters parameters)
     {
+        if (_mapManager == null) _mapManager = FindFirstObjectByType<MapManager>();
+
         AsyncOperation ao = UnitySceneManager.LoadSceneAsync(sceneName, parameters);
         LoadingAsyncOperations.Add(ao);
         CurrentAsyncOperation = ao;
@@ -148,6 +153,8 @@ public class NetSceneProcessor : DefaultSceneProcessor
             }
             yield return null;
         } while (notDone);
+
+        _mapManager.UpdateNavMesh();
 
         yield break;
     }

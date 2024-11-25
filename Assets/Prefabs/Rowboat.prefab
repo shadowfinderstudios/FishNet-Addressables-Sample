@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6018021126042977366}
   - component: {fileID: 1822598983164174514}
   - component: {fileID: 6907039558283096632}
-  - component: {fileID: 9089720981971644499}
+  - component: {fileID: 5619892917328582417}
   m_Layer: 8
   m_Name: Rowboat
   m_TagString: Boat
@@ -279,7 +279,7 @@ MonoBehaviour:
   _timingType: 0
   _allowTickDropping: 1
   _maximumFrameTicks: 3
-  _tickRate: 60
+  _tickRate: 30
   _pingInterval: 1
   _physicsMode: 1
 --- !u!114 &6907039558283096632
@@ -304,7 +304,7 @@ MonoBehaviour:
   _interpolation: 2
   _clientAuthoritative: 1
   _sendToOwner: 0
---- !u!114 &9089720981971644499
+--- !u!114 &5619892917328582417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,7 +327,7 @@ MonoBehaviour:
     Scale: 0
   _interpolation: 2
   _extrapolation: 2
-  _enableTeleport: 0
+  _enableTeleport: 1
   _teleportThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
