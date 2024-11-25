@@ -48,7 +48,7 @@ public class BasicVehicle : TickNetworkBehaviour
 
         AnimSetBool(_vehicleAnimator, vehicleRunningBool, false);
         AnimSetBool(_secondaryAnimator, vehicleRunningBool, false);
-        //GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
+        GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
 
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
         _rigidbody.simulated = true;
