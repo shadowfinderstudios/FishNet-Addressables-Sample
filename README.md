@@ -38,6 +38,12 @@ Showcase 3 - Mineable Rocks
 
 4. ???
 
+Showcase 4 - Switchable Character
+
+1. Press the C key to switch the character.
+
+2. Character can now be switched using a SpriteLibrary over the network.
+
 TODO: More showcases.
 
 Art and Sound Credits:

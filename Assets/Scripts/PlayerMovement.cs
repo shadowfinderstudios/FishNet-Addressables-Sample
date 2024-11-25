@@ -14,6 +14,8 @@ using System.Collections.Generic;
 using FishNet.Connection;
 using FishNet.Component.Transforming;
 using static PlayerMovement;
+using UnityEngine.U2D.Animation;
+using UnityEditor.U2D.Animation;
 
 public class PlayerMovement : TickNetworkBehaviour
 {
@@ -41,6 +43,7 @@ public class PlayerMovement : TickNetworkBehaviour
     [SerializeField] string _spawnTreesId;
     [SerializeField] GameObject _spellPrefab;
     [SerializeField] AudioSource _audioSource;
+    [SerializeField] SpriteLibraryAsset[] _spriteLibraryAssets;
 
     [Header("Mining")]
     [SerializeField] AudioClip _destroyRockSound;
@@ -55,6 +58,7 @@ public class PlayerMovement : TickNetworkBehaviour
     bool _canMove = true;
     float _spawnTest = 0f;
     float _sailTimer = 0f;
+    float _charChangeTimer = 0f;
     int _treeType = 1;
     Vector3 _lastdir = Vector3.zero;
     Rigidbody2D _rigidbody;
@@ -66,6 +70,9 @@ public class PlayerMovement : TickNetworkBehaviour
 
     readonly SyncVar<VehicleUpdate> _vehicleUpdate = new SyncVar<VehicleUpdate>(new VehicleUpdate());
     [ServerRpc] private void SetVehicle(VehicleUpdate value) => _vehicleUpdate.Value = value;
+
+    readonly SyncVar<int> _spriteLibraryIndex = new SyncVar<int>(0);
+    [ServerRpc] private void SetSpriteLibraryIndex(int value) => _spriteLibraryIndex.Value = value;
 
     #endregion
 
@@ -113,6 +120,12 @@ public class PlayerMovement : TickNetworkBehaviour
         }
     }
 
+    private void OnSpriteLibraryIndexChanged(int prev, int next, bool asServer)
+    {
+        GetComponent<SpriteLibrary>().spriteLibraryAsset = _spriteLibraryAssets[next];
+    }
+
+
     #endregion
 
     #region Setup
@@ -120,11 +133,13 @@ public class PlayerMovement : TickNetworkBehaviour
     void OnEnable()
     {
         _vehicleUpdate.OnChange += OnVehicleChanged;
+        _spriteLibraryIndex.OnChange += OnSpriteLibraryIndexChanged;
     }
 
     void OnDisable()
     {
         _vehicleUpdate.OnChange -= OnVehicleChanged;
+        _spriteLibraryIndex.OnChange -= OnSpriteLibraryIndexChanged;
     }
 
     #endregion
@@ -157,6 +172,15 @@ public class PlayerMovement : TickNetworkBehaviour
             {
                 // If we didn't enter a vehicle, then we activated our pickaxe instead.
                 AnimSetTrigger(_netBodyAnim, "Slash");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (Time.fixedTime - _charChangeTimer > 0.5f)
+            {
+                _charChangeTimer = Time.fixedTime;
+                var index = (_spriteLibraryIndex.Value + 1) % _spriteLibraryAssets.Length;
+                SetSpriteLibraryIndex(index);
             }
         }
     }
@@ -227,6 +251,7 @@ public class PlayerMovement : TickNetworkBehaviour
                         _sailTimer = Time.fixedTime;
 
                         VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
+                        AnimSetBool(_bodyAnim, "Walk", false);
                         AnimSetBool(_bodyAnim, "Sail", true);
                         _vehicleUpdate.Value.isMounted = true;
                         _vehicleUpdate.Value.vehicleTransform = hit.transform;

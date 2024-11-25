@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2766435150726387229}
   - component: {fileID: 8958311697895777719}
   - component: {fileID: 2389413485754975662}
-  - component: {fileID: 6640561902848530992}
+  - component: {fileID: 5760336185952347521}
   - component: {fileID: 9028371821068032533}
   - component: {fileID: 8482266654456439170}
   - component: {fileID: 3970002024111156261}
@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 5722156264176189790}
   - component: {fileID: 7624202032531758413}
   - component: {fileID: 2730194545167096966}
+  - component: {fileID: 2639241053242186581}
+  - component: {fileID: 7453792229951257961}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -281,7 +283,7 @@ SortingGroup:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortAtRoot: 0
---- !u!95 &6640561902848530992
+--- !u!95 &5760336185952347521
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -291,7 +293,7 @@ Animator:
   m_GameObject: {fileID: 1488630497419866413}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc844401646fe0040b13d89452269efe, type: 2}
+  m_Controller: {fileID: 9100000, guid: 55682f0605210ca4182a1898e8057ce9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -348,7 +350,7 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 0.5
-  <PrefabId>k__BackingField: 2
+  <PrefabId>k__BackingField: 3
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 7807759643866311769
   <SceneId>k__BackingField: 0
@@ -407,7 +409,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 9028371821068032533}
   _networkObjectCache: {fileID: 9028371821068032533}
   IgnoredParameters: []
-  _animator: {fileID: 6640561902848530992}
+  _animator: {fileID: 0}
   _synchronizeWhenDisabled: 0
   _smoothFloats: 1
   _interpolation: 2
@@ -431,12 +433,14 @@ MonoBehaviour:
   _tickCallbacks: 6
   _speed: 12
   _camera: {fileID: 0}
-  _bodyAnim: {fileID: 6640561902848530992}
+  _bodyAnim: {fileID: 5760336185952347521}
   _netBodyAnim: {fileID: 3891381169627373308}
   _spawnTreesId: AddressableTrees
   _spellPrefab: {fileID: 2667890734758021457, guid: e5752ae08cc3ffa468a21c1e4232b310, type: 3}
   _audioSource: {fileID: 2766435150726387229}
-  _sparksParticles: {fileID: 2902237288934481231, guid: ec9ddc63fda27614d9c2220a02619869, type: 3}
+  _spriteLibraryAssets:
+  - {fileID: 7108339969198208228, guid: 7dbcb260683b70f4c97e40fe0041d504, type: 3}
+  - {fileID: 7108339969198208228, guid: 8eed82d2fcedbc44993c5985fe3341ce, type: 3}
   _destroyRockSound: {fileID: 8300000, guid: 01c6971f48e514c4399e8e5a706f9ad7, type: 3}
   _pickaxeSounds:
   - {fileID: 8300000, guid: 99194faa7edec8c40b3eff615d781625, type: 3}
@@ -500,3 +504,33 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
+--- !u!114 &2639241053242186581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488630497419866413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 7dbcb260683b70f4c97e40fe0041d504, type: 3}
+--- !u!114 &7453792229951257961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488630497419866413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 1.7297815e-21
+  m_labelHash: 2.5364856e-13
+  m_SpriteKey: 0
+  m_SpriteHash: 1013618848
