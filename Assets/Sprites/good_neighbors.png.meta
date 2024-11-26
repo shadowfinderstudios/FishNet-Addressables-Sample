@@ -1,0 +1,2561 @@
+fileFormatVersion: 2
+guid: 499f6a5cedd55ec428d8e442214f499e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7190162526848694225
+    second: good_neighbors_0
+  - first:
+      213: -7659851791865716211
+    second: good_neighbors_1
+  - first:
+      213: 3296490761559955371
+    second: good_neighbors_2
+  - first:
+      213: 3682572408827271929
+    second: good_neighbors_3
+  - first:
+      213: -6355474568646983186
+    second: good_neighbors_4
+  - first:
+      213: -370524503383107155
+    second: good_neighbors_5
+  - first:
+      213: 977300690498712920
+    second: good_neighbors_6
+  - first:
+      213: -6090514510896731918
+    second: good_neighbors_7
+  - first:
+      213: 309802200728181733
+    second: good_neighbors_8
+  - first:
+      213: -3521175002411067723
+    second: good_neighbors_9
+  - first:
+      213: 8861597656321168386
+    second: good_neighbors_10
+  - first:
+      213: 1363673911503209172
+    second: good_neighbors_11
+  - first:
+      213: -5081091870482715193
+    second: good_neighbors_12
+  - first:
+      213: 2287112475050234997
+    second: good_neighbors_13
+  - first:
+      213: 1740954646338797299
+    second: good_neighbors_14
+  - first:
+      213: 950104574547768417
+    second: good_neighbors_15
+  - first:
+      213: -6571888536394264126
+    second: good_neighbors_16
+  - first:
+      213: 3479498206319184006
+    second: good_neighbors_17
+  - first:
+      213: -5430610037617032114
+    second: good_neighbors_18
+  - first:
+      213: -691128574241313029
+    second: good_neighbors_19
+  - first:
+      213: 1790921951709511523
+    second: good_neighbors_20
+  - first:
+      213: -7924987767826544276
+    second: good_neighbors_21
+  - first:
+      213: 5298605033018994022
+    second: good_neighbors_22
+  - first:
+      213: 1294146839946473823
+    second: good_neighbors_23
+  - first:
+      213: 439084477693788944
+    second: good_neighbors_24
+  - first:
+      213: 3932344451409479440
+    second: good_neighbors_25
+  - first:
+      213: -4234662743036116433
+    second: good_neighbors_26
+  - first:
+      213: 6476908531060544796
+    second: good_neighbors_27
+  - first:
+      213: -3660268998721743443
+    second: good_neighbors_28
+  - first:
+      213: -3650799218749398587
+    second: good_neighbors_29
+  - first:
+      213: 3751318367457877693
+    second: good_neighbors_30
+  - first:
+      213: -5223427159704968595
+    second: good_neighbors_31
+  - first:
+      213: 7918892925069327089
+    second: good_neighbors_32
+  - first:
+      213: 6240483361722227941
+    second: good_neighbors_33
+  - first:
+      213: 4699783934867681756
+    second: good_neighbors_34
+  - first:
+      213: -7109439726475012710
+    second: good_neighbors_35
+  - first:
+      213: 5957993592976712643
+    second: good_neighbors_36
+  - first:
+      213: -7512460960623205437
+    second: good_neighbors_37
+  - first:
+      213: -2527663958697032926
+    second: good_neighbors_38
+  - first:
+      213: 8348618080168608546
+    second: good_neighbors_39
+  - first:
+      213: 1094912668429837477
+    second: good_neighbors_40
+  - first:
+      213: -2955889580373096659
+    second: good_neighbors_41
+  - first:
+      213: 583135894657667806
+    second: good_neighbors_42
+  - first:
+      213: -1777529858407010069
+    second: good_neighbors_43
+  - first:
+      213: 3030063817608804411
+    second: good_neighbors_44
+  - first:
+      213: -5177758541173402545
+    second: good_neighbors_45
+  - first:
+      213: 8279746737288164885
+    second: good_neighbors_46
+  - first:
+      213: -9100298481800557339
+    second: good_neighbors_47
+  - first:
+      213: 8183885715856001121
+    second: good_neighbors_48
+  - first:
+      213: -7884701731019228743
+    second: good_neighbors_49
+  - first:
+      213: 8351448704025339087
+    second: good_neighbors_50
+  - first:
+      213: -4702877254462635461
+    second: good_neighbors_51
+  - first:
+      213: 5963056658918317033
+    second: good_neighbors_52
+  - first:
+      213: -4637145120352237180
+    second: good_neighbors_53
+  - first:
+      213: -361580956727922204
+    second: good_neighbors_54
+  - first:
+      213: 1316472673819417653
+    second: good_neighbors_55
+  - first:
+      213: -1066440972070343001
+    second: good_neighbors_56
+  - first:
+      213: -5977789415818900915
+    second: good_neighbors_57
+  - first:
+      213: 4964564267777043544
+    second: good_neighbors_58
+  - first:
+      213: 320605561070843673
+    second: good_neighbors_59
+  - first:
+      213: 5354817657197756256
+    second: good_neighbors_60
+  - first:
+      213: -5257512026401657654
+    second: good_neighbors_61
+  - first:
+      213: -272489081153488016
+    second: good_neighbors_62
+  - first:
+      213: 3536768455920757732
+    second: good_neighbors_63
+  - first:
+      213: 4378283460299344546
+    second: good_neighbors_64
+  - first:
+      213: 1364946134055698123
+    second: good_neighbors_65
+  - first:
+      213: 6241240530775718097
+    second: good_neighbors_66
+  - first:
+      213: 7871601330918516406
+    second: good_neighbors_67
+  - first:
+      213: -4893116925132598765
+    second: good_neighbors_68
+  - first:
+      213: 6101354508784819491
+    second: good_neighbors_69
+  - first:
+      213: -4001680430501591793
+    second: good_neighbors_70
+  - first:
+      213: 1658200685382615335
+    second: good_neighbors_71
+  - first:
+      213: 2422085867007668925
+    second: good_neighbors_72
+  - first:
+      213: -2084808369356571165
+    second: good_neighbors_73
+  - first:
+      213: -7341622713451337624
+    second: good_neighbors_74
+  - first:
+      213: 1117663328896678472
+    second: good_neighbors_75
+  - first:
+      213: -3445186874008861702
+    second: good_neighbors_76
+  - first:
+      213: 2352339968862337305
+    second: good_neighbors_77
+  - first:
+      213: 120314545943930534
+    second: good_neighbors_78
+  - first:
+      213: 8326821842129941146
+    second: good_neighbors_79
+  - first:
+      213: -2111496925476846044
+    second: good_neighbors_80
+  - first:
+      213: 1968578544940590275
+    second: good_neighbors_81
+  - first:
+      213: 8329538509043267827
+    second: good_neighbors_82
+  - first:
+      213: -7535342103273802683
+    second: good_neighbors_83
+  - first:
+      213: -7212863463269448034
+    second: good_neighbors_84
+  - first:
+      213: -586180293409777099
+    second: good_neighbors_85
+  - first:
+      213: 7900858271433442666
+    second: good_neighbors_86
+  - first:
+      213: -3729161666172993554
+    second: good_neighbors_87
+  - first:
+      213: -8126108892460401966
+    second: good_neighbors_88
+  - first:
+      213: -1957840771504593992
+    second: good_neighbors_89
+  - first:
+      213: 5084212113964420868
+    second: good_neighbors_90
+  - first:
+      213: 5746339924969705812
+    second: good_neighbors_91
+  - first:
+      213: -8059566174863858758
+    second: good_neighbors_92
+  - first:
+      213: -5225717698993204893
+    second: good_neighbors_93
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: good_neighbors_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28cbd5e649673c90800000000000000
+      internalID: -7190162526848694225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0264b1016db2b590800000000000000
+      internalID: -7659851791865716211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 3
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba75320d1ec7fbd20800000000000000
+      internalID: 3296490761559955371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_3
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9faddcf38102b1330800000000000000
+      internalID: 3682572408827271929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_4
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee184c47d81dcc7a0800000000000000
+      internalID: -6355474568646983186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_5
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da995436de1abdaf0800000000000000
+      internalID: -370524503383107155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 7
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8557befccc1109d00800000000000000
+      internalID: 977300690498712920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f863ae32552a7ba0800000000000000
+      internalID: -6090514510896731918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb990dc573ac4400800000000000000
+      internalID: 309802200728181733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 4
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b69d45cdf5422fc0800000000000000
+      internalID: -3521175002411067723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_10
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 3
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 204157f1e18bafa70800000000000000
+      internalID: 8861597656321168386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_11
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d2cd9c823ebce210800000000000000
+      internalID: 1363673911503209172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 5
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cda0c45dd55c79b0800000000000000
+      internalID: -5081091870482715193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_13
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 2
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574dbbcada47dbf10800000000000000
+      internalID: 2287112475050234997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fef611e60d192810800000000000000
+      internalID: 1740954646338797299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_15
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164b461a3137f2d00800000000000000
+      internalID: 950104574547768417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_16
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c112cc0236fbc4a0800000000000000
+      internalID: -6571888536394264126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_17
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6888348fe29a94030800000000000000
+      internalID: 3479498206319184006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e448a2281f892a4b0800000000000000
+      internalID: -5430610037617032114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_19
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe6936393e9866f0800000000000000
+      internalID: -691128574241313029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_20
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f3810c602aad810800000000000000
+      internalID: 1790921951709511523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_21
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6902611d99c40290800000000000000
+      internalID: -7924987767826544276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_22
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66da13e443d688940800000000000000
+      internalID: 5298605033018994022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51343ab1bbb5f110800000000000000
+      internalID: 1294146839946473823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013835f8101f71600800000000000000
+      internalID: 439084477693788944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_25
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 3
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0178db0b17e729630800000000000000
+      internalID: 3932344451409479440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_26
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2240c1eba47b35c0800000000000000
+      internalID: -4234662743036116433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_27
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 1
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c159f8c2ef992e950800000000000000
+      internalID: 6476908531060544796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_28
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 3
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5d0d41dbc143dc0800000000000000
+      internalID: -3660268998721743443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_29
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 1
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c12b2c0471c55dc0800000000000000
+      internalID: -3650799218749398587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe99bb0e2c5f0430800000000000000
+      internalID: 3751318367457877693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_31
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 2
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6268a35ca8a287b0800000000000000
+      internalID: -5223427159704968595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa7c15c82f85ed60800000000000000
+      internalID: 7918892925069327089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_33
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec5032dd86aa9650800000000000000
+      internalID: 6240483361722227941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_34
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd130e6969cf83140800000000000000
+      internalID: 4699783934867681756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_35
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9518677c32365d90800000000000000
+      internalID: -7109439726475012710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_36
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c32e632b9b0fa250800000000000000
+      internalID: 5957993592976712643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c3601d1f806eb790800000000000000
+      internalID: -7512460960623205437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_38
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2234e4e850febecd0800000000000000
+      internalID: -2527663958697032926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_39
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2238ad939ef3cd370800000000000000
+      internalID: 8348618080168608546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_40
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 2
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a4e5d55549e13f00800000000000000
+      internalID: 1094912668429837477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_41
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27459e66129af6d0800000000000000
+      internalID: -2955889580373096659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_42
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed299d0b107b71800800000000000000
+      internalID: 583135894657667806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_43
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0fff3f202f457e0800000000000000
+      internalID: -1777529858407010069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b383657fcf2fc0a20800000000000000
+      internalID: 3030063817608804411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_45
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f445d9c2a08e428b0800000000000000
+      internalID: -5177758541173402545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_46
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516b2422ac197e270800000000000000
+      internalID: 8279746737288164885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_47
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec404a0fbe35b180800000000000000
+      internalID: -9100298481800557339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_48
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1688dffc2b0039170800000000000000
+      internalID: 8183885715856001121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_49
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9f0b2fc89e39290800000000000000
+      internalID: -7884701731019228743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_50
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4a353395e46e370800000000000000
+      internalID: 8351448704025339087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_51
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b328d71dd060cbeb0800000000000000
+      internalID: -4702877254462635461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_52
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb9a5a007801c250800000000000000
+      internalID: 5963056658918317033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_53
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4890879e41d85afb0800000000000000
+      internalID: -4637145120352237180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_54
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1bfac19086bfaf0800000000000000
+      internalID: -361580956727922204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_55
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 2
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53cd38ffbec054210800000000000000
+      internalID: 1316472673819417653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_56
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae23dd069d3331f0800000000000000
+      internalID: -1066440972070343001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_57
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a4600b230aa0da0800000000000000
+      internalID: -5977789415818900915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_58
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 1
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ca27de5eca5e440800000000000000
+      internalID: 4964564267777043544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_59
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 1
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91774a42f05037400800000000000000
+      internalID: 320605561070843673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_60
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ff246c942205a40800000000000000
+      internalID: 5354817657197756256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_61
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 7
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc2cffdaa09907b0800000000000000
+      internalID: -5257512026401657654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_62
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b7ca8df9ce73cf0800000000000000
+      internalID: -272489081153488016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_63
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eba6fb0c20251130800000000000000
+      internalID: 3536768455920757732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_64
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa4c192c99c2cc30800000000000000
+      internalID: 4378283460299344546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_65
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcebee1f64341f210800000000000000
+      internalID: 1364946134055698123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_66
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d838aaf1375d9650800000000000000
+      internalID: 6241240530775718097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_67
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6e3e674bb8d3d60800000000000000
+      internalID: 7871601330918516406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_68
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3121509d418281cb0800000000000000
+      internalID: -4893116925132598765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_69
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 2
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dd8d0799d5ca450800000000000000
+      internalID: 6101354508784819491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_70
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 0
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05025ba9dc2778c0800000000000000
+      internalID: -4001680430501591793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_71
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7214a82ecbc130710800000000000000
+      internalID: 1658200685382615335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_72
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db27c76634afc9120800000000000000
+      internalID: 2422085867007668925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_73
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 0
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed7db775d54113e0800000000000000
+      internalID: -2084808369356571165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_74
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 2
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8682bc92a015d1a90800000000000000
+      internalID: -7341622713451337624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_75
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 2
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84afd5140ecb28f00800000000000000
+      internalID: 1117663328896678472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_76
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 2
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af30ddd9acc3030d0800000000000000
+      internalID: -3445186874008861702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_77
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9193efa0db035a020800000000000000
+      internalID: 2352339968862337305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_78
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a6ec4c21717ba100800000000000000
+      internalID: 120314545943930534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_79
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 0
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a927e181950de8370800000000000000
+      internalID: 8326821842129941146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_80
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 0
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4268f94cbb472b2e0800000000000000
+      internalID: -2111496925476846044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_81
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4a3a3b1cbc15b10800000000000000
+      internalID: 1968578544940590275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_82
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8f5766427789370800000000000000
+      internalID: 8329538509043267827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_83
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544f151f7461d6790800000000000000
+      internalID: -7535342103273802683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_84
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e964e6245e2c6eb90800000000000000
+      internalID: -7212863463269448034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_85
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53ad9fcf0287dd7f0800000000000000
+      internalID: -586180293409777099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_86
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 2
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a654f71ccbc75ad60800000000000000
+      internalID: 7900858271433442666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_87
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef31c9f83b5f3cc0800000000000000
+      internalID: -3729161666172993554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_88
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 0
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da31ca24034a3f80800000000000000
+      internalID: -8126108892460401966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_89
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 2
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b321bff03a54d4e0800000000000000
+      internalID: -1957840771504593992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_90
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f4697faffbe8640800000000000000
+      internalID: 5084212113964420868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_91
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 1
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451d67267b91fbf40800000000000000
+      internalID: 5746339924969705812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_92
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 1
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab36c7fe34ba62090800000000000000
+      internalID: -8059566174863858758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: good_neighbors_93
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 8
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 361d90790758a77b0800000000000000
+      internalID: -5225717698993204893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      good_neighbors_0: -7190162526848694225
+      good_neighbors_1: -7659851791865716211
+      good_neighbors_10: 8861597656321168386
+      good_neighbors_11: 1363673911503209172
+      good_neighbors_12: -5081091870482715193
+      good_neighbors_13: 2287112475050234997
+      good_neighbors_14: 1740954646338797299
+      good_neighbors_15: 950104574547768417
+      good_neighbors_16: -6571888536394264126
+      good_neighbors_17: 3479498206319184006
+      good_neighbors_18: -5430610037617032114
+      good_neighbors_19: -691128574241313029
+      good_neighbors_2: 3296490761559955371
+      good_neighbors_20: 1790921951709511523
+      good_neighbors_21: -7924987767826544276
+      good_neighbors_22: 5298605033018994022
+      good_neighbors_23: 1294146839946473823
+      good_neighbors_24: 439084477693788944
+      good_neighbors_25: 3932344451409479440
+      good_neighbors_26: -4234662743036116433
+      good_neighbors_27: 6476908531060544796
+      good_neighbors_28: -3660268998721743443
+      good_neighbors_29: -3650799218749398587
+      good_neighbors_3: 3682572408827271929
+      good_neighbors_30: 3751318367457877693
+      good_neighbors_31: -5223427159704968595
+      good_neighbors_32: 7918892925069327089
+      good_neighbors_33: 6240483361722227941
+      good_neighbors_34: 4699783934867681756
+      good_neighbors_35: -7109439726475012710
+      good_neighbors_36: 5957993592976712643
+      good_neighbors_37: -7512460960623205437
+      good_neighbors_38: -2527663958697032926
+      good_neighbors_39: 8348618080168608546
+      good_neighbors_4: -6355474568646983186
+      good_neighbors_40: 1094912668429837477
+      good_neighbors_41: -2955889580373096659
+      good_neighbors_42: 583135894657667806
+      good_neighbors_43: -1777529858407010069
+      good_neighbors_44: 3030063817608804411
+      good_neighbors_45: -5177758541173402545
+      good_neighbors_46: 8279746737288164885
+      good_neighbors_47: -9100298481800557339
+      good_neighbors_48: 8183885715856001121
+      good_neighbors_49: -7884701731019228743
+      good_neighbors_5: -370524503383107155
+      good_neighbors_50: 8351448704025339087
+      good_neighbors_51: -4702877254462635461
+      good_neighbors_52: 5963056658918317033
+      good_neighbors_53: -4637145120352237180
+      good_neighbors_54: -361580956727922204
+      good_neighbors_55: 1316472673819417653
+      good_neighbors_56: -1066440972070343001
+      good_neighbors_57: -5977789415818900915
+      good_neighbors_58: 4964564267777043544
+      good_neighbors_59: 320605561070843673
+      good_neighbors_6: 977300690498712920
+      good_neighbors_60: 5354817657197756256
+      good_neighbors_61: -5257512026401657654
+      good_neighbors_62: -272489081153488016
+      good_neighbors_63: 3536768455920757732
+      good_neighbors_64: 4378283460299344546
+      good_neighbors_65: 1364946134055698123
+      good_neighbors_66: 6241240530775718097
+      good_neighbors_67: 7871601330918516406
+      good_neighbors_68: -4893116925132598765
+      good_neighbors_69: 6101354508784819491
+      good_neighbors_7: -6090514510896731918
+      good_neighbors_70: -4001680430501591793
+      good_neighbors_71: 1658200685382615335
+      good_neighbors_72: 2422085867007668925
+      good_neighbors_73: -2084808369356571165
+      good_neighbors_74: -7341622713451337624
+      good_neighbors_75: 1117663328896678472
+      good_neighbors_76: -3445186874008861702
+      good_neighbors_77: 2352339968862337305
+      good_neighbors_78: 120314545943930534
+      good_neighbors_79: 8326821842129941146
+      good_neighbors_8: 309802200728181733
+      good_neighbors_80: -2111496925476846044
+      good_neighbors_81: 1968578544940590275
+      good_neighbors_82: 8329538509043267827
+      good_neighbors_83: -7535342103273802683
+      good_neighbors_84: -7212863463269448034
+      good_neighbors_85: -586180293409777099
+      good_neighbors_86: 7900858271433442666
+      good_neighbors_87: -3729161666172993554
+      good_neighbors_88: -8126108892460401966
+      good_neighbors_89: -1957840771504593992
+      good_neighbors_9: -3521175002411067723
+      good_neighbors_90: 5084212113964420868
+      good_neighbors_91: 5746339924969705812
+      good_neighbors_92: -8059566174863858758
+      good_neighbors_93: -5225717698993204893
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

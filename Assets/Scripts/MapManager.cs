@@ -59,7 +59,7 @@ public class MapManager : NetworkBehaviour
     {
         if (_surface2D != null)
         {
-            var objs = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
+            var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
             foreach (var item in objs) item.SetNav(false);
 
@@ -73,9 +73,11 @@ public class MapManager : NetworkBehaviour
     {
         if (_surface2D != null)
         {
-            var objs = FindObjectsByType<PlayerMovement>(FindObjectsSortMode.None);
+            var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
             foreach (var item in objs) item.SetNav(false);
+
+            Physics2D.SyncTransforms();
 
             yield return _surface2D.BuildNavMeshAsync();
 

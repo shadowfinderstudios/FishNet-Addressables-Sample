@@ -131,3 +131,10 @@ Retro Stereo
 CC0 By inog
 https://opengameart.org/content/retro-stereo-sprite
 
+Sword Dialog Box
+CCBYSA By Angelee https://artsyangelee.deviantart.com
+https://opengameart.org/content/sword-dialog-box
+
+Good Neighbors Pixel Font
+CC0 by Clint Bellanger, RamifyArt (otf vector version)
+https://opengameart.org/content/good-neighbors-pixel-font

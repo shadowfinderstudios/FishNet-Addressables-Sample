@@ -16,7 +16,7 @@ using FishNet.Component.Transforming;
 using UnityEngine.U2D.Animation;
 using UnityEngine.AI;
 
-public class PlayerMovement : TickNetworkBehaviour
+public class PlayerController : TickNetworkBehaviour
 {
     const float MountOffsetY = 0.5f;
 
@@ -62,6 +62,8 @@ public class PlayerMovement : TickNetworkBehaviour
     Vector3 _lastpos = Vector3.zero;
     MapManager _mapManager;
     NavMeshAgent _navMeshAgent;
+    Canvas _canvas;
+    DialogueManager _dialogueManager;
 
     #endregion
 
@@ -420,6 +422,15 @@ public class PlayerMovement : TickNetworkBehaviour
 
         if (base.Owner.IsLocalClient)
         {
+            _canvas = FindFirstObjectByType<Canvas>();
+            _dialogueManager = _canvas.GetComponent<DialogueManager>();
+
+            _dialogueManager.Title.text = "...";
+            _dialogueManager.Text.text = "Welcome to the showcase.";
+
+            _dialogueManager.FadeIn = true;
+            _dialogueManager.DelayedFadeout(5f);
+
             _audioSource = GetComponent<AudioSource>();
 
             _camera = FindFirstObjectByType<CinemachineCamera>();

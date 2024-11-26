@@ -7,12 +7,12 @@ public class SpawnManager : MonoBehaviour
     public void SelectTree_Apple()
     {
         if (playerPrefab != null)
-            playerPrefab.GetComponent<PlayerMovement>()?.SetTree(0);
+            playerPrefab.GetComponent<PlayerController>()?.SetTree(0);
     }
 
     public void SelectTree_Cherry()
     {
         if (playerPrefab != null)
-            playerPrefab.GetComponent<PlayerMovement>()?.SetTree(1);
+            playerPrefab.GetComponent<PlayerController>()?.SetTree(1);
     }
 }
