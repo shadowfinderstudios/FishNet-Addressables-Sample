@@ -1,20 +1,23 @@
-using UnityEngine;
-using Unity.Cinemachine;
-using FishNet;
-using FishNet.Component.Animating;
-using FishNet.Utility.Template;
-using FishNet.Managing.Object;
-using GameKit.Dependencies.Utilities;
 using System.Collections;
-using FishNet.Managing;
+using System.Collections.Generic;
+
+using UnityEngine;
+using UnityEngine.U2D.Animation;
 using UnityEngine.UI;
+using UnityEngine.AI;
+using Unity.Cinemachine;
+
+using FishNet;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
-using System.Collections.Generic;
+using FishNet.Managing;
+using FishNet.Managing.Object;
 using FishNet.Connection;
+using FishNet.Component.Animating;
 using FishNet.Component.Transforming;
-using UnityEngine.U2D.Animation;
-using UnityEngine.AI;
+using FishNet.Utility.Template;
+
+using GameKit.Dependencies.Utilities;
 
 public class PlayerController : TickNetworkBehaviour
 {
@@ -42,6 +45,9 @@ public class PlayerController : TickNetworkBehaviour
     [SerializeField] GameObject _spellPrefab;
     [SerializeField] AudioSource _audioSource;
     [SerializeField] SpriteLibraryAsset[] _spriteLibraryAssets;
+    [SerializeField] GameObject _healthStatus;
+    [SerializeField] Sprite _damageStatusSprite;
+    [SerializeField] Sprite _healthStatusSprite;
 
     [Header("Mining")]
     [SerializeField] AudioClip _destroyRockSound;
@@ -75,15 +81,21 @@ public class PlayerController : TickNetworkBehaviour
 
     #region SyncVars
 
+    readonly SyncVar<int> _health = new SyncVar<int>(100);
+
     readonly SyncVar<VehicleUpdate> _vehicleUpdate = new SyncVar<VehicleUpdate>(new VehicleUpdate());
-    [ServerRpc] private void SetVehicle(VehicleUpdate value) => _vehicleUpdate.Value = value;
 
     readonly SyncVar<int> _spriteLibraryIndex = new SyncVar<int>(0);
-    [ServerRpc] private void SetSpriteLibraryIndex(int value) => _spriteLibraryIndex.Value = value;
 
     #endregion
 
-    #region RPC
+    #region Changed Events
+
+    void OnHealthChanged(int oldValue, int newValue, bool asServer)
+    {
+        _health.Value = newValue;
+        Debug.Log("Health: " + newValue);
+    }
 
     void OnVehicleChanged(VehicleUpdate oldValue, VehicleUpdate newValue, bool asServer)
     {
@@ -134,6 +146,39 @@ public class PlayerController : TickNetworkBehaviour
         GetComponent<SpriteLibrary>().spriteLibraryAsset = _spriteLibraryAssets[next];
     }
 
+    #endregion
+
+    #region RPC
+
+    [ServerRpc] void SetHealth(int value) => _health.Value = value;
+
+    [ServerRpc] void SetVehicle(VehicleUpdate value) => _vehicleUpdate.Value = value;
+
+    [ServerRpc] void SetSpriteLibraryIndex(int value) => _spriteLibraryIndex.Value = value;
+
+    [ServerRpc]
+    void VehicleTakeOwnership(NetworkObject nob, NetworkConnection connection)
+    {
+        nob.GiveOwnership(connection);
+    }
+
+    [ServerRpc]
+    void ServerCastSpell(Vector3 position, float delayTime)
+    {
+        // Spawn the spell effect.
+        var go = Instantiate(_spellPrefab, position, Quaternion.identity);
+        InstanceFinder.ServerManager.Spawn(go);
+    }
+
+    [ServerRpc]
+    void ServerSummonTree(int index, Vector3 position)
+    {
+        ushort id = _spawnTreesId.GetStableHashU16();
+        var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
+        var prefab = spawnables.Prefabs[index];
+        var nob = Instantiate(prefab, position, Quaternion.identity);
+        InstanceFinder.ServerManager.Spawn(nob);
+    }
 
     #endregion
 
@@ -143,8 +188,10 @@ public class PlayerController : TickNetworkBehaviour
     {
         _mapManager = FindFirstObjectByType<MapManager>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
+
         _vehicleUpdate.OnChange += OnVehicleChanged;
         _spriteLibraryIndex.OnChange += OnSpriteLibraryIndexChanged;
+        _health.OnChange += OnHealthChanged;
 
         // If you don't set the following, the 2d navmeshagent will fall over.
         _navMeshAgent.enabled = true;
@@ -230,9 +277,35 @@ public class PlayerController : TickNetworkBehaviour
         }
     }
 
-    void ReleaseArrow()
+    #endregion
+
+    #region Public Methods
+
+    public void ReleaseHealth()
     {
-        GetComponent<Bow>().ShootArrow();
+        _healthStatus.GetComponent<SpriteRenderer>().sprite = null;
+    }
+
+    public void ModifyHealth(int amount)
+    {
+        var oldValue = _health.Value;
+        var newValue = _health.Value + amount;
+        if (newValue < 0) newValue = 0;
+        else if (newValue > 100) newValue = 100;
+
+        if (oldValue != newValue)
+        {
+            SetHealth(newValue);
+
+            if (newValue == 0 || newValue == 100) ReleaseHealth();
+            else
+            {
+                if (newValue < oldValue)
+                    _healthStatus.GetComponent<SpriteRenderer>().sprite = _damageStatusSprite;
+                else
+                    _healthStatus.GetComponent<SpriteRenderer>().sprite = _healthStatusSprite;
+            }
+        }
     }
 
     public void Slash()
@@ -267,9 +340,13 @@ public class PlayerController : TickNetworkBehaviour
         _treeType = type;
     }
 
-    [ServerRpc] void VehicleTakeOwnership(NetworkObject nob, NetworkConnection connection)
+    #endregion
+
+    #region Private Methods
+
+    void ReleaseArrow()
     {
-        nob.GiveOwnership(connection);
+        GetComponent<Bow>().ShootArrow();
     }
 
     bool UseVehicle()
@@ -328,22 +405,6 @@ public class PlayerController : TickNetworkBehaviour
             var nm = InstanceFinder.NetworkManager;
             if (nm != null) StartCoroutine(SummonTreeSpell(nm, transform.position + _lastdir * 3f, index, 0.8f));
         }
-    }
-
-    [ServerRpc] void ServerCastSpell(Vector3 position, float delayTime)
-    {
-        // Spawn the spell effect.
-        var go = Instantiate(_spellPrefab, position, Quaternion.identity);
-        InstanceFinder.ServerManager.Spawn(go);
-    }
-
-    [ServerRpc] void ServerSummonTree(int index, Vector3 position)
-    {
-        ushort id = _spawnTreesId.GetStableHashU16();
-        var spawnables = (SinglePrefabObjects)InstanceFinder.NetworkManager.GetPrefabObjects<SinglePrefabObjects>(id, true);
-        var prefab = spawnables.Prefabs[index];
-        var nob = Instantiate(prefab, position, Quaternion.identity);
-        InstanceFinder.ServerManager.Spawn(nob);
     }
 
     IEnumerator SummonTreeSpell(NetworkManager nm, Vector3 position, int index, float delayTime)

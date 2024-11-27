@@ -126,6 +126,27 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 1559254948, guid: 1d6c3309418e6b048b56e83077d88f59, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 6
+  - m_Name: HealthModStatus
+    m_Hash: 1017703878
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Damage
+      m_Hash: 375673178
+      m_Sprite: {fileID: 3269770310667152618, guid: 04c08984491df9244be6390ef5385778, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3269770310667152618, guid: 04c08984491df9244be6390ef5385778, type: 3}
+    - m_Name: Heal
+      m_Hash: 152752528
+      m_Sprite: {fileID: 751934435659609086, guid: 04c08984491df9244be6390ef5385778, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 751934435659609086, guid: 04c08984491df9244be6390ef5385778, type: 3}
+    - m_Name: None
+      m_Hash: 530755569
+      m_Sprite: {fileID: -3209833726738011397, guid: 59eabb8559ec97a4b871a76b492d49b1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3209833726738011397, guid: 59eabb8559ec97a4b871a76b492d49b1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638680732032999185
+  m_ModificationHash: 638682736465903235
   m_Version: 1

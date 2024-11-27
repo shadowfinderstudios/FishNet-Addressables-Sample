@@ -151,3 +151,23 @@ https://opengameart.org/content/sword-dialog-box
 Good Neighbors Pixel Font
 CC0 by Clint Bellanger, RamifyArt (otf vector version)
 https://opengameart.org/content/good-neighbors-pixel-font
+
+Fight Icons Spritesheet
+CC0 By ninja_6734_
+https://opengameart.org/content/fight-icons-spritesheet
+
+Jingling Heal
+CCBYSA By Zoltan Mihalyi based on Spell Sounds Starter Pack by p0ss https://opengameart.org/content/spell-sounds-starter-pack
+
+Fireplace Sound Loop
+CC0 By PagDev
+https://opengameart.org/content/fireplace-sound-loop
+
+Fire Animation For RPGs (Finished)
+CCBYSA By Zabin and Jetrel
+https://opengameart.org/content/camp-fire-animation-for-rpgs-finished
+
+Explosion effects and more
+CC0 By Soluna Software
+https://opengameart.org/content/explosion-effects-and-more
+
