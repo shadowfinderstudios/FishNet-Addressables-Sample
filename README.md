@@ -10,6 +10,9 @@ This sample showcases different topics, among them:
 * Network switchable Character
 * Proximity radio using an observable distance condition and trigger
 * Shooting arrows
+* Taking damage zones (campfire), healing zones, stat hud
+* Health, mana and stamina loss/gain and regen
+* Death implemented
 
 The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 
@@ -69,20 +72,44 @@ Showcase 6 - Shooting arrows
 
 5. Press Q again to holster your bow.
 
+Showcase 7 - Campfire damage zone, healing aura zone
+
+1. Walk into the campfire and take damage, watch health go down
+
+2. Walk into the healing aura and heal, watch health go up faster
+
+3. Stand still outside of either zone and watch health regen slowly
+
+4. Stand in campfire damage zone until health hits zero, watch Death
+
+5. Attempt to move around after death, input is locked
+
+Showcase 8 - Swing pickaxe, shoot arrows, or cast summon tree to affect stats
+
+1. Cast summon tree, or shoot an arrow, or swing your pickaxe
+
+2. Watch stamina go down.
+
+3. Wait and watch stamina regen
+
 
 TODO: More showcases.
 
 Art and Sound Credits:
 
-LPC Tree Recolors
-CCBYSA By William.Thompsonj and C.Nilsson
-https://opengameart.org/content/lpc-tree-recolors
+Licenses:
 https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/3.0/
+https://creativecommons.org/publicdomain/zero/1.0/
+
+LPC Tree Recolors
+CCBY By William.Thompsonj and C.Nilsson
+https://opengameart.org/content/lpc-tree-recolors
 
 LPC All Seasons Tree
 CCBYSA By Death's Darling
 https://opengameart.org/content/lpc-all-seasons-apple-tree
-https://creativecommons.org/licenses/by-sa/3.0/
 
 Grass Tiles
 Public Domain by Invincible
@@ -90,7 +117,6 @@ https://opengameart.org/content/grass-tiles-0
 
 LPC Medieval Fantasy Character Sprites
 CCBYSA By Wulax
-https://creativecommons.org/licenses/by-sa/3.0/
 https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
 
 Cosmic Time - Magic Effect
@@ -119,21 +145,28 @@ https://freesound.org/people/SoundCollectah/sounds/109360/
 
 RPG Tiles: Cobble Stone Paths & Town Objects
 CCBYSA By daneeklu, Jetrel, Hyptosis, Redshrike, Bertram
-http://creativecommons.org/licenses/by-sa/3.0/
 https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
 
 Ships with Ripple Effect
 CCBY By chabull
 https://opengameart.org/content/ships-with-ripple-effect
 
-surfaces_tileset & North-South Rowboat modifications
+surfaces_tileset
+CC0 By Shadowfinder Studios
+https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+
+North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
-https://creativecommons.org/licenses/by-sa/4.0/
 https://opengameart.org/content/lpc-rowboat-topdown-4-directional-recolor-for-rpg
+
+LPC Tree Buttons
+CCBY,CCBYSA By Shadowfinder Studios, based on LPC Tree Recolors and LPC All Seasons Tree
+https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://opengameart.org/content/lpc-tree-recolors
+https://opengameart.org/content/lpc-all-seasons-apple-tree
 
 LPC Pickaxe
 CCBYSA Based on art originally by Tuomo Untinen. Adapted by Darkwall LKE.
-http://creativecommons.org/licenses/by-sa/3.0/
 http://darkwalllke.com/
 
 LPC Rocks
@@ -170,4 +203,9 @@ https://opengameart.org/content/camp-fire-animation-for-rpgs-finished
 Explosion effects and more
 CC0 By Soluna Software
 https://opengameart.org/content/explosion-effects-and-more
+
+Fantasy MMORPG HUD & Mobile Controllers modifications (Cleaned up fill image)
+CCBY By Shadowfinder Studios, based on AliHamieh's mmorpg hud
+https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://opengameart.org/content/fantasy-mmorpg-hud-mobile-controllers
 
