@@ -9,6 +9,7 @@ This sample showcases different topics, among them:
 * Mineable resources: rocks.
 * Network switchable Character
 * Proximity radio using an observable distance condition and trigger
+* Shooting arrows
 
 The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 
@@ -55,6 +56,18 @@ Showcase 5 - Proximity radio
 2. If you walk outside the range of the radio it will pause.
 
 3. This is network aware and an observer is used to manage visibility as well.
+
+Showcase 6 - Shooting arrows
+
+1. Press Q to ready your bow.
+
+2. Aim in the direction you want to aim.
+
+3. Point your mouse somewhere on the screen and left click and hold.
+
+4. When ready, release the mouse button to shoot the arrow.
+
+5. Press Q again to holster your bow.
 
 
 TODO: More showcases.

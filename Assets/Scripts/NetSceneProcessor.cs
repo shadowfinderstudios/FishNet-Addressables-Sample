@@ -15,7 +15,6 @@ using FishNet.Managing.Object;
 
 using GameKit.Dependencies.Utilities;
 using System;
-using UnityEngine.AI;
 
 [Serializable]
 public class AddressablePackage

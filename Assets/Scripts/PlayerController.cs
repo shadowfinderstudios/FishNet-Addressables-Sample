@@ -54,12 +54,18 @@ public class PlayerController : TickNetworkBehaviour
     bool _firstSpawn = true;
     bool _isWalking = false;
     bool _canMove = true;
+    bool _bowReady = false;
+    bool _isBowCharging = false;
+
     float _spawnTest = 0f;
     float _sailTimer = 0f;
     float _charChangeTimer = 0f;
+    float _bowTimer = 0f;
     int _treeType = 1;
+    
     Vector3 _lastdir = Vector3.zero;
     Vector3 _lastpos = Vector3.zero;
+    
     MapManager _mapManager;
     NavMeshAgent _navMeshAgent;
     Canvas _canvas;
@@ -194,6 +200,39 @@ public class PlayerController : TickNetworkBehaviour
                 SetSpriteLibraryIndex(index);
             }
         }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (Time.fixedTime - _bowTimer > 0.25f)
+            {
+                _bowTimer = Time.fixedTime;
+                _bowReady = !_bowReady;
+                AnimSetBool(_bodyAnim, "Bow", _bowReady);
+                GetComponent<Bow>().BowReady = _bowReady;
+            }
+        }
+
+        if (!_isBowCharging && Input.GetMouseButtonDown(0))
+        {
+            if (_bowReady)
+            {
+                AnimSetTrigger(_netBodyAnim, "Shoot");
+                _isBowCharging = true;
+            }
+        }
+        else if (_isBowCharging && Input.GetMouseButtonUp(0))
+        {
+            _isBowCharging = false;
+            if (_bowReady)
+            {
+                AnimSetTrigger(_netBodyAnim, "Release");
+                Invoke("ReleaseArrow", 0.8f);
+            }
+        }
+    }
+
+    void ReleaseArrow()
+    {
+        GetComponent<Bow>().ShootArrow();
     }
 
     public void Slash()

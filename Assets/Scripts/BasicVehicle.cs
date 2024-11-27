@@ -1,6 +1,5 @@
 using FishNet.Utility.Template;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class BasicVehicle : TickNetworkBehaviour
 {

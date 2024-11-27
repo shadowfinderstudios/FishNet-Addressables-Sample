@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 9086587214395352367}
   - component: {fileID: 2256745210793393767}
   - component: {fileID: 6018021126042977366}
-  - component: {fileID: 1822598983164174514}
   - component: {fileID: 6907039558283096632}
   - component: {fileID: 5619892917328582417}
   m_Layer: 8
@@ -277,25 +276,6 @@ MonoBehaviour:
     Position: {x: -17.57, y: -4.9, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 0.6732241, y: 0.6732241, z: 0.6732241}
---- !u!114 &1822598983164174514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408980462394680641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fdaae44044276a49a52229c1597e33b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _updateOrder: 0
-  _timingType: 0
-  _allowTickDropping: 1
-  _maximumFrameTicks: 3
-  _tickRate: 30
-  _pingInterval: 1
-  _physicsMode: 1
 --- !u!114 &6907039558283096632
 MonoBehaviour:
   m_ObjectHideFlags: 0
