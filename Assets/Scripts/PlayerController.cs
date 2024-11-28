@@ -664,21 +664,21 @@ public class PlayerController : TickNetworkBehaviour
     {
         base.OnStartClient();
 
+        _healthStatusSpriteRenderer = _healthStatus.GetComponent<SpriteRenderer>();
+        _manaStatusSpriteRenderer = _manaStatus.GetComponent<SpriteRenderer>();
+        _staminaStatusSpriteRenderer = _staminaStatus.GetComponent<SpriteRenderer>();
+
+        _healthBar = GameObject.Find("HealthBarFill");
+        _manaBar = GameObject.Find("ManaBarFill");
+        _staminaBar = GameObject.Find("StaminaBarFill");
+        _healthText = GameObject.Find("HealthText").GetComponent<TextMeshProUGUI>();
+        _manaText = GameObject.Find("ManaText").GetComponent<TextMeshProUGUI>();
+
         if (base.Owner.IsLocalClient)
         {
             _castTimer = Time.fixedTime;
             _swingTimer = Time.fixedTime;
             _bowTimer = Time.fixedTime;
-
-            _healthStatusSpriteRenderer = _healthStatus.GetComponent<SpriteRenderer>();
-            _manaStatusSpriteRenderer = _manaStatus.GetComponent<SpriteRenderer>();
-            _staminaStatusSpriteRenderer = _staminaStatus.GetComponent<SpriteRenderer>();
-
-            _healthBar = GameObject.Find("HealthBarFill");
-            _manaBar = GameObject.Find("ManaBarFill");
-            _staminaBar = GameObject.Find("StaminaBarFill");
-            _healthText = GameObject.Find("HealthText").GetComponent<TextMeshProUGUI>();
-            _manaText = GameObject.Find("ManaText").GetComponent<TextMeshProUGUI>();
 
             _canvas = FindFirstObjectByType<Canvas>();
             _dialogueManager = _canvas.GetComponent<DialogueManager>();

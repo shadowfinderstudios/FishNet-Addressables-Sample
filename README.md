@@ -209,3 +209,8 @@ CCBY By Shadowfinder Studios, based on AliHamieh's mmorpg hud
 https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
 https://opengameart.org/content/fantasy-mmorpg-hud-mobile-controllers
 
+Dwarven Cursor modified (Redrew as a pressed cursor and resized)
+CCBYSA By Shadowfinder Studios, based on Jinn's Dwarven Cursor
+https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://opengameart.org/content/dwarven-cursor
+
