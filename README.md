@@ -1,22 +1,22 @@
 # FishNet-Addressables-Showcase
-A W.I.P. 2D URP showcase for FishNet in Unity created by Shadowfinder Studios.
-With 2D navmesh agent support using NavMeshPlus.
+
+A W.I.P. 2D URP showcase for FishNet in Unity created by Shadowfinder Studios. With 2D navmesh agent support using NavMeshPlus. The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
+
+## Features
 
 This sample showcases different topics, among them:
-* Addressables
-* Scene loading; global, with addressable loading
+* Addressables.
+* Scene loading; global, with addressable loading.
 * Rideable vehicles; rowboat.
 * Mineable resources: rocks.
-* Network switchable Character
-* Proximity radio using an observable distance condition and trigger
-* Shooting arrows
-* Taking damage zones (campfire), healing zones, stat hud
-* Health, mana and stamina loss/gain and regen
-* Death implemented
+* Network switchable character outfits.
+* Proximity radio using an observable distance condition and trigger.
+* Shooting arrows.
+* Taking damage zones (campfire), healing zones, and stat HUD.
+* Health, mana and stamina loss/gain and regen.
+* Death implemented.
 
-The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
-
-Instructions to play:
+## Showcases
 
 Showcase 1 - Scene loading and addressables
 
@@ -95,126 +95,52 @@ Showcase 8 - Swing pickaxe, shoot arrows, or cast summon tree to affect stats
 
 TODO: More showcases.
 
-Art and Sound Credits:
+Showcase ? - Emotes and animations.
+Showcase ? - Interact with chests and generate loot randomly.
+Showcase ? - Synchronize a shop and inventory system.
+Showcase ? - Item pickup and drop.
+Showcase ? - Set up quests.
+Showcase ? - Synchronize AI (goap, behavior trees, etc?).
+Showcase ? - Pet follower.
+Showcase ? - Interact with levers, buttons, switches, pressure plates
+Showcase ? - Interact with doors.
+Showcase ? - Puzzles (e.g. two players have to use levers or pressure plates, puzzle blocks, etc)
+Showcase ? - Area of effect
+Showcase ? - Breakable objects (pots, crates, barrels, etc)
+Showcase ? - Stealth mechanics (noise detection, player visibility)
+Showcase ? - Crafting
+Showcase ? - Base building
+Showcase ? - Chat (global, guild, local, private) + Chat history
+Showcase ? - Friend lists
+Showcase ? - Spectating
+Showcase ? - PVE Combat
+Showcase ? - PVP Combat
+Showcase ? - Leaderboards
+Showcase ? - Matchmaking
+Showcase ? - Character wearables
+Showcase ? - Character customization - customizing looks
+Showcase ? - Synchronized dynamic weather; rain, snow, lightning, autumn leaves, etc.
+Showcase ? - Farming (plowing, seeding, growth, harvesting, carrying, stashing, buying, selling)
+Showcase ? - Day / night cycles
+Showcase ? - Water sources, filling containers
+Showcase ? - Chopping for wood, lighting fires, cooking food
+Showcase ? - Reading / writing notes, scrolls, books and tablets
+Showcase ? - Anvil and workbench for blacksmith and other crafting
+Showcase ? - Guild systems
+Showcase ? - Trade systems - auction house
+Showcase ? - Economy systems
+Showcase ? - Player housing ownership
+Showcase ? - Dynamic world events
+Showcase ? - NPC Faction system
+Showcase ? - War and siege battles
+Showcase ? - Alchemy
+Showcase ? - Tailoring
+Showcase ? - Fishing
 
-Licenses:
-https://creativecommons.org/licenses/by/4.0/
-https://creativecommons.org/licenses/by-sa/4.0/
-https://creativecommons.org/licenses/by-sa/3.0/
-https://creativecommons.org/publicdomain/zero/1.0/
+## Art and Sound Credits
 
-LPC Tree Recolors
-CCBY By William.Thompsonj and C.Nilsson
-https://opengameart.org/content/lpc-tree-recolors
+Please refer to [Art and Sound Credits](CREDITS.md) for more details.
 
-LPC All Seasons Tree
-CCBYSA By Death's Darling
-https://opengameart.org/content/lpc-all-seasons-apple-tree
+## License
 
-Grass Tiles
-Public Domain by Invincible
-https://opengameart.org/content/grass-tiles-0
-
-LPC Medieval Fantasy Character Sprites
-CCBYSA By Wulax
-https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
-
-Cosmic Time - Magic Effect
-Public Domain By Cethiel
-https://opengameart.org/content/cosmic-time-magic-effect
-
-Magic Spell
-CC0 By Bastianhallo
-https://freesound.org/people/Bastianhallo/sounds/682635/
-
-Awaking of Magic
-CCBY3 By Tausdei
-https://opengameart.org/content/awaking-of-magic
-
-Knight's Forest Footsteps
-Public Domain By Ali_6868 
-https://freesound.org/people/Ali_6868/
-
-Pickaxe sounds
-CCBY4 By TechspiredMinds
-https://freesound.org/people/TechspiredMinds/sounds/728756/
-
-Rocks breaking
-CC0 By SoundCollectah
-https://freesound.org/people/SoundCollectah/sounds/109360/
-
-RPG Tiles: Cobble Stone Paths & Town Objects
-CCBYSA By daneeklu, Jetrel, Hyptosis, Redshrike, Bertram
-https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
-
-Ships with Ripple Effect
-CCBY By chabull
-https://opengameart.org/content/ships-with-ripple-effect
-
-surfaces_tileset
-CC0 By Shadowfinder Studios
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
-
-North-South Rowboat modifications
-CCBYSA By Shadowfinder Studios
-https://opengameart.org/content/lpc-rowboat-topdown-4-directional-recolor-for-rpg
-
-LPC Tree Buttons
-CCBY,CCBYSA By Shadowfinder Studios, based on LPC Tree Recolors and LPC All Seasons Tree
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
-https://opengameart.org/content/lpc-tree-recolors
-https://opengameart.org/content/lpc-all-seasons-apple-tree
-
-LPC Pickaxe
-CCBYSA Based on art originally by Tuomo Untinen. Adapted by Darkwall LKE.
-http://darkwalllke.com/
-
-LPC Rocks
-https://opengameart.org/content/lpc-rocks
-CCBYSA By bluecarrot16, Johann Charlot, Yar, Hyptosis, Evert, Lanea Zimmerman (Sharm), Guillaume Lecollinet, Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Jetrel, Hyptosis, Redshrike, Rayane Félix (RayaneFLX), Michele Bucelli (Buch)
-
-Retro Stereo
-CC0 By inog
-https://opengameart.org/content/retro-stereo-sprite
-
-Sword Dialog Box
-CCBYSA By Angelee https://artsyangelee.deviantart.com
-https://opengameart.org/content/sword-dialog-box
-
-Good Neighbors Pixel Font
-CC0 by Clint Bellanger, RamifyArt (otf vector version)
-https://opengameart.org/content/good-neighbors-pixel-font
-
-Fight Icons Spritesheet
-CC0 By ninja_6734_
-https://opengameart.org/content/fight-icons-spritesheet
-
-Jingling Heal
-CCBYSA By Zoltan Mihalyi based on Spell Sounds Starter Pack by p0ss https://opengameart.org/content/spell-sounds-starter-pack
-
-Fireplace Sound Loop
-CC0 By PagDev
-https://opengameart.org/content/fireplace-sound-loop
-
-Fire Animation For RPGs (Finished)
-CCBYSA By Zabin and Jetrel
-https://opengameart.org/content/camp-fire-animation-for-rpgs-finished
-
-Explosion effects and more
-CC0 By Soluna Software
-https://opengameart.org/content/explosion-effects-and-more
-
-Fantasy MMORPG HUD & Mobile Controllers modifications (Cleaned up fill image)
-CCBY By Shadowfinder Studios, based on AliHamieh's mmorpg hud
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
-https://opengameart.org/content/fantasy-mmorpg-hud-mobile-controllers
-
-Dwarven Cursor modified (Redrew as a pressed cursor and resized)
-CCBYSA By Shadowfinder Studios, based on Jinn's Dwarven Cursor
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
-https://opengameart.org/content/dwarven-cursor
-
-LPC Shadow
-CC0 By Dr. Jamgo
-https://opengameart.org/content/shadow-for-lpc-sprite
-
+This code is MIT
