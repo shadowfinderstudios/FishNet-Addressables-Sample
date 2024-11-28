@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7379346205723956344}
   - component: {fileID: 5971850680767925347}
   - component: {fileID: -7889209180411001627}
+  - component: {fileID: 2211914687384112578}
+  - component: {fileID: -5930768515522365779}
   - component: {fileID: 7868240973688585456}
   - component: {fileID: 244685519707317236}
   m_Layer: 7
@@ -57,7 +59,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -95,7 +97,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4294708130857727907}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -109,8 +111,8 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 64
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -238,6 +240,8 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
+  - {fileID: 2211914687384112578}
+  - {fileID: -5930768515522365779}
   - {fileID: 244685519707317236}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
@@ -251,18 +255,18 @@ MonoBehaviour:
   _defaultDespawnType: 0
   _initializedValusSet: 1
   NetworkObserver: {fileID: 0}
-  _enablePrediction: 0
-  _predictionType: 0
-  _graphicalObject: {fileID: 0}
+  _enablePrediction: 1
+  _predictionType: 2
+  _graphicalObject: {fileID: 6714723010678398679}
   _detachGraphicalObject: 0
   _enableStateForwarding: 1
   _networkTransform: {fileID: 0}
   _ownerInterpolation: 1
-  _ownerSmoothedProperties: 255
+  _ownerSmoothedProperties: 3
   _adaptiveInterpolation: 3
-  _spectatorSmoothedProperties: 255
+  _spectatorSmoothedProperties: 3
   _spectatorInterpolation: 2
-  _enableTeleport: 0
+  _enableTeleport: 1
   _teleportThreshold: 1
   <PrefabId>k__BackingField: 7
   <SpawnableCollectionId>k__BackingField: 0
@@ -284,9 +288,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overrideType: 3
+  _overrideType: 2
   _updateHostVisibility: 1
   _observerConditions: []
+--- !u!114 &2211914687384112578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294708130857727907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 0
+  _addedNetworkObject: {fileID: 5971850680767925347}
+  _networkObjectCache: {fileID: 5971850680767925347}
+  _componentConfiguration: 3
+  _synchronizeParent: 0
+  _packing:
+    Position: 1
+    Rotation: 1
+    Scale: 0
+  _interpolation: 2
+  _extrapolation: 2
+  _enableTeleport: 1
+  _teleportThreshold: 1
+  _clientAuthoritative: 1
+  _sendToOwner: 1
+  _interval: 1
+  _synchronizePosition: 1
+  _positionSnapping:
+    X: 1
+    Y: 1
+    Z: 1
+  _synchronizeRotation: 1
+  _rotationSnapping:
+    X: 0
+    Y: 0
+    Z: 0
+  _synchronizeScale: 0
+  _scaleSnapping:
+    X: 0
+    Y: 0
+    Z: 0
+--- !u!114 &-5930768515522365779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294708130857727907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8cac635f24954048aad3a6ff9110beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentIndexCache: 1
+  _addedNetworkObject: {fileID: 5971850680767925347}
+  _networkObjectCache: {fileID: 5971850680767925347}
+  IgnoredParameters: []
+  _animator: {fileID: 1656495035421511118}
+  _synchronizeWhenDisabled: 0
+  _smoothFloats: 1
+  _interpolation: 3
+  _clientAuthoritative: 1
+  _sendToOwner: 0
 --- !u!195 &7868240973688585456
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -299,7 +368,7 @@ NavMeshAgent:
   m_Radius: 0.93
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 0
   m_AngularSpeed: 80
   m_StoppingDistance: 0.2
   m_AutoTraverseOffMeshLink: 1
@@ -307,8 +376,8 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2.83
   m_BaseOffset: -0.4
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &244685519707317236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,11 +390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d438f6c1ba4bc2a41961e27ab7c3a04e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 5971850680767925347}
   _networkObjectCache: {fileID: 5971850680767925347}
   _tickCallbacks: 6
-  radiusFromSpawn: 10
+  radiusFromSpawn: 7
   isSleeping: 0
   energyLifeInSeconds: 480
   maxEnergyLife: 480

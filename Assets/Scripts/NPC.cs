@@ -4,7 +4,9 @@ using FishNet.Utility.Template;
 
 public class NPC : TickNetworkBehaviour
 {
-    [SerializeField] float radiusFromSpawn = 10f;
+    const float AnimUpdateFreq = 0.8f;
+
+    [SerializeField] float radiusFromSpawn = 7f;
     [SerializeField] bool isSleeping = false;
     [SerializeField] float energyLifeInSeconds = 480f;
     [SerializeField] float maxEnergyLife = 480f;
@@ -14,6 +16,7 @@ public class NPC : TickNetworkBehaviour
     Vector2 targetPosition;
     Vector3 lastpos = Vector3.zero;
     float bounceOverlap = 0.2f;
+    float animUpdateFrequency = 0f;
     Vector2 originalPosition;
     NavMeshAgent agent;
 
@@ -53,23 +56,32 @@ public class NPC : TickNetworkBehaviour
 
     void HandleMovement(float axisx, float axisy)
     {
-        anim.SetFloat("DX", axisx);
-        anim.SetFloat("DY", axisy);
-
         if (agent != null && agent.enabled && agent.isOnNavMesh)
+        {
             agent.SetDestination(targetPosition);
+        }
 
         if (agent.pathStatus == NavMeshPathStatus.PathInvalid || agent.pathStatus == NavMeshPathStatus.PathPartial)
         {
-            //targetPosition = transform.position + new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0f) * 5f;
-            targetPosition = originalPosition;
             if (agent != null && agent.enabled && agent.isOnNavMesh)
+            {
+                StopAgentAndClearPath();
+                targetPosition = transform.position + new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0f) * 5f;
                 agent.SetDestination(targetPosition);
+            }
         }
 
         if (lastpos != transform.position)
         {
             lastpos = transform.position;
+
+            if (Time.fixedTime - animUpdateFrequency > AnimUpdateFreq)
+            {
+                animUpdateFrequency = Time.fixedTime;
+                anim.SetFloat("DX", axisx);
+                anim.SetFloat("DY", axisy);
+            }
+
             if (axisx != 0f && axisy != 0f) anim.SetBool("Walk", true);
             else anim.SetBool("Walk", false);
         }

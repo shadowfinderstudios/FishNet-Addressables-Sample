@@ -15,7 +15,7 @@ This sample showcases different topics, among them:
 * Taking damage zones (campfire), healing zones, and stat HUD.
 * Health, mana and stamina loss/gain and regen.
 * Death implemented.
-* NPCs - Still has a synchronization bug that needs to be worked on.
+* A wandering NPC was added
 
 ## Showcases
 
@@ -93,9 +93,9 @@ Showcase 8 - Swing pickaxe, shoot arrows, or cast summon tree to affect stats
 
 3. Wait and watch stamina regen
 
-Showcase 9 - NPC Turkey
+Showcase 9 - NPC Wanderer
 
-1. Watch the turkey run around aimlessly.
+1. Watch the wandering NPC run around aimlessly.
 
 2. ???
 
