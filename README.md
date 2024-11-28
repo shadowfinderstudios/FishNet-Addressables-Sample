@@ -214,3 +214,7 @@ CCBYSA By Shadowfinder Studios, based on Jinn's Dwarven Cursor
 https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
 https://opengameart.org/content/dwarven-cursor
 
+LPC Shadow
+CC0 By Dr. Jamgo
+https://opengameart.org/content/shadow-for-lpc-sprite
+
