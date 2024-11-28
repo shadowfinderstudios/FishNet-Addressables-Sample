@@ -121,3 +121,7 @@ LPC Shadow
 CC0 By Dr. Jamgo
 https://opengameart.org/content/shadow-for-lpc-sprite
 
+LPC Turkey
+CCBY By bluecarrot16
+https://opengameart.org/content/lpc-turkey
+

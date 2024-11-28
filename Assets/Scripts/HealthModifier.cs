@@ -30,7 +30,7 @@ public class HealthModifier : NetworkBehaviour
             }
 
             ModifyHealth(collision.gameObject, _healthModifier);
-            _audioSource?.PlayOneShot(_audioClip);
+            if (_audioClip != null) _audioSource.PlayOneShot(_audioClip);
         }
     }
 

@@ -8,6 +8,8 @@ TagManager:
   - Boat
   - SceneLoader
   - Rock
+  - Tilemap
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -16,10 +18,10 @@ TagManager:
   - Water
   - UI
   - Characters
-  - Trees
+  - NPC
   - Vehicles
-  - 
-  - 
+  - Objects
+  - Trees
   - 
   - 
   - 

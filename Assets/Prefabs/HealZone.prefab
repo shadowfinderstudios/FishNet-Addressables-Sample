@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7136773844350591479}
   - component: {fileID: 1699412538955808816}
   - component: {fileID: 8304387261494826238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,8 @@ MonoBehaviour:
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
   <PredictedOwner>k__BackingField: {fileID: 0}
-  NetworkBehaviours: []
+  NetworkBehaviours:
+  - {fileID: 1699412538955808816}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
   RuntimeParentNetworkBehaviour: {fileID: 0}
@@ -216,7 +217,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _preventDespawnOnDisconnect: 0
   _defaultDespawnType: 0
-  _initializedValusSet: 0
+  _initializedValusSet: 1
   NetworkObserver: {fileID: 0}
   _enablePrediction: 0
   _predictionType: 0
@@ -231,14 +232,14 @@ MonoBehaviour:
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 1
-  <PrefabId>k__BackingField: 65535
+  <PrefabId>k__BackingField: 6
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 10450119802762941043
   <SceneId>k__BackingField: 0
   SerializedTransformProperties:
-    Position: {x: 0, y: 0, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 0}
-    LocalScale: {x: 0, y: 0, z: 0}
+    Position: {x: -4.804, y: 12.123, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 0.63746995, y: 0.63746995, z: 0.63746995}
 --- !u!61 &7136773844350591479
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -273,17 +274,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.14350498, y: -1.9432955}
+  m_Offset: {x: 0.14350498, y: -0.33369473}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.2673936}
     oldSize: {x: 8, y: 8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.8177292, y: 1.896905}
+  m_Size: {x: 2.8177292, y: 1.3304358}
   m_EdgeRadius: 0
 --- !u!114 &1699412538955808816
 MonoBehaviour:
@@ -297,9 +298,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13043c40acb29cd4e87394767f6d19fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 255
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 2643374356196147006}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 2643374356196147006}
   _healthModifier: 2
   _affectWhilePresent: 1
   _frequency: 0.5

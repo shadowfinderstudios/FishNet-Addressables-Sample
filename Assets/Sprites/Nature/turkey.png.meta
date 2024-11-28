@@ -1,106 +1,103 @@
 fileFormatVersion: 2
-guid: a76976179a1569b4181c163022776078
+guid: ef8db6921d2bfc24182b4eeb8e6d52df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8751532389763486895
-    second: Aura38_0
+      213: -5382658046807761749
+    second: turkey_0
   - first:
-      213: 6084235425536338761
-    second: Aura38_1
+      213: 5997627669782384628
+    second: turkey_1
   - first:
-      213: -9016163005116112941
-    second: Aura38_2
+      213: 5293862805287349389
+    second: turkey_2
   - first:
-      213: -7150823121477161040
-    second: Aura38_3
+      213: -98078740983374367
+    second: turkey_3
   - first:
-      213: -1750458113506960047
-    second: Aura38_4
+      213: 8054974139972272733
+    second: turkey_4
   - first:
-      213: 8637022122483269810
-    second: Aura38_5
+      213: -1016258897512488500
+    second: turkey_5
   - first:
-      213: -4540398091551134979
-    second: Aura38_6
+      213: -2310333377721837077
+    second: turkey_6
   - first:
-      213: 4529651229013141611
-    second: Aura38_7
+      213: -5637928711717010168
+    second: turkey_7
   - first:
-      213: -6922001075991656784
-    second: Aura38_8
+      213: 4316271672201301939
+    second: turkey_8
   - first:
-      213: -7284574648899235397
-    second: Aura38_9
+      213: -4087223223742930167
+    second: turkey_9
   - first:
-      213: -5237221525083959496
-    second: Aura38_10
+      213: 5241158922701202512
+    second: turkey_10
   - first:
-      213: -6447457378047829301
-    second: Aura38_11
+      213: -2738290447371832239
+    second: turkey_11
   - first:
-      213: 8678034617908409669
-    second: Aura38_12
+      213: -3573575653302980158
+    second: turkey_12
   - first:
-      213: -4826297163599130099
-    second: Aura38_13
+      213: -3599010611888853232
+    second: turkey_13
   - first:
-      213: -43613311227705382
-    second: Aura38_14
+      213: 1509091213232923408
+    second: turkey_14
   - first:
-      213: 7764113555794564828
-    second: Aura38_15
+      213: 5166741424262104139
+    second: turkey_15
   - first:
-      213: -8053635138113762485
-    second: Aura38_16
+      213: -262698970049272201
+    second: turkey_16
   - first:
-      213: 8375118611266272013
-    second: Aura38_17
+      213: 9071273646457749907
+    second: turkey_17
   - first:
-      213: -5042977279768043649
-    second: Aura38_18
+      213: 8619370592498291980
+    second: turkey_18
   - first:
-      213: 1855659159351911580
-    second: Aura38_19
+      213: 6761700822827507898
+    second: turkey_19
   - first:
-      213: -1752441083276310533
-    second: Aura38_20
+      213: 8570137499360388358
+    second: turkey_20
   - first:
-      213: 8281403661947505685
-    second: Aura38_21
+      213: -5801299167296321141
+    second: turkey_21
   - first:
-      213: 7716766513857438163
-    second: Aura38_22
+      213: 6313412358204881797
+    second: turkey_22
   - first:
-      213: -2446099190728033850
-    second: Aura38_23
+      213: -1348333229767965953
+    second: turkey_23
   - first:
-      213: 540112752748459357
-    second: Aura38_24
+      213: -7359568421921151875
+    second: turkey_24
   - first:
-      213: -3888422521185845991
-    second: Aura38_25
+      213: -7239022061318676811
+    second: turkey_25
   - first:
-      213: -7902159306404639911
-    second: Aura38_26
+      213: 776870681540266963
+    second: turkey_26
   - first:
-      213: -4396214689105027110
-    second: Aura38_27
+      213: -2628781777631182231
+    second: turkey_27
   - first:
-      213: -7006989122171351381
-    second: Aura38_28
+      213: -6457353827650691126
+    second: turkey_28
   - first:
-      213: 1193459959191398277
-    second: Aura38_29
+      213: 6390277113168768729
+    second: turkey_29
   - first:
-      213: 8522432035743943961
-    second: Aura38_30
+      213: -1069368726108332941
+    second: turkey_30
   - first:
-      213: 8735767700109304852
-    second: Aura38_31
-  - first:
-      213: -8648609714171081814
-    second: Aura38_32
+      213: 5893036754384059284
+    second: turkey_31
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -196,705 +193,705 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Aura38_0
+      name: turkey_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac10a46605fc45b0800000000000000
+      internalID: -5382658046807761749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffce60c69adb3350800000000000000
+      internalID: 5997627669782384628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c2ece5c24977940800000000000000
+      internalID: 5293862805287349389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed1bab97ed83aef0800000000000000
+      internalID: -98078740983374367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d524100ad4409cf60800000000000000
+      internalID: 8054974139972272733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc120f5cae585e1f0800000000000000
+      internalID: -1016258897512488500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be9592c980c00ffd0800000000000000
+      internalID: -2310333377721837077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 805c12d25bd02c1b0800000000000000
+      internalID: -5637928711717010168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfc3af973a76eb30800000000000000
+      internalID: 4316271672201301939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 903631f02244747c0800000000000000
+      internalID: -4087223223742930167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05469f675465cb840800000000000000
+      internalID: 5241158922701202512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1547e80a853aff9d0800000000000000
+      internalID: -2738290447371832239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c134ee70eb186ec0800000000000000
+      internalID: -3573575653302980158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fe087baeebd0ec0800000000000000
+      internalID: -3599010611888853232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0136962867e51f410800000000000000
+      internalID: 1509091213232923408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44407763f3f3b740800000000000000
+      internalID: 5166741424262104139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: turkey_16
       rect:
         serializedVersion: 2
         x: 0
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa49d244750b37970800000000000000
-      internalID: 8751532389763486895
+      spriteID: 7762a57bda4ba5cf0800000000000000
+      internalID: -262698970049272201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_1
+      name: turkey_17
       rect:
         serializedVersion: 2
         x: 128
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94be0f442eb8f6450800000000000000
-      internalID: 6084235425536338761
+      spriteID: 3910a7dd153a3ed70800000000000000
+      internalID: 9071273646457749907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_2
+      name: turkey_18
       rect:
         serializedVersion: 2
         x: 256
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3df190b348720e280800000000000000
-      internalID: -9016163005116112941
+      spriteID: c051f41f2e72e9770800000000000000
+      internalID: 8619370592498291980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_3
+      name: turkey_19
       rect:
         serializedVersion: 2
         x: 384
         y: 384
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0bf24b8f14c23cc90800000000000000
-      internalID: -7150823121477161040
+      spriteID: ab0a916c21366dd50800000000000000
+      internalID: 6761700822827507898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15d973ebe9f15b7e0800000000000000
-      internalID: -1750458113506960047
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b04ec70cdddcd770800000000000000
-      internalID: 8637022122483269810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dfaab36edf34df0c0800000000000000
-      internalID: -4540398091551134979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 384
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b686dbd2bcd8cde30800000000000000
-      internalID: 4529651229013141611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_8
+      name: turkey_20
       rect:
         serializedVersion: 2
         x: 0
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b645aa12bc10ff90800000000000000
-      internalID: -6922001075991656784
+      spriteID: 60561ad26ae3fe670800000000000000
+      internalID: 8570137499360388358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_9
+      name: turkey_21
       rect:
         serializedVersion: 2
         x: 128
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb19b80c3fdf7ea90800000000000000
-      internalID: -7284574648899235397
+      spriteID: b898889d425ad7fa0800000000000000
+      internalID: -5801299167296321141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_10
+      name: turkey_22
       rect:
         serializedVersion: 2
         x: 256
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83f475b55c6a157b0800000000000000
-      internalID: -5237221525083959496
+      spriteID: 58bfc53071fbd9750800000000000000
+      internalID: 6313412358204881797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_11
+      name: turkey_23
       rect:
         serializedVersion: 2
         x: 384
         y: 256
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcadcfcbca70686a0800000000000000
-      internalID: -6447457378047829301
+      spriteID: ff243d04212c94de0800000000000000
+      internalID: -1348333229767965953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_12
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 54539fcb1829e6870800000000000000
-      internalID: 8678034617908409669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_13
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d02d23fec4c850db0800000000000000
-      internalID: -4826297163599130099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_14
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ad74bccaced056ff0800000000000000
-      internalID: -43613311227705382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_15
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd61ee8942cafbb60800000000000000
-      internalID: 7764113555794564828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_16
+      name: turkey_24
       rect:
         serializedVersion: 2
         x: 0
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4b002a038dbb3090800000000000000
-      internalID: -8053635138113762485
+      spriteID: d74253f438f8dd990800000000000000
+      internalID: -7359568421921151875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_17
+      name: turkey_25
       rect:
         serializedVersion: 2
         x: 128
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0bf940f0066a3470800000000000000
-      internalID: 8375118611266272013
+      spriteID: 5be52e90ac3d98b90800000000000000
+      internalID: -7239022061318676811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_18
+      name: turkey_26
       rect:
         serializedVersion: 2
         x: 256
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7f5f0502eeb30ab0800000000000000
-      internalID: -5042977279768043649
+      spriteID: 3db8f91d4cff7ca00800000000000000
+      internalID: 776870681540266963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_19
+      name: turkey_27
       rect:
         serializedVersion: 2
         x: 384
         y: 128
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c94ee597c20a0c910800000000000000
-      internalID: 1855659159351911580
+      spriteID: 9620640b6e0b48bd0800000000000000
+      internalID: -2628781777631182231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_20
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf7c38d9e141ea7e0800000000000000
-      internalID: -1752441083276310533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_21
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 51c0008f0c47de270800000000000000
-      internalID: 8281403661947505685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_22
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3d12a195246771b60800000000000000
-      internalID: 7716766513857438163
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_23
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6c9f84bfeb5bd0ed0800000000000000
-      internalID: -2446099190728033850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_24
+      name: turkey_28
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d55fa3edfadde7700800000000000000
-      internalID: 540112752748459357
+      spriteID: acf1fd108eed266a0800000000000000
+      internalID: -6457353827650691126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_25
+      name: turkey_29
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91db618915c890ac0800000000000000
-      internalID: -3888422521185845991
+      spriteID: 9deabb26d23dea850800000000000000
+      internalID: 6390277113168768729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_26
+      name: turkey_30
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95b443f6af3e55290800000000000000
-      internalID: -7902159306404639911
+      spriteID: 37c96623fc6d821f0800000000000000
+      internalID: -1069368726108332941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Aura38_27
+      name: turkey_31
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 128
         height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2436104}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: adf5a8b48028df2c0800000000000000
-      internalID: -4396214689105027110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_28
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bae43fb948c22ce90800000000000000
-      internalID: -7006989122171351381
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_29
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 58761497285009010800000000000000
-      internalID: 1193459959191398277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_30
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 91d4de068c2c54670800000000000000
-      internalID: 8522432035743943961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Aura38_31
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 414a85d607eab3970800000000000000
-      internalID: 8735767700109304852
+      spriteID: 49bf16994b548c150800000000000000
+      internalID: 5893036754384059284
       vertices: []
       indices: 
       edges: []
@@ -903,7 +900,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f2250f28bcedece429d98a934f79cd94
+    spriteID: 56adc29c8569ae342a3765907ac6e6b9
     internalID: 0
     vertices: []
     indices: 
@@ -913,38 +910,38 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Aura38_0: 8751532389763486895
-      Aura38_1: 6084235425536338761
-      Aura38_10: -5237221525083959496
-      Aura38_11: -6447457378047829301
-      Aura38_12: 8678034617908409669
-      Aura38_13: -4826297163599130099
-      Aura38_14: -43613311227705382
-      Aura38_15: 7764113555794564828
-      Aura38_16: -8053635138113762485
-      Aura38_17: 8375118611266272013
-      Aura38_18: -5042977279768043649
-      Aura38_19: 1855659159351911580
-      Aura38_2: -9016163005116112941
-      Aura38_20: -1752441083276310533
-      Aura38_21: 8281403661947505685
-      Aura38_22: 7716766513857438163
-      Aura38_23: -2446099190728033850
-      Aura38_24: 540112752748459357
-      Aura38_25: -3888422521185845991
-      Aura38_26: -7902159306404639911
-      Aura38_27: -4396214689105027110
-      Aura38_28: -7006989122171351381
-      Aura38_29: 1193459959191398277
-      Aura38_3: -7150823121477161040
-      Aura38_30: 8522432035743943961
-      Aura38_31: 8735767700109304852
-      Aura38_4: -1750458113506960047
-      Aura38_5: 8637022122483269810
-      Aura38_6: -4540398091551134979
-      Aura38_7: 4529651229013141611
-      Aura38_8: -6922001075991656784
-      Aura38_9: -7284574648899235397
+      turkey_0: -5382658046807761749
+      turkey_1: 5997627669782384628
+      turkey_10: 5241158922701202512
+      turkey_11: -2738290447371832239
+      turkey_12: -3573575653302980158
+      turkey_13: -3599010611888853232
+      turkey_14: 1509091213232923408
+      turkey_15: 5166741424262104139
+      turkey_16: -262698970049272201
+      turkey_17: 9071273646457749907
+      turkey_18: 8619370592498291980
+      turkey_19: 6761700822827507898
+      turkey_2: 5293862805287349389
+      turkey_20: 8570137499360388358
+      turkey_21: -5801299167296321141
+      turkey_22: 6313412358204881797
+      turkey_23: -1348333229767965953
+      turkey_24: -7359568421921151875
+      turkey_25: -7239022061318676811
+      turkey_26: 776870681540266963
+      turkey_27: -2628781777631182231
+      turkey_28: -6457353827650691126
+      turkey_29: 6390277113168768729
+      turkey_3: -98078740983374367
+      turkey_30: -1069368726108332941
+      turkey_31: 5893036754384059284
+      turkey_4: 8054974139972272733
+      turkey_5: -1016258897512488500
+      turkey_6: -2310333377721837077
+      turkey_7: -5637928711717010168
+      turkey_8: 4316271672201301939
+      turkey_9: -4087223223742930167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
