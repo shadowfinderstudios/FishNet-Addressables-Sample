@@ -83,7 +83,8 @@ public class PlayerController : TickNetworkBehaviour
     MapManager _mapManager;
     NavMeshAgent _navMeshAgent;
     Canvas _canvas;
-    DialogueManager _dialogueManager;
+    MessageFader _dialogueFader;
+    MessageFader _messageFader;
     SpriteRenderer _healthStatusSpriteRenderer;
     SpriteRenderer _manaStatusSpriteRenderer;
     SpriteRenderer _staminaStatusSpriteRenderer;
@@ -681,13 +682,20 @@ public class PlayerController : TickNetworkBehaviour
             _bowTimer = Time.fixedTime;
 
             _canvas = FindFirstObjectByType<Canvas>();
-            _dialogueManager = _canvas.GetComponent<DialogueManager>();
-
-            _dialogueManager.Title.text = "...";
-            _dialogueManager.Text.text = "Welcome to the showcase.";
-
-            _dialogueManager.FadeIn = true;
-            _dialogueManager.DelayedFadeout(5f);
+            var messageFaders = _canvas.GetComponentsInChildren<MessageFader>();
+            foreach (var mf in messageFaders)
+            {
+                if (mf.Name == "Dialogue")
+                {
+                    _dialogueFader = mf;
+                    _dialogueFader.Title.text = "...";
+                    _dialogueFader.Content.text = "Welcome to the showcase.";
+                    _dialogueFader.FadeIn = true;
+                    _dialogueFader.DelayedFadeout(5f);
+                }
+                else if (mf.Name == "Message")
+                    _messageFader = mf;
+            }
 
             _audioSource = GetComponent<AudioSource>();
 
@@ -770,6 +778,21 @@ public class PlayerController : TickNetworkBehaviour
         {
             anim.SetFloat(name, value);
         }
+    }
+
+    public void EnterRegionArea(string regionName, string regionDescription, string regionType)
+    {
+        if (_messageFader != null)
+        {
+            _messageFader.Title.text = regionName;
+            _messageFader.Content.text = regionDescription;
+            _messageFader.FadeIn = true;
+            _messageFader.DelayedFadeout(5f);
+        }
+    }
+
+    public void ExitRegionArea(string regionName, string regionDescription, string regionType)
+    {
     }
 
     #endregion
