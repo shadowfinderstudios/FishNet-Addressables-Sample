@@ -780,6 +780,10 @@ public class PlayerController : TickNetworkBehaviour
         }
     }
 
+    #endregion
+
+    #region Event Handlers
+    
     public void EnterRegionArea(string regionName, string regionDescription, string regionType)
     {
         if (_messageFader != null)
