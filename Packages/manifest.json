@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.crashkonijn.goap": "https://github.com/crashkonijn/GOAP.git?path=/Package#3.0.24",
     "com.h8man.2d.navmeshplus": "https://github.com/h8man/NavMeshPlus.git",
     "com.unity.addressables": "2.2.2",
     "com.unity.ai.navigation": "2.0.5",
