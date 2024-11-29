@@ -2,7 +2,7 @@ using UnityEngine;
 using FishNet.Object;
 using FishNet.Managing.Scened;
 using FishNet.Connection;
-
+ 
 public class SceneLoader : NetworkBehaviour
 {
     [SerializeField] string _sceneName;

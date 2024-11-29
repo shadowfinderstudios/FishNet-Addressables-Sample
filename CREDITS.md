@@ -125,3 +125,35 @@ LPC Turkey
 CCBY By bluecarrot16
 https://opengameart.org/content/lpc-turkey
 
+LPC Blacksmith
+CCBY By bluecarrot16
+https://opengameart.org/content/lpc-blacksmith
+
+LPC Ore and Forge
+CCBY By bluecarrot16
+https://opengameart.org/content/lpc-ore-and-forge
+
+LPC Floors
+CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm), William Thompson (William.Thompsonj), Hyptosis, SpiderDave, Cougarmint, Stephen Challener (Redshrike), Bonsaiheldin, Tyler Olsen (Roots), Jetrel, jestan, The Open Surge team (http://opensnc.sourceforge.net), Gaurav Munjal, Reemax, Silveira Neto, bleutailfly, Casper Nilsson, NaRNeRZz, Buch, keith karnage, Arthur Carvalho, Guilherme Vieira (n2liquid), Chris Hamons (maintainer).
+https://opengameart.org/content/lpc-floors
+
+LPC Walls
+CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm), Daniel Armstrong (HughSpectrum), William Thompson (William.Thompsonj), Hyptosis, Zabin, Daniel Cook, Guido Bos, SpiderDave, Cougarmint, Stephen Challener (Redshrike), Matthew Nash, Wolthera van Hövell tot Westerflier (TheraHedwig), Reemax, bleutailfly, NaRNeRZz, Sir Spummington, Casper Nilsson, KnoblePersona.
+https://opengameart.org/content/lpc-walls
+
+LPC Wooden Furniture
+CCBYSA By bluecarrot16, Baŝto, Lanea Zimmerman (Sharm), William Thompson, Tuomo Untinen (Reemax), Janna/Lilius/Jannax.
+https://opengameart.org/content/lpc-wooden-furniture
+
+LPC Upholstery
+CCBY/CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm). https://opengameart.org/content/lpc-upholstery
+https://opengameart.org/content/lpc-interior-castle-tiles
+
+LPC Windows & Doors
+CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm) and Daniel Armstrong (HughSpectrum), Casper Nilsson, Anamaris, Krusmira, Keith Karnage, Guido Bos, and Talosaurus.
+https://opengameart.org/content/lpc-windows-doors
+
+LPC Workshop
+CCBY By bluecarrot16
+https://opengameart.org/content/lpc-woodshop
+
