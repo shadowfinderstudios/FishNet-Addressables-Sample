@@ -17,7 +17,7 @@ This sample showcases different topics, among them:
 * Taking damage zones (campfire), healing zones, and stat HUD.
 * Health, mana and stamina loss/gain and regen.
 * Death implemented.
-* A wandering NPC was added and GOAP support for it added
+* A wandering NPC was added
 
 ## Showcases
 
@@ -95,7 +95,7 @@ Showcase 8 - Swing pickaxe, shoot arrows, or cast summon tree to affect stats
 
 3. Wait and watch stamina regen
 
-Showcase 9 - NPC Wanderer (Now with GOAP support)
+Showcase 9 - NPC Wanderer
 
 1. Watch the wandering NPC run around aimlessly.
 
