@@ -490,7 +490,7 @@ namespace FishNet.Managing.Timing
         /// <param name="automatic"></param>
         private void SetAutomaticPhysicsSimulation(bool automatic)
         {
-#if UNITY_2022_1_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
             if (automatic)
             {
                 Physics.simulationMode = SimulationMode.FixedUpdate;

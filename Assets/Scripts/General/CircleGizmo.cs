@@ -3,11 +3,11 @@ using UnityEngine;
 public class CircleGizmo : MonoBehaviour
 {
     [SerializeField] Color _color = Color.white;
+    [SerializeField] float _radius = 1f;
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = _color;
-        float radius = transform.localScale.magnitude;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, _radius);
     }
 }
