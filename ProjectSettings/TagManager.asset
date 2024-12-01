@@ -10,6 +10,7 @@ TagManager:
   - Rock
   - Tilemap
   - Water
+  - NPC
   layers:
   - Default
   - TransparentFX
