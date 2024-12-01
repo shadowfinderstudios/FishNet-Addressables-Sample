@@ -104,47 +104,6 @@ Showcase 9 - NPC Wanderer
 
 TODO: More showcases.
 
-Showcase ? - Emotes and animations.
-Showcase ? - Interact with chests and generate loot randomly.
-Showcase ? - Synchronize a shop and inventory system.
-Showcase ? - Item pickup and drop.
-Showcase ? - Set up quests.
-Showcase ? - Synchronize AI (goap, behavior trees, etc?).
-Showcase ? - Pet follower.
-Showcase ? - Interact with levers, buttons, switches, pressure plates
-Showcase ? - Interact with doors.
-Showcase ? - Puzzles (e.g. two players have to use levers or pressure plates, puzzle blocks, etc)
-Showcase ? - Area of effect
-Showcase ? - Breakable objects (pots, crates, barrels, etc)
-Showcase ? - Stealth mechanics (noise detection, player visibility)
-Showcase ? - Crafting
-Showcase ? - Base building
-Showcase ? - Chat (global, guild, local, private) + Chat history
-Showcase ? - Friend lists
-Showcase ? - Spectating
-Showcase ? - PVE Combat
-Showcase ? - PVP Combat
-Showcase ? - Leaderboards
-Showcase ? - Matchmaking
-Showcase ? - Character wearables
-Showcase ? - Character customization - customizing looks
-Showcase ? - Synchronized dynamic weather; rain, snow, lightning, autumn leaves, etc.
-Showcase ? - Farming (plowing, seeding, growth, harvesting, carrying, stashing, buying, selling)
-Showcase ? - Day / night cycles
-Showcase ? - Water sources, filling containers
-Showcase ? - Chopping for wood, lighting fires, cooking food
-Showcase ? - Reading / writing notes, scrolls, books and tablets
-Showcase ? - Anvil and workbench for blacksmith and other crafting
-Showcase ? - Guild systems
-Showcase ? - Trade systems - auction house
-Showcase ? - Economy systems
-Showcase ? - Player housing ownership
-Showcase ? - Dynamic world events
-Showcase ? - NPC Faction system
-Showcase ? - War and siege battles
-Showcase ? - Alchemy
-Showcase ? - Tailoring
-Showcase ? - Fishing
 
 ## Art and Sound Credits
 
