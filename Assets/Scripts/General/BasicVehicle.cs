@@ -13,9 +13,11 @@ public class BasicVehicle : TickNetworkBehaviour
     Vector3 _lastpos = Vector3.zero;
     Rigidbody2D _rigidbody;
     float _braketime = 0f;
+    AudioSource _audioSource;
 
     private void OnEnable()
     {
+        _audioSource = GetComponent<AudioSource>();
         Invoke("SetupRigidbody", 3);
     }
 
@@ -34,9 +36,14 @@ public class BasicVehicle : TickNetworkBehaviour
         AnimSetBool(_vehicleAnimator, vehicleRunningBool, true);
         AnimSetBool(_secondaryAnimator, vehicleRunningBool, true);
 
-        transform.Find("WaterEffect").gameObject.SetActive(true);
+        transform.Find("WaterEffect").gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
         _isMounted = true;
+
+        if (_audioSource.time != 0)
+            _audioSource.UnPause();
+        else
+            _audioSource.Play();
     }
 
     public void Unmount()
@@ -49,9 +56,13 @@ public class BasicVehicle : TickNetworkBehaviour
         AnimSetBool(_secondaryAnimator, vehicleRunningBool, false);
         GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
 
+        transform.Find("WaterEffect").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
         _rigidbody.simulated = true;
         _rigidbody.linearVelocity = Vector2.zero;
+
+        _audioSource.Pause();
     }
 
     protected override void TimeManager_OnTick()

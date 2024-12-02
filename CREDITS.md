@@ -157,3 +157,8 @@ LPC Workshop
 CCBY By bluecarrot16
 https://opengameart.org/content/lpc-woodshop
 
+Market on the Sea Music
+CCBY By InspectorJ
+"Market on the Sea" Composed by Jonathan Shaw (www.jshaw.co.uk)
+https://opengameart.org/content/market-on-the-sea-rpg-orchestral-essentials-village-music
+
