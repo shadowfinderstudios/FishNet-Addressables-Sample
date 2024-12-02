@@ -170,3 +170,7 @@ RPG GUI Construction Kit
 CCBY By Lamoot
 https://opengameart.org/content/rpg-gui-construction-kit-v10
 
+Mnimap
+CC0 By kindland
+https://opengameart.org/content/mnimap
+
