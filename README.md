@@ -18,6 +18,7 @@ This sample showcases different topics, among them:
 * Health, mana and stamina loss/gain and regen.
 * Death implemented.
 * A wandering NPC was added (Now via Unity Behavior Graph)
+* Chat system
 
 ## Showcases
 
@@ -100,6 +101,14 @@ Showcase 9 - NPC Wanderer
 1. Watch the wandering NPC run around aimlessly. (Now via Unity Behavior Graph)
 
 2. ???
+
+Showcase 10 - Chat system (unauthenticated for testing purposes)
+
+1. Jot some text in the chat box.
+
+2. See the other side respond.
+
+3. Random names are seeded with the client id for testing purposes.
 
 
 TODO: More showcases.
