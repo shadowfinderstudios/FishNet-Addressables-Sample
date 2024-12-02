@@ -51,6 +51,7 @@ public class PlayerController : TickNetworkBehaviour
     [SerializeField] GameObject _staminaStatus;
     [SerializeField] Sprite _damageStatusSprite;
     [SerializeField] Sprite _healthStatusSprite;
+    [SerializeField] TMP_InputField _inputField;
 
     [Header("Mining")]
     [SerializeField] AudioClip _destroyRockSound;
@@ -264,6 +265,8 @@ public class PlayerController : TickNetworkBehaviour
 
         if (!base.HasAuthority) return;
         if (AnimGetBool(_bodyAnim, "Dead")) return;
+
+        if (_inputField != null && _inputField.isFocused) return;
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -585,7 +588,25 @@ public class PlayerController : TickNetworkBehaviour
             _lastpos = transform.position;
         }
 
+        if (Time.fixedTime - _healthRegenTimer > 1f)
+        {
+            _healthRegenTimer = Time.fixedTime;
+            if (_health.Value < 100) ModifyHealth(1, false);
+        }
+        if (Time.fixedTime - _manaRegenTimer > 1f)
+        {
+            _manaRegenTimer = Time.fixedTime;
+            if (_mana.Value < 100) ModifyMana(1, false);
+        }
+        if (Time.fixedTime - _staminaRegenTimer > 1f)
+        {
+            _staminaRegenTimer = Time.fixedTime;
+            if (_stamina.Value < 100) ModifyStamina(1, false);
+        }
+
         if (!_canMove) return;
+
+        if (_inputField != null && _inputField.isFocused) return;
 
         float axisx = Input.GetAxis("Horizontal");
         float axisy = Input.GetAxis("Vertical");
@@ -629,22 +650,6 @@ public class PlayerController : TickNetworkBehaviour
         {
             if (_isWalking && !_vehicleUpdate.Value.isMounted) AnimSetBool(_bodyAnim, "Walk", _isWalking=false);
         }
-
-        if (Time.fixedTime - _healthRegenTimer > 1f)
-        {
-            _healthRegenTimer = Time.fixedTime;
-            if (_health.Value < 100) ModifyHealth(1, false);
-        }
-        if (Time.fixedTime - _manaRegenTimer > 1f)
-        {
-            _manaRegenTimer = Time.fixedTime;
-            if (_mana.Value < 100) ModifyMana(1, false);
-        }
-        if (Time.fixedTime - _staminaRegenTimer > 1f)
-        {
-            _staminaRegenTimer = Time.fixedTime;
-            if (_stamina.Value < 100) ModifyStamina(1, false);
-        }
     }
 
     #endregion
@@ -665,6 +670,9 @@ public class PlayerController : TickNetworkBehaviour
     {
         base.OnStartClient();
 
+        var found = GameObject.Find("ChatField");
+        _inputField = GameObject.Find("ChatField").GetComponent<TMP_InputField>();
+
         _healthStatusSpriteRenderer = _healthStatus.GetComponent<SpriteRenderer>();
         _manaStatusSpriteRenderer = _manaStatus.GetComponent<SpriteRenderer>();
         _staminaStatusSpriteRenderer = _staminaStatus.GetComponent<SpriteRenderer>();
@@ -677,6 +685,7 @@ public class PlayerController : TickNetworkBehaviour
 
         if (base.Owner.IsLocalClient)
         {
+            var found2 = GameObject.Find("ChatField");
             _castTimer = Time.fixedTime;
             _swingTimer = Time.fixedTime;
             _bowTimer = Time.fixedTime;

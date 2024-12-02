@@ -162,3 +162,11 @@ CCBY By InspectorJ
 "Market on the Sea" Composed by Jonathan Shaw (www.jshaw.co.uk)
 https://opengameart.org/content/market-on-the-sea-rpg-orchestral-essentials-village-music
 
+RPG Game UI
+CC0 By Wyrmheart
+https://opengameart.org/content/rpg-game-ui
+
+RPG GUI Construction Kit
+CCBY By Lamoot
+https://opengameart.org/content/rpg-gui-construction-kit-v10
+
