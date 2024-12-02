@@ -5,7 +5,6 @@ using Action = Unity.Behavior.Action;
 using Unity.Properties;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
-using static UnityEngine.UI.Image;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(
@@ -27,6 +26,7 @@ public partial class WanderAction : Action
     [SerializeReference] public BlackboardVariable<string> AnimatorDirectionYParam = new BlackboardVariable<string>("DY");
 
     NavMeshAgent _navMeshAgent;
+    NavmeshController _navmeshController;
     Animator _animator;
 
     [CreateProperty]
@@ -44,8 +44,20 @@ public partial class WanderAction : Action
             return Status.Failure;
         }
 
-        Initialize();
+        _navmeshController = Agent.Value.GetComponent<NavmeshController>();
+        if (_navmeshController == null)
+        {
+            LogFailure("Navmesh Controller is not initialized.");
+            return Status.Failure;
+        }
 
+        if (!_navmeshController.IsServerInitialized)
+        {
+            Debug.Log("Navmesh Controller is server only.");
+            return Status.Uninitialized;
+        }
+
+        Initialize();
         _waiting = false;
         _waitTimer = 0.0f;
         MoveToRandomPosition();
@@ -54,12 +66,14 @@ public partial class WanderAction : Action
 
     bool IsNavMeshValid()
     {
-        return _navMeshAgent != null && _navMeshAgent.enabled && _navMeshAgent.isOnNavMesh;
+        return _navMeshAgent != null && _navMeshAgent != null &&
+            _navMeshAgent.enabled && _navMeshAgent.isOnNavMesh;
     }
 
     protected override Status OnUpdate()
     {
         if (Agent.Value == null) return Status.Failure;
+        if (!_navmeshController.IsServerInitialized) return Status.Running;
 
         if (_waiting)
         {
@@ -77,7 +91,10 @@ public partial class WanderAction : Action
             if (_animator != null && _navMeshAgent != null)
             {
                 _animator.SetFloat(AnimatorSpeedParam, _navMeshAgent.velocity.magnitude);
-                _animator.SetBool(AnimatorMoveStateParam, true);
+                if (_navMeshAgent.velocity.magnitude > 0.0f)
+                    _animator.SetBool(AnimatorMoveStateParam, true);
+                else
+                    _animator.SetBool(AnimatorMoveStateParam, false);
             }
 
             if (IsNavMeshValid() && _navMeshAgent.remainingDistance <= DistanceThreshold)
@@ -130,7 +147,7 @@ public partial class WanderAction : Action
         ResetAnimSpeed();
 
         _navMeshAgent = Agent.Value.GetComponentInChildren<NavMeshAgent>();
-        if (_navMeshAgent != null)
+        if (_navMeshAgent != null && _navmeshController != null)
         {
             _navMeshAgent.enabled = true;
             _navMeshAgent.updateRotation = false;
@@ -144,19 +161,30 @@ public partial class WanderAction : Action
 
     void MoveToRandomPosition()
     {
-        Vector3 lastPosition = Agent.Value.transform.position;
-        Vector3 randomDirection = Random.insideUnitSphere * Radius.Value;
-        _currentTarget = Origin.Value + randomDirection;
-
-        if (IsNavMeshValid()) _navMeshAgent.SetDestination(_currentTarget);
-        
-        if (_animator != null)
+        if (IsNavMeshValid())
         {
-            _animator.SetFloat(AnimatorSpeedParam, Speed.Value);
+            Vector3 lastPosition = Agent.Value.transform.position;
 
-            Vector2 direction = (_currentTarget - lastPosition).normalized;
-            _animator.SetFloat(AnimatorDirectionXParam, direction.x);
-            _animator.SetFloat(AnimatorDirectionYParam, direction.y);
+            _currentTarget = Origin.Value + new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0f) * Radius.Value;
+            _navMeshAgent.SetDestination(_currentTarget);
+
+            if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
+                _navMeshAgent.pathStatus == NavMeshPathStatus.PathPartial)
+            {
+                _navMeshAgent.ResetPath();
+                _navMeshAgent.velocity = Vector3.zero;
+                _currentTarget = Origin.Value + new Vector3(Random.insideUnitCircle.x, Random.insideUnitCircle.y, 0f) * Radius.Value;
+                _navMeshAgent.SetDestination(_currentTarget);
+            }
+
+            if (_animator != null)
+            {
+                _animator.SetFloat(AnimatorSpeedParam, Speed.Value);
+
+                Vector2 direction = (_currentTarget - lastPosition).normalized;
+                _animator.SetFloat(AnimatorDirectionXParam, direction.x);
+                _animator.SetFloat(AnimatorDirectionYParam, direction.y);
+            }
         }
     }
 }
