@@ -1,4 +1,4 @@
-# FishNet-Addressables-Showcase
+# FishNet-Showcase
 
 <img src="screenshot.jpg" width="1250px"><br>
 
