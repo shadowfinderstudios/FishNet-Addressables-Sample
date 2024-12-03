@@ -98,6 +98,14 @@ Showcase 10 - Chat system (unauthenticated for testing purposes)
 
 3. Random names are seeded with the client id for testing purposes.
 
+Showcase 11 - Behavior Graph for a Dockworker
+
+1. Dockworker gathers a bag if available.
+
+2. And, takes it onto the ship, if there is room in the pile.
+
+3. Then, deposits the bag and repeats.
+
 
 TODO: More showcases.
 
