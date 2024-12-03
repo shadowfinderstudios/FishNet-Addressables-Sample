@@ -6,19 +6,7 @@ A W.I.P. 2D URP showcase for FishNet in Unity created by Shadowfinder Studios. W
 
 ## Features
 
-This sample showcases different topics, among them:
-* Addressables.
-* Scene loading; global, with addressable loading.
-* Rideable vehicles; rowboat.
-* Mineable resources: rocks.
-* Network switchable character outfits.
-* Proximity radio using an observable distance condition and trigger.
-* Shooting arrows.
-* Taking damage zones (campfire), healing zones, and stat HUD.
-* Health, mana and stamina loss/gain and regen.
-* Death implemented.
-* A wandering NPC was added (Now via Unity Behavior Graph)
-* Chat system
+[Feature List](Features.md)
 
 ## Showcases
 
