@@ -36,7 +36,9 @@ public class BasicVehicle : TickNetworkBehaviour
         AnimSetBool(_vehicleAnimator, vehicleRunningBool, true);
         AnimSetBool(_secondaryAnimator, vehicleRunningBool, true);
 
-        transform.Find("WaterEffect").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        var waterEffect = transform.Find("WaterEffect");
+        if (waterEffect != null)
+            waterEffect.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
         _isMounted = true;
 
@@ -56,7 +58,9 @@ public class BasicVehicle : TickNetworkBehaviour
         AnimSetBool(_secondaryAnimator, vehicleRunningBool, false);
         GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
 
-        transform.Find("WaterEffect").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        var waterEffect = transform.Find("WaterEffect");
+        if (waterEffect != null)
+            waterEffect.gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
         _rigidbody.simulated = true;

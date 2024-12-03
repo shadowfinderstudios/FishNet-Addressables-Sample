@@ -19,6 +19,7 @@ using FishNet.Utility.Template;
 
 using GameKit.Dependencies.Utilities;
 using TMPro;
+using UnityEngine.Tilemaps;
 
 public class PlayerController : TickNetworkBehaviour
 {
@@ -137,16 +138,38 @@ public class PlayerController : TickNetworkBehaviour
         }
     }
 
+    bool GetVehicleBoundsAndRenderer(Transform vt, out Bounds bounds, out SpriteRenderer sr, out TilemapRenderer tr)
+    {
+        sr = null;
+        tr = null;
+        bounds = new Bounds();
+
+        sr = vt.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            bounds = sr.bounds;
+            sr.sortingOrder = -1;
+        }
+        else
+        {
+            tr = vt.GetComponentInChildren<TilemapRenderer>();
+            if (tr == null) return false;
+
+            bounds = tr.bounds;
+            tr.sortingOrder = -1;
+        }
+        return true;
+    }
+
     void OnVehicleChanged(VehicleUpdate oldValue, VehicleUpdate newValue, bool asServer)
     {
         var vt = newValue.vehicleTransform;
 
         if (newValue.isMounted)
         {
-            var sr = vt.GetComponent<SpriteRenderer>();
-            sr.sortingOrder = -1;
+            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds, out SpriteRenderer srend, out TilemapRenderer trend)) return;
 
-            newValue.guestTransforms[0].position = vt.position + new Vector3(0, sr.bounds.extents.y * MountOffsetY, 0);
+            newValue.guestTransforms[0].position = vt.position + new Vector3(0, bounds.extents.y * MountOffsetY, 0);
 
             foreach (var tr in newValue.guestTransforms)
             {
@@ -161,7 +184,7 @@ public class PlayerController : TickNetworkBehaviour
         }
         else
         {
-            var sr = vt.GetComponent<SpriteRenderer>();
+            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds, out SpriteRenderer srend, out TilemapRenderer trend)) return;
 
             foreach (var tr in newValue.guestTransforms)
             {
@@ -171,9 +194,11 @@ public class PlayerController : TickNetworkBehaviour
                 tr.GetComponent<Rigidbody2D>().simulated = true;
             }
 
-            newValue.guestTransforms[0].position = vt.position + new Vector3(0, sr.bounds.extents.y * MountOffsetY, 0);
+            newValue.guestTransforms[0].position = vt.position + new Vector3(0, bounds.extents.y * MountOffsetY, 0);
 
-            sr.sortingOrder = 0;
+            if (srend != null) srend.sortingOrder = 0;
+            else if (trend != null) trend.sortingOrder = 0;
+
             vt.gameObject.SendMessage("Unmount");
             _navMeshAgent.enabled = true;
 

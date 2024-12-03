@@ -36,8 +36,8 @@ public class ChatSystem : MonoBehaviour
 
     void OnDisable()
     {
-        InstanceFinder.ClientManager.UnregisterBroadcast<ChatBroadcast>(OnClientBroadcast);
-        InstanceFinder.ServerManager.UnregisterBroadcast<ChatBroadcast>(OnServerBroadcast);
+        InstanceFinder.ClientManager?.UnregisterBroadcast<ChatBroadcast>(OnClientBroadcast);
+        InstanceFinder.ServerManager?.UnregisterBroadcast<ChatBroadcast>(OnServerBroadcast);
     }
 
     void Update()

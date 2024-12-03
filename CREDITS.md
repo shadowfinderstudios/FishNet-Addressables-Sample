@@ -1,13 +1,14 @@
 Art and Sound Credits:
 
 Licenses:
+https://static.opengameart.org/OGA-BY-3.0.txt
 https://creativecommons.org/licenses/by/4.0/
 https://creativecommons.org/licenses/by-sa/4.0/
 https://creativecommons.org/licenses/by-sa/3.0/
 https://creativecommons.org/publicdomain/zero/1.0/
 
 LPC Tree Recolors
-CCBY By William.Thompsonj and C.Nilsson
+OGABY, CCBY By William.Thompsonj and C.Nilsson
 https://opengameart.org/content/lpc-tree-recolors
 
 LPC All Seasons Tree
@@ -19,7 +20,7 @@ Public Domain by Invincible
 https://opengameart.org/content/grass-tiles-0
 
 LPC Medieval Fantasy Character Sprites
-CCBYSA By Wulax
+OGABY, CCBYSA By Wulax
 https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
 
 Cosmic Time - Magic Effect
@@ -38,8 +39,8 @@ Knight's Forest Footsteps
 Public Domain By Ali_6868 
 https://freesound.org/people/Ali_6868/
 
-Pickaxe sounds
-CCBY4 By TechspiredMinds
+Metallic pickaxe 1/4
+Attribution 4.0 By TechspiredMinds
 https://freesound.org/people/TechspiredMinds/sounds/728756/
 
 Rocks breaking
@@ -63,7 +64,7 @@ CCBYSA By Shadowfinder Studios
 https://opengameart.org/content/lpc-rowboat-topdown-4-directional-recolor-for-rpg
 
 LPC Tree Buttons
-CCBY,CCBYSA By Shadowfinder Studios, based on LPC Tree Recolors and LPC All Seasons Tree
+OGABY, CCBY, CCBYSA By Shadowfinder Studios, based on LPC Tree Recolors and LPC All Seasons Tree
 https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
 https://opengameart.org/content/lpc-tree-recolors
 https://opengameart.org/content/lpc-all-seasons-apple-tree
@@ -122,15 +123,15 @@ CC0 By Dr. Jamgo
 https://opengameart.org/content/shadow-for-lpc-sprite
 
 LPC Turkey
-CCBY By bluecarrot16
+OGABY, CCBY By bluecarrot16
 https://opengameart.org/content/lpc-turkey
 
 LPC Blacksmith
-CCBY By bluecarrot16
+OGABY, CCBY By bluecarrot16
 https://opengameart.org/content/lpc-blacksmith
 
 LPC Ore and Forge
-CCBY By bluecarrot16
+OGABY, CCBY By bluecarrot16
 https://opengameart.org/content/lpc-ore-and-forge
 
 LPC Floors
@@ -146,7 +147,7 @@ CCBYSA By bluecarrot16, Baŝto, Lanea Zimmerman (Sharm), William Thompson, Tuomo
 https://opengameart.org/content/lpc-wooden-furniture
 
 LPC Upholstery
-CCBY/CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm). https://opengameart.org/content/lpc-upholstery
+OGABY, CCBY, CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm). https://opengameart.org/content/lpc-upholstery
 https://opengameart.org/content/lpc-interior-castle-tiles
 
 LPC Windows & Doors
@@ -154,7 +155,7 @@ CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm) and Daniel Armstrong (HughSpectr
 https://opengameart.org/content/lpc-windows-doors
 
 LPC Workshop
-CCBY By bluecarrot16
+OGABY, CCBY By bluecarrot16
 https://opengameart.org/content/lpc-woodshop
 
 Market on the Sea Music
@@ -173,4 +174,16 @@ https://opengameart.org/content/rpg-gui-construction-kit-v10
 Mnimap
 CC0 By kindland
 https://opengameart.org/content/mnimap
+
+LPC Ship
+bluecarrot16
+https://opengameart.org/content/lpc-ship
+
+LPC Base Assets
+CCBYSA, OGABY, See CREDITS.txt in Sprites/Base folder for more details.
+https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+
+LPC Containers
+CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm), William Thompson, Tuomo Untinen (Reemax), Evert, Buch, Blarumyrran, n2liquid, Jetrel, Guido Bos, Hyptosis, Bonsaiheldin, NaRNeRZz, PriorBlue, Jerom, 7Soul, and Wolthera van Hövell tot Westerflier (TheraHedwig). See CREDITS-container.txt.
+https://opengameart.org/content/lpc-containers
 
