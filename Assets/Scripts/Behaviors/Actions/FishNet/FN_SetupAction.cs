@@ -14,7 +14,7 @@ public partial class FN_SetupAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
 
-    NavmeshController _navmeshController;
+    FN_AgentBehaviourSetup _navmeshController;
 
     protected override Status OnStart()
     {
@@ -24,7 +24,7 @@ public partial class FN_SetupAction : Action
             return Status.Failure;
         }
 
-        _navmeshController = Agent.Value.GetComponent<NavmeshController>();
+        _navmeshController = Agent.Value.GetComponent<FN_AgentBehaviourSetup>();
         if (_navmeshController == null)
         {
             LogFailure("Navmesh Controller is not initialized.");
@@ -33,17 +33,17 @@ public partial class FN_SetupAction : Action
 
         if (!_navmeshController.IsServerInitialized)
         {
-            Debug.Log("Navmesh Controller is server only.");
-            return Status.Uninitialized;
+            LogFailure("Navmesh Controller is server only.");
+            return Status.Failure;
         }
 
         var navMeshAgent = Agent.Value.GetComponent<NavMeshAgent>();
         if (navMeshAgent != null)
         {
-            navMeshAgent.enabled = true;
             navMeshAgent.updateRotation = false;
             navMeshAgent.updateUpAxis = false;
             navMeshAgent.autoRepath = true;
+            navMeshAgent.enabled = true;
         }
 
         return Status.Running;

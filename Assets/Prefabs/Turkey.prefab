@@ -263,9 +263,9 @@ MonoBehaviour:
   _enableStateForwarding: 1
   _networkTransform: {fileID: 0}
   _ownerInterpolation: 1
-  _ownerSmoothedProperties: 3
+  _ownerSmoothedProperties: 1
   _adaptiveInterpolation: 3
-  _spectatorSmoothedProperties: 3
+  _spectatorSmoothedProperties: 1
   _spectatorInterpolation: 2
   _enableTeleport: 1
   _teleportThreshold: 1
@@ -293,6 +293,7 @@ MonoBehaviour:
   _updateHostVisibility: 1
   _observerConditions:
   - {fileID: 11400000, guid: 2033f54fd2794464bae08fa5a55c8996, type: 2}
+  - {fileID: 11400000, guid: 3623914c5bcf89142b3910641eeb4873, type: 2}
 --- !u!114 &4300140867557126101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +327,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeRotation: 1
+  _synchronizeRotation: 0
   _rotationSnapping:
     X: 0
     Y: 0
@@ -395,7 +396,6 @@ MonoBehaviour:
   _componentIndexCache: 2
   _addedNetworkObject: {fileID: 5652238423056757439}
   _networkObjectCache: {fileID: 5652238423056757439}
-  navMeshAgent: {fileID: 7349180409534696584}
 --- !u!114 &4542475986892369028
 MonoBehaviour:
   m_ObjectHideFlags: 0

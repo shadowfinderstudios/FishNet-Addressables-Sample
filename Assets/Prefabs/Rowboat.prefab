@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9086587214395352367}
   - component: {fileID: 2256745210793393767}
   - component: {fileID: 6018021126042977366}
+  - component: {fileID: 6502113715049594161}
   - component: {fileID: 6907039558283096632}
   - component: {fileID: 5619892917328582417}
   - component: {fileID: 2373436672809207885}
@@ -256,16 +257,16 @@ MonoBehaviour:
   _defaultDespawnType: 0
   _initializedValusSet: 1
   NetworkObserver: {fileID: 0}
-  _enablePrediction: 0
+  _enablePrediction: 1
   _predictionType: 2
   _graphicalObject: {fileID: 7855503080751664390}
   _detachGraphicalObject: 0
   _enableStateForwarding: 1
   _networkTransform: {fileID: 0}
   _ownerInterpolation: 1
-  _ownerSmoothedProperties: 3
-  _adaptiveInterpolation: 3
-  _spectatorSmoothedProperties: 3
+  _ownerSmoothedProperties: 1
+  _adaptiveInterpolation: 4
+  _spectatorSmoothedProperties: 1
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 0.5
@@ -277,6 +278,23 @@ MonoBehaviour:
     Position: {x: -17.57, y: -4.9, z: 0}
     Rotation: {x: 0, y: 0, z: 0, w: 1}
     LocalScale: {x: 0.6732241, y: 0.6732241, z: 0.6732241}
+--- !u!114 &6502113715049594161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408980462394680641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _overrideType: 2
+  _updateHostVisibility: 1
+  _observerConditions:
+  - {fileID: 11400000, guid: 2033f54fd2794464bae08fa5a55c8996, type: 2}
+  - {fileID: 11400000, guid: 3623914c5bcf89142b3910641eeb4873, type: 2}
 --- !u!114 &6907039558283096632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +340,7 @@ MonoBehaviour:
     Scale: 0
   _interpolation: 2
   _extrapolation: 2
-  _enableTeleport: 1
+  _enableTeleport: 0
   _teleportThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
@@ -332,7 +350,7 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeRotation: 1
+  _synchronizeRotation: 0
   _rotationSnapping:
     X: 0
     Y: 0

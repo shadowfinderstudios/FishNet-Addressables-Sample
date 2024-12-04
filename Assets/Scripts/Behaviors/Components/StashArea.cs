@@ -1,24 +1,41 @@
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using UnityEngine;
 
 public class StashArea : NetworkBehaviour
 {
     [SerializeField] Renderer[] _stashObjects;
 
-    int _stashCount;
+    readonly SyncVar<int> _stashCount = new(-1);
 
-    private void OnEnable()
+    [ServerRpc(RequireOwnership = false)]
+    public void SetStashCount(int value) => _stashCount.Value = value;
+
+    void OnStashCountChanged(int oldValue, int newValue, bool asServer)
     {
-        int value = -1;
-        for (int i = _stashObjects.Length - 1; i >= 0; --i)
+        if (!asServer)
         {
-            if (_stashObjects[i].enabled)
-            {
-                value = i;
-                break;
-            }
+            for (int i = 0; i < _stashObjects.Length; i++)
+                _stashObjects[i].enabled = i == newValue;
         }
-        _stashCount = value;
+    }
+
+    void UpdateStashCount(int value)
+    {
+        if (base.IsClientInitialized)
+            SetStashCount(value);
+        else
+            _stashCount.Value = value;
+    }
+
+    protected void OnEnable()
+    {
+        _stashCount.OnChange += OnStashCountChanged;
+    }
+
+    protected void OnDisable()
+    {
+        _stashCount.OnChange -= OnStashCountChanged;
     }
 
     void HideAll()
@@ -32,7 +49,7 @@ public class StashArea : NetworkBehaviour
 
     public int GetStashedCount()
     {
-        return _stashCount + 1;
+        return _stashCount.Value + 1;
     }
 
     public bool HasStash()
@@ -47,11 +64,13 @@ public class StashArea : NetworkBehaviour
 
     public bool PlaceStash()
     {
+        if (!base.IsServerInitialized) return false;
+
         if (GetStashedCount() < _stashObjects.Length)
         {
             HideAll();
             _stashObjects[GetStashedCount()].enabled = true;
-            ++_stashCount;
+            UpdateStashCount(_stashCount.Value + 1);
             return true;
         }
         return false;
@@ -59,18 +78,27 @@ public class StashArea : NetworkBehaviour
 
     public bool TakeStash()
     {
-        if (_stashCount < 0) return false;
+        if (!base.IsServerInitialized) return false;
 
-        if (_stashObjects[_stashCount].enabled)
+        var value = _stashCount.Value;
+        if (value < 0) return false;
+
+        if (_stashObjects[value].enabled)
         {
-            _stashObjects[_stashCount].enabled = false;
-            _stashCount--;
-
-            if (_stashCount >= 0)
-                _stashObjects[_stashCount].enabled = true;
-
+            _stashObjects[value].enabled = false;
+            if (--value >= 0) _stashObjects[value].enabled = true;
+            UpdateStashCount(value);
             return true;
         }
         return false;
+    }
+
+    public override void OnStartServer()
+    {
+        GiveOwnership(base.Owner);
+        int value = -1;
+        for (int i = _stashObjects.Length - 1; i >= 0; --i)
+            if (_stashObjects[i].enabled) { value = i; break; }
+        _stashCount.Value = value;
     }
 }

@@ -180,7 +180,7 @@ public class PlayerController : TickNetworkBehaviour
             }
 
             vt.gameObject.SendMessage("Mount");
-            _navMeshAgent.enabled = false;
+            UpdateNav(false);
         }
         else
         {
@@ -200,7 +200,7 @@ public class PlayerController : TickNetworkBehaviour
             else if (trend != null) trend.sortingOrder = 0;
 
             vt.gameObject.SendMessage("Unmount");
-            _navMeshAgent.enabled = true;
+            UpdateNav(true);
 
             if (asServer) vt.GetComponent<NetworkObject>().RemoveOwnership();
         }
@@ -214,6 +214,29 @@ public class PlayerController : TickNetworkBehaviour
     #endregion
 
     #region RPC
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SetNav(bool state)
+    {
+        SetMyNav(state);
+        ObserversSetMyNav(state);
+    }
+
+    [ServerRpc]
+    void SetDest(Vector3 pos)
+    {
+        SetMyDest(pos);
+        ObserversSetMyDest(pos);
+    }
+
+    public void UpdateNav(bool state)
+    {
+        if (IsClientInitialized) SetNav(state);
+    }
+
+    [ObserversRpc] void ObserversSetMyNav(bool state) => SetMyNav(state);
+
+    [ObserversRpc] void ObserversSetMyDest(Vector3 pos) => SetMyDest(pos);
 
     [ServerRpc] void SetHealth(int value) => _health.Value = value;
 
@@ -259,7 +282,6 @@ public class PlayerController : TickNetworkBehaviour
 
         // If you don't set the following, the 2d navmeshagent will fall over.
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _navMeshAgent.enabled = true;
         _navMeshAgent.updateRotation = false;
         _navMeshAgent.updateUpAxis = false;
         _navMeshAgent.autoRepath = true;
@@ -520,7 +542,7 @@ public class PlayerController : TickNetworkBehaviour
                         AnimSetBool(_bodyAnim, "Sail", false);
                         _vehicleUpdate.Value.isMounted = false;
                         SetVehicle(_vehicleUpdate.Value);
-                        _navMeshAgent.enabled = true;
+                        UpdateNav(true);
                         return true;
                     }
                 }
@@ -586,15 +608,15 @@ public class PlayerController : TickNetworkBehaviour
 
     #region Agent
 
-    public void SetNav(bool state)
+    void SetMyNav(bool state)
     {
         if (_vehicleUpdate.Value.isMounted) return;
         _navMeshAgent.enabled = state;
     }
 
-    void SetDest(Vector3 pos)
+    void SetMyDest(Vector3 pos)
     {
-        if (_navMeshAgent.enabled)
+        if (_navMeshAgent.enabled && _navMeshAgent.isOnNavMesh)
             _navMeshAgent.SetDestination(pos);
     }
 
@@ -681,20 +703,8 @@ public class PlayerController : TickNetworkBehaviour
 
     #region Network Events
 
-    public override void OnStartNetwork()
-    {
-        base.OnStartNetwork();
-    }
-
-    public override void OnStartServer()
-    {
-        base.OnStartServer();
-    }
-
     public override void OnStartClient()
     {
-        base.OnStartClient();
-
         var found = GameObject.Find("ChatField");
         _inputField = GameObject.Find("ChatField").GetComponent<TMP_InputField>();
 

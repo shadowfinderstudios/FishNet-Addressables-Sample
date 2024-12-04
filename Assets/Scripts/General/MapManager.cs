@@ -61,11 +61,11 @@ public class MapManager : NetworkBehaviour
         {
             var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
-            foreach (var item in objs) item.SetNav(false);
+            foreach (var item in objs) item.UpdateNav(false);
 
             _surface2D.UpdateNavMesh(_surface2D.navMeshData);
 
-            foreach (var item in objs) item.SetNav(true);
+            foreach (var item in objs) item.UpdateNav(true);
         }
     }
 
@@ -75,13 +75,13 @@ public class MapManager : NetworkBehaviour
         {
             var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
 
-            foreach (var item in objs) item.SetNav(false);
+            foreach (var item in objs) item.UpdateNav(false);
 
             Physics2D.SyncTransforms();
 
             yield return _surface2D.BuildNavMeshAsync();
 
-            foreach (var item in objs) item.SetNav(true);
+            foreach (var item in objs) item.UpdateNav(true);
         }
     }
 }

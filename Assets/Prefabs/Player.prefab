@@ -329,8 +329,8 @@ MonoBehaviour:
   <PredictedOwner>k__BackingField: {fileID: 0}
   NetworkBehaviours:
   - {fileID: 3891381169627373308}
-  - {fileID: 5722156264176189790}
   - {fileID: -1368798130973332146}
+  - {fileID: 5722156264176189790}
   - {fileID: 3231440640558609855}
   InitializedParentNetworkBehaviour: {fileID: 0}
   InitializedNestedNetworkObjects: []
@@ -344,20 +344,20 @@ MonoBehaviour:
   _defaultDespawnType: 0
   _initializedValusSet: 1
   NetworkObserver: {fileID: 0}
-  _enablePrediction: 0
+  _enablePrediction: 1
   _predictionType: 2
   _graphicalObject: {fileID: 6065572604866349400}
   _detachGraphicalObject: 0
   _enableStateForwarding: 1
   _networkTransform: {fileID: 0}
   _ownerInterpolation: 1
-  _ownerSmoothedProperties: 3
+  _ownerSmoothedProperties: 1
   _adaptiveInterpolation: 4
-  _spectatorSmoothedProperties: 3
+  _spectatorSmoothedProperties: 1
   _spectatorInterpolation: 2
   _enableTeleport: 0
   _teleportThreshold: 0.5
-  <PrefabId>k__BackingField: 5
+  <PrefabId>k__BackingField: 7
   <SpawnableCollectionId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 7807759643866311769
   <SceneId>k__BackingField: 0
@@ -381,6 +381,7 @@ MonoBehaviour:
   _updateHostVisibility: 1
   _observerConditions:
   - {fileID: 11400000, guid: 2033f54fd2794464bae08fa5a55c8996, type: 2}
+  - {fileID: 11400000, guid: 3623914c5bcf89142b3910641eeb4873, type: 2}
 --- !u!114 &3891381169627373308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2836e36774ca1c4bbbee976e17b649c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 9028371821068032533}
   _networkObjectCache: {fileID: 9028371821068032533}
   _componentConfiguration: 3
@@ -426,7 +427,7 @@ MonoBehaviour:
     Scale: 0
   _interpolation: 2
   _extrapolation: 2
-  _enableTeleport: 1
+  _enableTeleport: 0
   _teleportThreshold: 1
   _clientAuthoritative: 1
   _sendToOwner: 1
@@ -436,12 +437,12 @@ MonoBehaviour:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeRotation: 1
+  _synchronizeRotation: 0
   _rotationSnapping:
     X: 0
     Y: 0
     Z: 0
-  _synchronizeScale: 1
+  _synchronizeScale: 0
   _scaleSnapping:
     X: 0
     Y: 0
@@ -458,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50719bf11e662524cadef1eb9b49425c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 9028371821068032533}
   _networkObjectCache: {fileID: 9028371821068032533}
   _tickCallbacks: 6
@@ -476,6 +477,7 @@ MonoBehaviour:
   _staminaStatus: {fileID: 4029174500762459270}
   _damageStatusSprite: {fileID: 3269770310667152618, guid: 04c08984491df9244be6390ef5385778, type: 3}
   _healthStatusSprite: {fileID: 751934435659609086, guid: 04c08984491df9244be6390ef5385778, type: 3}
+  _inputField: {fileID: 0}
   _destroyRockSound: {fileID: 8300000, guid: 01c6971f48e514c4399e8e5a706f9ad7, type: 3}
   _pickaxeSounds:
   - {fileID: 8300000, guid: 99194faa7edec8c40b3eff615d781625, type: 3}
@@ -533,7 +535,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488630497419866413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 6
