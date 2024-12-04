@@ -222,7 +222,7 @@ MonoBehaviour:
   _networkTransform: {fileID: 0}
   _ownerInterpolation: 1
   _ownerSmoothedProperties: 255
-  _adaptiveInterpolation: 3
+  _adaptiveInterpolation: 4
   _spectatorSmoothedProperties: 255
   _spectatorInterpolation: 2
   _enableTeleport: 1
@@ -260,7 +260,7 @@ MonoBehaviour:
   _extrapolation: 2
   _enableTeleport: 1
   _teleportThreshold: 1
-  _clientAuthoritative: 1
+  _clientAuthoritative: 0
   _sendToOwner: 1
   _interval: 1
   _synchronizePosition: 1
