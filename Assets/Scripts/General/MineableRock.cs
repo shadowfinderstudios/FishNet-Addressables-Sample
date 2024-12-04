@@ -3,6 +3,7 @@ using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using FishNet.CodeGenerating;
 using NavMeshPlus.Components;
+
 public class MineableRock : NetworkBehaviour, IMineable
 {
     [SerializeField] Sprite _defaultSprite;
@@ -14,34 +15,59 @@ public class MineableRock : NetworkBehaviour, IMineable
 
     MapManager _mapManager;
 
-    void OnEnable()
+    [ServerRpc(RequireOwnership = false)]
+    void SetHealth(int value) => _health.Value = value;
+
+    [ObserversRpc(ExcludeOwner = true)]
+    void ObserversSetHealth(int value) => UpdateEffects(value);
+
+    private void OnHealthChanged(int oldValue, int newValue, bool asServer)
     {
-        _mapManager = FindFirstObjectByType<MapManager>();
+        if (asServer) ObserversSetHealth(newValue);
+        else UpdateEffects(newValue);
     }
 
-    public void ResetResource()
+    void UpdateEffects(int newValue)
     {
-        _health.Value = 100;
-        GetComponent<SpriteRenderer>().sprite = _defaultSprite;
-        GetComponent<PolygonCollider2D>().enabled = true;
-        GetComponent<NavMeshModifier>().overrideArea = true;
-        StartCoroutine(_mapManager.UpdateNavMeshAsync());
-    }
-
-    public int MineResource(int damage)
-    {
-        if (_health.Value > 0)
+        var isReset = newValue == 100;
+        if (!isReset && newValue > 0)
         {
-            _health.Value -= damage;
             GetComponent<ParticleSystem>().Play();
         }
         else
         {
-            GetComponent<SpriteRenderer>().sprite = _rubbleSprite;
-            GetComponent<PolygonCollider2D>().enabled = false;
-            GetComponent<NavMeshModifier>().overrideArea = false;
+            var sprite = isReset ? _defaultSprite : _rubbleSprite;
+            GetComponent<SpriteRenderer>().sprite = sprite;
+            GetComponent<PolygonCollider2D>().enabled = isReset;
+            GetComponent<NavMeshModifier>().overrideArea = isReset;
             StartCoroutine(_mapManager.UpdateNavMeshAsync());
         }
-        return _health.Value;
+    }
+
+    protected void OnEnable()
+    {
+        _mapManager = FindFirstObjectByType<MapManager>();
+        _health.OnChange += OnHealthChanged;
+    }
+
+    protected void OnDisable()
+    {
+        _health.OnChange -= OnHealthChanged;
+    }
+
+    public void ResetResource()
+    {
+        SetHealth(100);
+    }
+
+    public int MineResource(int damage)
+    {
+        var health = _health.Value;
+        if (health > 0)
+        {
+            health -= damage;
+            SetHealth(health);
+        }
+        return health;
     }
 }

@@ -60,28 +60,19 @@ public class MapManager : NetworkBehaviour
         if (_surface2D != null)
         {
             var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-
-            foreach (var item in objs) item.UpdateNav(false);
+            foreach (var item in objs)
+                item.GetComponent<NavMeshAgent>().enabled = false;
 
             _surface2D.UpdateNavMesh(_surface2D.navMeshData);
 
-            foreach (var item in objs) item.UpdateNav(true);
+            foreach (var item in objs)
+                item.GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 
     public IEnumerator UpdateNavMeshAsync()
     {
-        if (_surface2D != null)
-        {
-            var objs = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
-
-            foreach (var item in objs) item.UpdateNav(false);
-
-            Physics2D.SyncTransforms();
-
-            yield return _surface2D.BuildNavMeshAsync();
-
-            foreach (var item in objs) item.UpdateNav(true);
-        }
+        UpdateNavMesh();
+        yield return null;
     }
 }
