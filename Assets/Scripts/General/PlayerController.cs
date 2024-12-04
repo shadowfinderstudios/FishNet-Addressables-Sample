@@ -557,7 +557,7 @@ public class PlayerController : TickNetworkBehaviour
                         _sailTimer = Time.fixedTime;
 
                         VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
-                        AnimSetBool(_bodyAnim, "Walk", false);
+                        AnimSetInteger(_bodyAnim, "Motion", -1);
                         AnimSetBool(_bodyAnim, "Sail", true);
                         _vehicleUpdate.Value.isMounted = true;
                         _vehicleUpdate.Value.vehicleTransform = hit.transform;
@@ -577,7 +577,8 @@ public class PlayerController : TickNetworkBehaviour
         if (Time.fixedTime - _spawnTest > 1f)
         {
             _netBodyAnim.SetTrigger("Cast");
-            AnimSetBool(_bodyAnim, "Walk", _canMove = _isWalking = false);
+            _canMove = _isWalking = false;
+            AnimSetInteger(_bodyAnim, "Motion", -1);
             _spawnTest = Time.fixedTime;
 
             var nm = InstanceFinder.NetworkManager;
@@ -691,11 +692,19 @@ public class PlayerController : TickNetworkBehaviour
                 _lastdir = new Vector3(dx, dy);
             }
 
-            if (!_isWalking && !_vehicleUpdate.Value.isMounted) AnimSetBool(_bodyAnim, "Walk", _isWalking=true);
+            if (!_isWalking && !_vehicleUpdate.Value.isMounted)
+            {
+                _isWalking = true;
+                AnimSetInteger(_bodyAnim, "Motion", 0);
+            }
         }
         else
         {
-            if (_isWalking && !_vehicleUpdate.Value.isMounted) AnimSetBool(_bodyAnim, "Walk", _isWalking=false);
+            if (_isWalking && !_vehicleUpdate.Value.isMounted)
+            {
+                _isWalking = false;
+                AnimSetInteger(_bodyAnim, "Motion", -1);
+            }
         }
     }
 
@@ -797,6 +806,16 @@ public class PlayerController : TickNetworkBehaviour
         return 0f;
     }
 
+    int AnimGetInteger(Animator anim, string name)
+    {
+        if (anim == null) return 0;
+        if (anim.gameObject.activeSelf)
+        {
+            return anim.GetInteger(name);
+        }
+        return 0;
+    }
+
     void AnimSetTrigger(NetworkAnimator anim, string name)
     {
         if (anim == null) return;
@@ -824,10 +843,19 @@ public class PlayerController : TickNetworkBehaviour
         }
     }
 
+    void AnimSetInteger(Animator anim, string name, int value)
+    {
+        if (anim == null) return;
+        if (anim.gameObject.activeSelf)
+        {
+            anim.SetInteger(name, value);
+        }
+    }
+
     #endregion
 
     #region Event Handlers
-    
+
     public void EnterRegionArea(string regionName, string regionDescription, string regionType)
     {
         if (_messageFader != null)

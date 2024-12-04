@@ -20,13 +20,14 @@ public partial class Wander2DAction : Action
     [SerializeReference] public BlackboardVariable<float> Speed;
     [SerializeReference] public BlackboardVariable<float> WaitTime = new BlackboardVariable<float>(2.0f);
     [SerializeReference] public BlackboardVariable<float> DistanceThreshold = new BlackboardVariable<float>(0.2f);
-    [SerializeReference] public BlackboardVariable<string> AnimatorMoveStateParam = new BlackboardVariable<string>("Walk");
+    [SerializeReference] public BlackboardVariable<string> AnimatorMoveStateParam = new BlackboardVariable<string>("Motion");
     [SerializeReference] public BlackboardVariable<string> AnimatorSpeedParam = new BlackboardVariable<string>("Speed");
     [SerializeReference] public BlackboardVariable<string> AnimatorDirectionXParam = new BlackboardVariable<string>("DX");
     [SerializeReference] public BlackboardVariable<string> AnimatorDirectionYParam = new BlackboardVariable<string>("DY");
 
     NavMeshAgent _navMeshAgent;
     Animator _animator;
+    Vector2 _direction;
 
     [CreateProperty]
     Vector3 _currentTarget;
@@ -73,21 +74,23 @@ public partial class Wander2DAction : Action
         }
         else
         {
-            if (_animator != null && _navMeshAgent != null)
-            {
-                _animator.SetFloat(AnimatorSpeedParam, _navMeshAgent.velocity.magnitude);
-                if (_navMeshAgent.velocity.magnitude > 0.0f)
-                    _animator.SetBool(AnimatorMoveStateParam, true);
-                else
-                    _animator.SetBool(AnimatorMoveStateParam, false);
-            }
-
             if (IsNavMeshValid() && _navMeshAgent.remainingDistance <= DistanceThreshold)
             {
                 ResetAnimSpeed();
                 _waitTimer = WaitTime.Value;
                 _waiting = true;
             }
+        }
+
+        if (_animator != null && _navMeshAgent != null)
+        {
+            if (_navMeshAgent.velocity.magnitude > 0.0f)
+                _animator.SetInteger(AnimatorMoveStateParam, 0);
+            else
+                _animator.SetInteger(AnimatorMoveStateParam, -1);
+
+            _animator.SetFloat(AnimatorDirectionXParam, _direction.x);
+            _animator.SetFloat(AnimatorDirectionYParam, _direction.y);
         }
 
         return Status.Running;
@@ -109,6 +112,7 @@ public partial class Wander2DAction : Action
     {
         if (_animator != null)
         {
+            _direction = Vector2.zero;
             _animator.SetFloat(AnimatorDirectionXParam, 0f);
             _animator.SetFloat(AnimatorDirectionYParam, 0f);
         }
@@ -119,7 +123,7 @@ public partial class Wander2DAction : Action
         if (_animator != null)
         {
             _animator.SetFloat(AnimatorSpeedParam, 0f);
-            _animator.SetBool(AnimatorMoveStateParam, false);
+            _animator.SetInteger(AnimatorMoveStateParam, -1);
         }
     }
 
@@ -164,11 +168,10 @@ public partial class Wander2DAction : Action
 
             if (_animator != null)
             {
+                _direction = (_currentTarget - lastPosition).normalized;
                 _animator.SetFloat(AnimatorSpeedParam, Speed.Value);
-
-                Vector2 direction = (_currentTarget - lastPosition).normalized;
-                _animator.SetFloat(AnimatorDirectionXParam, direction.x);
-                _animator.SetFloat(AnimatorDirectionYParam, direction.y);
+                _animator.SetFloat(AnimatorDirectionXParam, _direction.x);
+                _animator.SetFloat(AnimatorDirectionYParam, _direction.y);
             }
         }
     }

@@ -82,8 +82,8 @@ public class NPC : TickNetworkBehaviour
                 anim.SetFloat("DY", axisy);
             }
 
-            if (axisx != 0f && axisy != 0f) anim.SetBool("Walk", true);
-            else anim.SetBool("Walk", false);
+            if (axisx != 0f && axisy != 0f) anim.SetInteger("Motion", 0);
+            else anim.SetInteger("Motion", -1);
         }
     }
 
@@ -108,7 +108,7 @@ public class NPC : TickNetworkBehaviour
             {
                 energyLifeInSeconds = 0f;
                 isSleeping = true;
-                anim.SetBool("Walk", false);
+                anim.SetInteger("Motion", -1);
                 anim.SetBool("Sleep", true);
                 anim.SetFloat("DX", 0f);
                 anim.SetFloat("DY", 0f);
