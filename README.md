@@ -106,6 +106,14 @@ Showcase 11 - Behavior Graph for a Dockworker
 
 3. Then, deposits the bag and repeats.
 
+Showcase 12 - Behavior Graph for car traffic and new scene for City demo
+
+1. Car arrives at stoplight, waits for light to change.
+
+2. Car choose whether to turn or drive ahead.
+
+3. Car moves to the next stoplight, repeat.
+
 
 TODO: More showcases.
 

@@ -12,3 +12,4 @@ Current examples are:
 * A wandering NPC was added (Now via Unity Behavior Graph)
 * Chat system
 * Dockworker behavior graph
+* City demo with car traffic
