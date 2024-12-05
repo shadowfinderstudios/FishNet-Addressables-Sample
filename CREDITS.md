@@ -187,3 +187,7 @@ LPC Containers
 CCBYSA By bluecarrot16, Lanea Zimmerman (Sharm), William Thompson, Tuomo Untinen (Reemax), Evert, Buch, Blarumyrran, n2liquid, Jetrel, Guido Bos, Hyptosis, Bonsaiheldin, NaRNeRZz, PriorBlue, Jerom, 7Soul, and Wolthera van Hövell tot Westerflier (TheraHedwig). See CREDITS-container.txt.
 https://opengameart.org/content/lpc-containers
 
+LPC SciFi Sprite Pack
+CCBYSA By Skorpio
+https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack
+

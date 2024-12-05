@@ -38,7 +38,7 @@ public partial class FN_SetupAction : Action
         }
 
         var navMeshAgent = Agent.Value.GetComponent<NavMeshAgent>();
-        if (navMeshAgent != null)
+        if (navMeshAgent != null && navMeshAgent.enabled == false)
         {
             navMeshAgent.updateRotation = false;
             navMeshAgent.updateUpAxis = false;

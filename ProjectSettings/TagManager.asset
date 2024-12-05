@@ -11,6 +11,7 @@ TagManager:
   - Tilemap
   - Water
   - NPC
+  - Intersection
   layers:
   - Default
   - TransparentFX

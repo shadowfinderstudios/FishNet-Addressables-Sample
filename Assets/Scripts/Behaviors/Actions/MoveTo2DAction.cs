@@ -4,18 +4,18 @@ using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
 using UnityEngine.AI;
-using FishNet.Component.Animating;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(
     name: "MoveTo2D",
-    story: "[Agent] moves to [Target]",
+    story: "[Agent] moves to [Target] target or [Position] position. Should [NotAnimate] not animate?",
     category: "Action/Navigation",
     id: "ed225365bd0aac3358564323707bda12")]
 public partial class MoveTo2DAction : Action
 {
     [SerializeReference] public BlackboardVariable<GameObject> Agent;
     [SerializeReference] public BlackboardVariable<Transform> Target;
+    [SerializeReference] public BlackboardVariable<Vector3> Position;
     [SerializeReference] public BlackboardVariable<float> Speed = new BlackboardVariable<float>(2.0f);
     [SerializeReference] public BlackboardVariable<float> WaitTime = new BlackboardVariable<float>(2.0f);
     [SerializeReference] public BlackboardVariable<float> DistanceThreshold = new BlackboardVariable<float>(0.2f);
@@ -23,6 +23,7 @@ public partial class MoveTo2DAction : Action
     [SerializeReference] public BlackboardVariable<string> AnimatorSpeedParam = new BlackboardVariable<string>("Speed");
     [SerializeReference] public BlackboardVariable<string> AnimatorDirectionXParam = new BlackboardVariable<string>("DX");
     [SerializeReference] public BlackboardVariable<string> AnimatorDirectionYParam = new BlackboardVariable<string>("DY");
+    [SerializeReference] public BlackboardVariable<bool> NotAnimate;
 
     NavMeshAgent _navMeshAgent;
     Animator _animator;
@@ -72,7 +73,7 @@ public partial class MoveTo2DAction : Action
         }
         else
         {
-            if (_animator != null && _navMeshAgent != null)
+            if (_animator != null && _navMeshAgent != null && !NotAnimate.Value)
                 _animator.SetFloat(AnimatorSpeedParam, _navMeshAgent.velocity.magnitude);
 
             if (IsNavMeshValid() && _navMeshAgent.remainingDistance <= DistanceThreshold)
@@ -81,7 +82,7 @@ public partial class MoveTo2DAction : Action
             }
         }
 
-        if (_animator != null && _navMeshAgent != null)
+        if (_animator != null && _navMeshAgent != null && !NotAnimate.Value)
         {
             if (_navMeshAgent.velocity.magnitude > 0.0f)
                 _animator.SetInteger(AnimatorMoveStateParam, 0);
@@ -109,7 +110,7 @@ public partial class MoveTo2DAction : Action
 
     void ResetAnimDirection()
     {
-        if (_animator != null)
+        if (_animator != null && !NotAnimate.Value)
         {
             _direction = Vector2.zero;
             _animator.SetFloat(AnimatorDirectionXParam, 0f);
@@ -119,7 +120,7 @@ public partial class MoveTo2DAction : Action
 
     void ResetAnimSpeed()
     {
-        if (_animator != null)
+        if (_animator != null && !NotAnimate.Value)
         {
             _animator.SetFloat(AnimatorSpeedParam, 0f);
             _animator.SetInteger(AnimatorMoveStateParam, -1);
@@ -151,7 +152,11 @@ public partial class MoveTo2DAction : Action
         {
             Vector3 lastPosition = Agent.Value.transform.position;
 
-            _currentTarget = Target.Value.position;
+            Vector3 targetPosition;
+            if (Target.Value == null) targetPosition = Position.Value;
+            else targetPosition = Target.Value.position;
+
+            _currentTarget = targetPosition;
             _navMeshAgent.SetDestination(_currentTarget);
 
             if (_navMeshAgent.pathStatus == NavMeshPathStatus.PathInvalid ||
@@ -162,7 +167,7 @@ public partial class MoveTo2DAction : Action
                 return false;
             }
 
-            if (_animator != null)
+            if (_animator != null && !NotAnimate.Value)
             {
                 _direction = (_currentTarget - lastPosition).normalized;
                 _animator.SetFloat(AnimatorSpeedParam, Speed.Value);

@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: CarUp
+    m_Hash: 441917937
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Cars_final_3
+      m_Hash: 1004391814
+      m_Sprite: {fileID: -7032500530798691507, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7032500530798691507, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: CarLeft
+    m_Hash: 321144960
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Cars_final_0
+      m_Hash: 584358972
+      m_Sprite: {fileID: 2064970298170385280, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2064970298170385280, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: CarRight
+    m_Hash: 439508209
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Cars_final_1
+      m_Hash: 366193834
+      m_Sprite: {fileID: 227376064338697428, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 227376064338697428, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: CarDown
+    m_Hash: 901529555
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Cars_final_2
+      m_Hash: 215678224
+      m_Sprite: {fileID: -9082165260254981022, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9082165260254981022, guid: 743ea01b068a2434b9383244b4aa642f, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638689486481401920
+  m_Version: 1

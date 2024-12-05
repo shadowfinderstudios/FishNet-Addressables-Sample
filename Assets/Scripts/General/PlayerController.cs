@@ -715,7 +715,8 @@ public class PlayerController : TickNetworkBehaviour
     public override void OnStartClient()
     {
         var found = GameObject.Find("ChatField");
-        _inputField = GameObject.Find("ChatField").GetComponent<TMP_InputField>();
+        var cfield = GameObject.Find("ChatField");
+        if (cfield != null) _inputField = cfield.GetComponent<TMP_InputField>();
 
         _healthStatusSpriteRenderer = _healthStatus.GetComponent<SpriteRenderer>();
         _manaStatusSpriteRenderer = _manaStatus.GetComponent<SpriteRenderer>();
