@@ -116,6 +116,29 @@ Showcase 12 - Behavior Graph for car traffic and new scene for City demo
 
 3. Car moves to the next stoplight, repeat.
 
+Showcase 13 - Rideable horse
+
+1. Walk up to horse
+
+2. Press E to use
+
+3. Ride around
+
+Showcase 14 - TODO: Farming
+
+1. Buy seeds
+
+2. Throw seeds
+
+3. Water ground
+
+4. Wait
+
+5. Grow
+
+6. Harvest
+
+7. Sell crops
 
 TODO: More showcases.
 

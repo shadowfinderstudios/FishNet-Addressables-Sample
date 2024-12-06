@@ -1,0 +1,83 @@
+Version: 0.9.0
+Changes: Now works for all of bluecarrot16's horses. I made many tweaks to the original algorithm, and many little draws to help ensure as much layer compatibility as possible
+
+Special Note: In order to work for female, you must have a matching male/female piece of equipment from the waist down, as all legs drawn are male. I achieved best results by still using male for the bottom legs (Also is super easier) Slightly buffer legs will be easier to notice on the horse anyway. The female legs simply do not extend out enough to be seen.
+
+Using this horse cutout to provide good results for almost all animation cycles will require drawing only part of some frames of certain sprites along with different parts of others.
+
+The cutouts are in 5 folders and labeled with the following:
+sf - foreground horse for standcycle
+sb - background horse for standcycle
+ef - foreground horse for eatcycle
+eb - background horse for eatcycle
+wf - foreground horse for walkcycle
+wb - background horse for walkcycle
+rf - foreground horse for gallopcycle
+rb - background horse for gallopcycle
+
+Here is all of the delicate alignment to make it look good:
+
+Player X we will call px
+Player Y we will call py
+
+At the bottom is a table that provides modx and mody values for each cycle, ridestep and direction
+
+
+Look up your modx and mody values for your situation.
+
+If the action is male/female castcycle or the male idle, add 1 to modY
+If the action is female slashing, decrease modY by 1
+
+For up-facing direction:
+Draw the background-horse at px - 32, py - 32
+Regardless of gender, draw the doll as a MALE at px + modX - 2, py + modY + 46 at the 6th frame of the castcycle, but only draw the leftmost 34 pixels within the bottommost 18 pixels
+Draw another male with all the equipment, also 6th frame of castcycle , but this time draw it at px + modX + 32, py + modY + 46. Draw the leftmost 31 pixels within the bottommost 18 pixels
+If the current cycle is shoot, add 1 to modx for just the next draw
+Now draw your correctly-gendered sprite (with all equipment including weapons/shield) at px + modx, py + modY in whatever frame of whatever cycle you wish, but only draw top 52 pixels
+
+
+
+
+For left-facing direction:
+draw your correctly gendered sprite at px + modX, py + modY + 50, in any frame/cycle, only the top 50 pixels
+Draw a MALE version of your sprite (but without any weapons or shields) at px + modX, py + modY, in the 3rd frame of the thrustcycle, only the 14 bottommost pixels
+
+For the down-facing direction:
+
+Draw the background-horse at px-32,py-32
+Draw a MALE version of your sprite (with all equipment except shield/weapoons), in the 6th frame of the cast cycle, drawing only the bottommost 17 pixels
+If the current cycle is shoot, add 1 to modx for just the next draw
+Draw the correctly gendered sprite (including weps/shield) at px + modX + py + modY + 47, in whatever cycle/frame, only the top 50 pixels
+
+For the right-facing direction:
+Draw the correctly gendered sprite (incl wep/shield) at px + modx, py + mody, in any frame/cycle, top 50 pixels only
+Draw the MALE sprite (without weap/shield) at px +modx, py + mody + 50, in the 3rd frame of the thrustcycle, bottom 14 pixels only
+
+
+We're not done yet!
+
+If its down-facing, draw the correctly-gendered sprite without anything but shield (no body either) at px + mody, py + mody, in whatever cycle/frame, whole 64x64
+
+Now draw horse-foreground at px - 32,py - 32
+
+If left-facing: The next 3 draws are for the sprite with ONLY foot layer (MALE)
+Draw at px + modx + 32, py + mody, 3rd frame of thrust, rightmost 32 pixels within top 58 pixels
+Draw at px + modx + 21, py + modY + 58, 3rd frame of thrust, rightmost 33 pixels within bottommost 6 pixels
+Draw at px + modx + 30, py + mody + 59, 3rd frame of thrust, rightmost 34 pixels within bottommost 5 pixels
+
+If right facing: The next 3 draws are for the sprite with ONLY foot layer (MALE)
+Draw at px + modx, py + mody, 3rd frame of thrustcycle, leftmost 32 pixels within topmost 57 pixels
+Draw at px + modx, py + mody + 58, 3rd frame of thrustcycle, leftmost 33 pixels within bottom 6 pixels
+Draw at px + modx, py + mody + 59, 3rd frame of thrustcycle, leftmost 34 pixels within bottommost 5 pixels
+
+If the direction is up OR down-facing: Add 1 to modx if shootcycle for next draw
+Draw correctly gendered sprite (just swords/spears) at px + modx, py + mody, full 64x64
+
+If the action ISNT shootcycle:
+Draw just the HAIR/HATS/HEADS/ETC (anything drawn near top of head) at px + modx, py + mody, any frame/cycle, top 24 pixels only
+
+If left or right facing:
+Draw just the Shield, correctly gendered, at px + modx, py + mody, full sprite
+
+
+If you've made it this far you are very good at following directions and are probably a programmer. Don't hesitate to ask if you need help implementing this, and it is coming to the sprite generator soon! 

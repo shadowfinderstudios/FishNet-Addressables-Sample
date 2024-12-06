@@ -12,6 +12,7 @@ TagManager:
   - Water
   - NPC
   - Intersection
+  - Vehicle
   layers:
   - Default
   - TransparentFX

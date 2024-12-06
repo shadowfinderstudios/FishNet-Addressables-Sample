@@ -13,3 +13,5 @@ Current examples are:
 * Chat system
 * Dockworker behavior graph
 * City demo with car traffic
+* Rideable horse
+* TODO: Farming

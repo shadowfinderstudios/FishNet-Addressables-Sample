@@ -191,3 +191,20 @@ LPC SciFi Sprite Pack
 CCBYSA By Skorpio
 https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack
 
+LPC Crops
+CCBYSA By bluecarrot16, Daniel Eddeland (daneeklu), Joshua Taylor, Richard Kettering (Jetrel). Commissioned by castelonia.
+https://opengameart.org/content/lpc-crops
+
+LPC Farm
+CCBY By bluecarrot16, Wolthera van Hövell tot Westerflier (TheraHedwig), and Ivan Voirol. Based on: Slates 32x32px orthogonal tileset by Ivan Voirol by Ivan Voirol. LPC compatible Ancient Greek Architecture by Wolthera van Hövell tot Westerflier (TheraHedwig).
+https://opengameart.org/content/lpc-farm
+
+LPC Horse Riding 0.9.1
+OGABY, CCBY By bigbeargames based on horses by bluecarrot16
+https://opengameart.org/content/lpc-horse-riding-updated-091
+
+LPC Horse
+OGABY, CCBY By Benjamin K. Smith By bluecarrot16
+Accessories, Unicorn Horn, and Face and Leg Markings by Benjamin K. Smith
+https://opengameart.org/content/lpc-horse-extended
+

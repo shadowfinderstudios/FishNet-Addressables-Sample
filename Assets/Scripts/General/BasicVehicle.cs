@@ -1,4 +1,5 @@
 using FishNet.Utility.Template;
+using TMPro;
 using UnityEngine;
 
 public class BasicVehicle : TickNetworkBehaviour
@@ -6,7 +7,7 @@ public class BasicVehicle : TickNetworkBehaviour
     [SerializeField] Animator _vehicleAnimator;
     [SerializeField] Animator _secondaryAnimator;
 
-    public string vehicleRunningBool;
+    public string VehicleAnimationMovementName;
 
     bool _isMounted = false;
     float _speed = 20f;
@@ -33,8 +34,8 @@ public class BasicVehicle : TickNetworkBehaviour
 
         // If this was a car you could swing open the car door, start the car, etc.
 
-        AnimSetBool(_vehicleAnimator, vehicleRunningBool, true);
-        AnimSetBool(_secondaryAnimator, vehicleRunningBool, true);
+        AnimSetInteger(_vehicleAnimator, VehicleAnimationMovementName, 0);
+        AnimSetInteger(_secondaryAnimator, VehicleAnimationMovementName, 0);
 
         var waterEffect = transform.Find("WaterEffect");
         if (waterEffect != null)
@@ -54,8 +55,8 @@ public class BasicVehicle : TickNetworkBehaviour
 
         _isMounted = false;
 
-        AnimSetBool(_vehicleAnimator, vehicleRunningBool, false);
-        AnimSetBool(_secondaryAnimator, vehicleRunningBool, false);
+        AnimSetInteger(_vehicleAnimator, VehicleAnimationMovementName, -1);
+        AnimSetInteger(_secondaryAnimator, VehicleAnimationMovementName, -1);
         GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
 
         var waterEffect = transform.Find("WaterEffect");
@@ -88,11 +89,10 @@ public class BasicVehicle : TickNetworkBehaviour
 
         if (Time.fixedTime - _braketime > 0.5f)
         {
+            _braketime = Time.fixedTime;
+
             if (0f == axisx && 0f == axisy)
-            {
-                _braketime = Time.fixedTime;
                 _rigidbody.linearVelocity = Vector2.zero;
-            }
         }
 
         if (_lastpos != transform.position)
@@ -103,9 +103,13 @@ public class BasicVehicle : TickNetworkBehaviour
                 AnimSetFloat(_vehicleAnimator, "DY", dy);
                 AnimSetFloat(_secondaryAnimator, "DX", dx);
                 AnimSetFloat(_secondaryAnimator, "DY", dy);
+                AnimSetInteger(_secondaryAnimator, VehicleAnimationMovementName, 0);
+            }
+            else
+            {
+                AnimSetInteger(_secondaryAnimator, VehicleAnimationMovementName, -1);
             }
 
-            AnimSetBool(_secondaryAnimator, vehicleRunningBool, !keepDirState);
             _lastpos = transform.position;
         }
     }
@@ -129,6 +133,12 @@ public class BasicVehicle : TickNetworkBehaviour
     {
         if (anim != null && anim.gameObject.activeSelf)
             anim.SetFloat(name, value);
+    }
+
+    void AnimSetInteger(Animator anim, string name, int value)
+    {
+        if (anim != null && anim.gameObject.activeSelf)
+            anim.SetInteger(name, value);
     }
 
     #endregion

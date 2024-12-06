@@ -1,0 +1,39 @@
+EatCycle modX/modY (in order of ride frame left to right)
+Up-facing: 
+[0,-23] [0,-23] [0,-23] [0,-23]
+Left-facing:
+[-3,-28] [-3,-28] [-4,-27] [-4,-27] 
+Down-facing
+[0,-21] [0,-21] [0,-20] [0,-20]
+Left-facing
+[3,-28] [3,-28] [4,-27] [4, -27]
+
+GallopCycle modX/modY (in order of ride frame left to right)
+Up-facing
+[0,-22] [0,-23] [0,-26] [0,-24]
+Left-facing
+[-2,-32] [-2,-28] [-7,-24] [-5, -26]
+Down-facing
+[0,-21] [0,-22] [0,-25] [0, -23]
+Right-facing
+[2,-32] [2,-28] [7,-24] [5, -26]
+	
+WalkCycle modX/modY (in order of ride frame left to right)
+Up-facing
+[1,-23] [0,-23] [-1,-23] [0,-23]
+Left-facing
+[-3,-28] [-3,-28] [-4,-28] [-4,-28]
+Down-facing
+[0,-21] [0,-21] [0,-20] [0,-20]
+Right-facing
+[3,-28] [3,-28] [4,-28] [4,-28]
+
+StandCycle modX/modY
+Up-facing
+[0,-23]
+Left-facing
+[-3,-28]
+Down-facing
+[0,-21]
+Right-facing
+[3,-28]

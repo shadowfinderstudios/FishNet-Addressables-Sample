@@ -23,7 +23,7 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : TickNetworkBehaviour
 {
-    const float MountOffsetY = 0.5f;
+    readonly string AnimationMovementName = "Motion";
 
     #region Network Update Data
 
@@ -33,6 +33,8 @@ public class PlayerController : TickNetworkBehaviour
         public bool isMounted = false;
         public Transform vehicleTransform = null;
         public List<Transform> guestTransforms = new();
+        public float mountOffsetX = 0f;
+        public float mountOffsetY = 0.5f;
     }
 
     #endregion
@@ -69,7 +71,7 @@ public class PlayerController : TickNetworkBehaviour
     bool _isBowCharging = false;
 
     float _spawnTest = 0f;
-    float _sailTimer = 0f;
+    float _vehicleTimer = 0f;
     float _charChangeTimer = 0f;
     float _bowTimer = 0f;
     float _swingTimer = 0f;
@@ -152,11 +154,20 @@ public class PlayerController : TickNetworkBehaviour
         }
         else
         {
-            tr = vt.GetComponentInChildren<TilemapRenderer>();
-            if (tr == null) return false;
+            // Could be the horse.
+            sr = vt.GetComponentInChildren<SpriteRenderer>();
+            if (sr != null)
+            {
+                bounds = sr.bounds;
+            }
+            else
+            {
+                tr = vt.GetComponentInChildren<TilemapRenderer>();
+                if (tr == null) return false;
 
-            bounds = tr.bounds;
-            tr.sortingOrder = -1;
+                bounds = tr.bounds;
+                tr.sortingOrder = -1;
+            }
         }
         return true;
     }
@@ -167,9 +178,12 @@ public class PlayerController : TickNetworkBehaviour
 
         if (newValue.isMounted)
         {
-            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds, out SpriteRenderer srend, out TilemapRenderer trend)) return;
+            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds,
+                out SpriteRenderer srend, out TilemapRenderer trend)) return;
 
-            newValue.guestTransforms[0].position = vt.position + new Vector3(0, bounds.extents.y * MountOffsetY, 0);
+            newValue.guestTransforms[0].position = vt.position +
+                new Vector3(newValue.mountOffsetX,
+                            bounds.extents.y * newValue.mountOffsetY, 0);
 
             foreach (var tr in newValue.guestTransforms)
             {
@@ -184,7 +198,8 @@ public class PlayerController : TickNetworkBehaviour
         }
         else
         {
-            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds, out SpriteRenderer srend, out TilemapRenderer trend)) return;
+            if (!GetVehicleBoundsAndRenderer(vt, out Bounds bounds,
+                out SpriteRenderer srend, out TilemapRenderer trend)) return;
 
             foreach (var tr in newValue.guestTransforms)
             {
@@ -194,7 +209,9 @@ public class PlayerController : TickNetworkBehaviour
                 tr.GetComponent<Rigidbody2D>().simulated = true;
             }
 
-            newValue.guestTransforms[0].position = vt.position + new Vector3(0, bounds.extents.y * MountOffsetY, 0);
+            newValue.guestTransforms[0].position = vt.position +
+                new Vector3(newValue.mountOffsetX,
+                            bounds.extents.y * newValue.mountOffsetY, 0);
 
             if (srend != null) srend.sortingOrder = 0;
             else if (trend != null) trend.sortingOrder = 0;
@@ -529,7 +546,7 @@ public class PlayerController : TickNetworkBehaviour
 
     bool UseVehicle()
     {
-        if (Time.fixedTime - _sailTimer > 1.5f)
+        if (Time.fixedTime - _vehicleTimer > 1.5f)
         {
             if (_vehicleUpdate.Value.isMounted)
             {
@@ -537,9 +554,12 @@ public class PlayerController : TickNetworkBehaviour
                 {
                     if (tr == transform)
                     {
-                        _sailTimer = Time.fixedTime;
+                        _vehicleTimer = Time.fixedTime;
 
-                        AnimSetBool(_bodyAnim, "Sail", false);
+                        if (AnimGetBool(_bodyAnim, "Sail"))
+                            AnimSetBool(_bodyAnim, "Sail", false);
+
+                        _navMeshAgent.enabled = true;
                         _vehicleUpdate.Value.isMounted = false;
                         SetVehicle(_vehicleUpdate.Value);
                         UpdateNav(true);
@@ -554,14 +574,31 @@ public class PlayerController : TickNetworkBehaviour
                 {
                     if (hit.CompareTag("Boat"))
                     {
-                        _sailTimer = Time.fixedTime;
-
+                        _vehicleTimer = Time.fixedTime;
                         VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
-                        AnimSetInteger(_bodyAnim, "Motion", -1);
+                        AnimSetInteger(_bodyAnim, AnimationMovementName, -1);
                         AnimSetBool(_bodyAnim, "Sail", true);
+                        _navMeshAgent.enabled = false;
                         _vehicleUpdate.Value.isMounted = true;
+                        _vehicleUpdate.Value.mountOffsetX = 0f;
+                        _vehicleUpdate.Value.mountOffsetY = 0.5f;
                         _vehicleUpdate.Value.vehicleTransform = hit.transform;
                         _vehicleUpdate.Value.guestTransforms.Clear(); // TODO: handle multiple passengers
+                        _vehicleUpdate.Value.guestTransforms.Add(transform);
+                        SetVehicle(_vehicleUpdate.Value);
+                        return true;
+                    }
+                    else if (hit.CompareTag("Vehicle"))
+                    {
+                        _vehicleTimer = Time.fixedTime;
+                        VehicleTakeOwnership(hit.gameObject.GetComponent<NetworkObject>(), base.Owner);
+                        AnimSetInteger(_bodyAnim, AnimationMovementName, -1);
+                        _navMeshAgent.enabled = false;
+                        _vehicleUpdate.Value.isMounted = true;
+                        _vehicleUpdate.Value.mountOffsetX = 0f;
+                        _vehicleUpdate.Value.mountOffsetY = 0.4f;
+                        _vehicleUpdate.Value.vehicleTransform = hit.transform;
+                        _vehicleUpdate.Value.guestTransforms.Clear();
                         _vehicleUpdate.Value.guestTransforms.Add(transform);
                         SetVehicle(_vehicleUpdate.Value);
                         return true;
@@ -578,7 +615,7 @@ public class PlayerController : TickNetworkBehaviour
         {
             _netBodyAnim.SetTrigger("Cast");
             _canMove = _isWalking = false;
-            AnimSetInteger(_bodyAnim, "Motion", -1);
+            AnimSetInteger(_bodyAnim, AnimationMovementName, -1);
             _spawnTest = Time.fixedTime;
 
             var nm = InstanceFinder.NetworkManager;
@@ -695,7 +732,7 @@ public class PlayerController : TickNetworkBehaviour
             if (!_isWalking && !_vehicleUpdate.Value.isMounted)
             {
                 _isWalking = true;
-                AnimSetInteger(_bodyAnim, "Motion", 0);
+                AnimSetInteger(_bodyAnim, AnimationMovementName, 0);
             }
         }
         else
@@ -703,7 +740,7 @@ public class PlayerController : TickNetworkBehaviour
             if (_isWalking && !_vehicleUpdate.Value.isMounted)
             {
                 _isWalking = false;
-                AnimSetInteger(_bodyAnim, "Motion", -1);
+                AnimSetInteger(_bodyAnim, AnimationMovementName, -1);
             }
         }
     }

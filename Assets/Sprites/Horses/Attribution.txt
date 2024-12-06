@@ -1,0 +1,3 @@
+"[LPC] Horses" Artist: bluecarrot16 License: CC-BY 3.0 / GPL 3.0 / GPL 2.0 / OGA-BY 3.0 Please link to opengameart: http://opengameart.org/content/lpc-horses
+
+I added a missing pixel to left and right walk frames, but the only other modification I did was cutout.
