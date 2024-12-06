@@ -119,6 +119,9 @@ Showcase 12 - Behavior Graph for car traffic and new scene for City demo
 
 TODO: More showcases.
 
+## Known Bugs
+
+1. A reconnecting player doesn't see the animator updates from the dockworker until his state changes again. - Still need to work out how to fix this.
 
 ## Art and Sound Credits
 
