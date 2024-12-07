@@ -208,3 +208,7 @@ OGABY, CCBY By Benjamin K. Smith By bluecarrot16
 Accessories, Unicorn Horn, and Face and Leg Markings by Benjamin K. Smith
 https://opengameart.org/content/lpc-horse-extended
 
+SFX Horse Walk
+CC0 By MrFizzywig
+https://freesound.org/people/MrFizzywig/sounds/581833/
+

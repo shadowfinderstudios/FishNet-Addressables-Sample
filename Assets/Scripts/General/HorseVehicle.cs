@@ -1,13 +1,21 @@
+using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using FishNet.Utility.Template;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class HorseVehicle : TickNetworkBehaviour
 {
+    #region Properties
+
     [SerializeField] Animator _foreAnimator;
     [SerializeField] Animator _backAnimator;
 
     public string VehicleAnimationMovementName;
+
+    #endregion
+
+    #region Member Fields
 
     bool _isMounted = false;
     float _speed = 10f;
@@ -18,24 +26,59 @@ public class HorseVehicle : TickNetworkBehaviour
     SpriteRenderer _backSpriteRenderer;
     Transform _rider;
 
+    #endregion
+
+    #region SyncVars
+
+    readonly SyncVar<bool> _hideBackRenderer = new SyncVar<bool>(false);
+    readonly SyncVar<bool> _isMoving = new SyncVar<bool>(false);
+
+    #endregion
+
+    #region Network Callbacks
+
+    void OnHideBackChanged(bool oldValue, bool newValue, bool asServer)
+    {
+        _backSpriteRenderer.enabled = newValue;
+    }
+
+    void OnIsMovingChanged(bool oldValue, bool newValue, bool asServer)
+    {
+        if (newValue) PlayHorseMoveSFX();
+        else _audioSource.Pause();
+    }
+
+    #endregion
+
+    #region RPCs
+
+    [ServerRpc(RequireOwnership = false)]
+    void SetHideBack(bool value) => _hideBackRenderer.Value = value;
+
+    [ServerRpc(RequireOwnership = false)]
+    void SetMoving(bool value) => _isMoving.Value = value;
+
+    #endregion
+
+    #region Setup
+
     void OnEnable()
     {
-        _backSpriteRenderer = transform.Find("Horse_Back").GetComponent<SpriteRenderer>();
-        _backSpriteRenderer.enabled = true;
-
-        _audioSource = GetComponent<AudioSource>();
+        _hideBackRenderer.OnChange += OnHideBackChanged;
+        _isMoving.OnChange += OnIsMovingChanged;
         Invoke("SetupRigidbody", 3);
     }
 
-    void SetupRigidbody()
-    {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _rigidbody.simulated = true;
-    }
+    #endregion
+
+    #region Public Methods
 
     public void Mount()
     {
         Debug.Log("Horse Mounted");
+
+        _backSpriteRenderer = transform.Find("Horse_Back").GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
 
         _rider = transform.Find("Player(Clone)");
         if (_rider != null)
@@ -52,17 +95,12 @@ public class HorseVehicle : TickNetworkBehaviour
         AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
 
         transform.Find("Horse_Fore").GetComponent<SpriteRenderer>().sortingOrder = 1;
-
         _isMounted = true;
-
-        //if (_audioSource.time != 0) _audioSource.UnPause();
-        //else _audioSource.Play();
     }
 
     public void Unmount()
     {
         Debug.Log("Vehicle Unmounted");
-
         _isMounted = false;
 
         if (_rider != null)
@@ -85,21 +123,11 @@ public class HorseVehicle : TickNetworkBehaviour
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
         _rigidbody.simulated = true;
         _rigidbody.linearVelocity = Vector2.zero;
-
-        //_audioSource.Pause();
     }
 
-    void SetNotMoving(float dx, float dy)
-    {
-        AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
-        AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, -1);
-        if (dx != 0f && dy == 0f) _backSpriteRenderer.enabled = false;
-    }
+    #endregion
 
-    void SetRiderOffset(float x, float y)
-    {
-        if (_rider != null) _rider.localPosition = new Vector3(x, y, 0f);
-    }
+    #region OnTick
 
     protected override void TimeManager_OnTick()
     {
@@ -132,6 +160,9 @@ public class HorseVehicle : TickNetworkBehaviour
 
         if (_lastpos != transform.position)
         {
+            if (AnimGetInteger(_foreAnimator, VehicleAnimationMovementName) >= 0)
+                SetMoving(true);
+
             if (!keepDirState)
             {
                 AnimSetFloat(_foreAnimator, "DX", dx);
@@ -141,7 +172,7 @@ public class HorseVehicle : TickNetworkBehaviour
 
                 if (axisy != 0f && axisx == 0f)
                 {
-                    _backSpriteRenderer.enabled = true;
+                    SetHideBack(true);
                     AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, 0);
                     AnimSetInteger(_backAnimator, VehicleAnimationMovementName, 0);
                 }
@@ -149,7 +180,7 @@ public class HorseVehicle : TickNetworkBehaviour
                 {
                     AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
                     AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, 0);
-                    _backSpriteRenderer.enabled = false;
+                    SetHideBack(false);
                 }
 
                 if (dy == 0f)
@@ -172,7 +203,51 @@ public class HorseVehicle : TickNetworkBehaviour
         }
     }
 
+    #endregion
+
+    #region Private Methods
+
+    void SetupRigidbody()
+    {
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody.simulated = true;
+    }
+
+    void SetNotMoving(float dx, float dy)
+    {
+        AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
+        AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, -1);
+        if (dx != 0f && dy == 0f) SetHideBack(false);
+        SetMoving(false);
+    }
+
+    void SetRiderOffset(float x, float y)
+    {
+        if (_rider != null) _rider.localPosition = new Vector3(x, y, 0f);
+    }
+
+    void PlayHorseMoveSFX()
+    {
+        if (!_audioSource.isPlaying)
+        {
+            if (_audioSource.time != 0) _audioSource.UnPause();
+            else _audioSource.Play();
+        }
+    }
+
+    #endregion
+
     #region Animations
+
+    int AnimGetInteger(Animator anim, string name)
+    {
+        if (anim == null) return 0;
+        if (anim.gameObject.activeSelf)
+        {
+            return anim.GetInteger(name);
+        }
+        return 0;
+    }
 
     void AnimSetBool(Animator anim, string name, bool value)
     {
