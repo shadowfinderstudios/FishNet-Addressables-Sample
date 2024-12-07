@@ -521,6 +521,28 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -8924091967720014871, guid: 337b5d4b3d015ac41ad9680b7add1f7d, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
+  - m_Name: Unmounted_Stand_Left
+    m_Hash: 796593511
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: unmounted_stand_fore_1
+      m_Hash: 127910845
+      m_Sprite: {fileID: 8174305413441231606, guid: fddea4f8a9e3a864286e79af83e8b2c2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8174305413441231606, guid: fddea4f8a9e3a864286e79af83e8b2c2, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
+  - m_Name: Unmounted_Stand_Right
+    m_Hash: 610301039
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: unmounted_stand_fore_3
+      m_Hash: 697410193
+      m_Sprite: {fileID: -9132276498326974141, guid: fddea4f8a9e3a864286e79af83e8b2c2, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9132276498326974141, guid: fddea4f8a9e3a864286e79af83e8b2c2, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 1
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638690558003992586
+  m_ModificationHash: 638691411679643626
   m_Version: 1

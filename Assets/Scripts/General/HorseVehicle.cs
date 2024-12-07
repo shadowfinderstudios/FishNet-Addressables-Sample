@@ -47,8 +47,11 @@ public class HorseVehicle : TickNetworkBehaviour
             if (sortingGroup != null) sortingGroup.sortingOrder = 1;
         }
 
+        AnimSetBool(_foreAnimator, "Mounted", true);
         AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, -1);
         AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
+
+        transform.Find("Horse_Fore").GetComponent<SpriteRenderer>().sortingOrder = 1;
 
         _isMounted = true;
 
@@ -73,9 +76,11 @@ public class HorseVehicle : TickNetworkBehaviour
             _rider = null;
         }
 
+        AnimSetBool(_foreAnimator, "Mounted", false);
         AnimSetInteger(_foreAnimator, VehicleAnimationMovementName, -1);
         AnimSetInteger(_backAnimator, VehicleAnimationMovementName, -1);
-        //GetComponent<PolygonCollider2D>().TryUpdateShapeToAttachedSprite();
+
+        transform.Find("Horse_Fore").GetComponent<SpriteRenderer>().sortingOrder = 0;
 
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
         _rigidbody.simulated = true;
