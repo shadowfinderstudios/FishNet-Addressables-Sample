@@ -1,3 +1,6 @@
+Unity Tilemap tutorial on scriptable tile footsteps:
+https://www.youtube.com/watch?v=7hgQSLGZDW4
+
 Art and Sound Credits:
 
 Licenses:
@@ -211,4 +214,22 @@ https://opengameart.org/content/lpc-horse-extended
 SFX Horse Walk
 CC0 By MrFizzywig
 https://freesound.org/people/MrFizzywig/sounds/581833/
+
+Door Squeak Handle Bang and Treasure Chest Open
+CC0 By Steprock
+https://freesound.org/people/steprock/sounds/760393/
+https://freesound.org/people/steprock/sounds/771164/
+
+Door_Locked_03
+CC0 By skyumori
+https://freesound.org/people/skyumori/sounds/104531/
+
+Glitchedtones
+https://freesound.org/people/Glitchedtones/sounds/322419/
+https://freesound.org/people/Glitchedtones/sounds/322418/
+
+UI Pack and Emote Pack
+CC0 By Kenney
+https://opengameart.org/content/ui-pack
+https://opengameart.org/content/emotes-pack
 

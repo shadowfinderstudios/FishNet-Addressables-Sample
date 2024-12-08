@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da4854866091d4b41937f07ed3f0b293, type: 3}
+  m_Name: ChestType1
+  m_EditorClassIdentifier: 
+  CellsWide: 2
+  CellsHigh: 2
+  upperLeftTile: {fileID: 11400000, guid: 905636d1b13c2da4780fe27c54f29f20, type: 2}
+  tiles:
+  - {fileID: 11400000, guid: 905636d1b13c2da4780fe27c54f29f20, type: 2}
+  - {fileID: 11400000, guid: 55422ea3733dc2747907873dfb4b41fa, type: 2}
+  - {fileID: 11400000, guid: e1390715bb9d21d40bf6caedd628def8, type: 2}
+  - {fileID: 11400000, guid: 5c4ff2d80cac6e84caa54b728ac52a0c, type: 2}
+  openClip: {fileID: 8300000, guid: d33310587c67d9f48ade05e4905bd802, type: 3}
+  closeClip: {fileID: 8300000, guid: b5c99070a103c0e429797ff0ea1b9614, type: 3}
+  lockClip: {fileID: 8300000, guid: 1a3348a7eaee929458948d8550132fb9, type: 3}
+  unlockClip: {fileID: 8300000, guid: fd7a596be82fe5f46ad0b88bb1d61109, type: 3}
+  lockedClip: {fileID: 8300000, guid: cbeb23ee4e17fc5428117a39e855e7dc, type: 3}
+  containerType: 1
+  lockDifficulty: 0
+  minimumLootQuantity: 1
+  maximumLootQuantity: 5

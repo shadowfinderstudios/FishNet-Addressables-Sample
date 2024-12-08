@@ -75,6 +75,7 @@ public class PlayerController : TickNetworkBehaviour
     float _charChangeTimer = 0f;
     float _bowTimer = 0f;
     float _swingTimer = 0f;
+    float _useContainerTimer = 0f;
     float _castTimer = 0f;
     float _healthRegenTimer = 0f;
     float _manaRegenTimer = 0f;
@@ -358,14 +359,38 @@ public class PlayerController : TickNetworkBehaviour
         {
             if (!UseVehicle())
             {
-                // If we didn't enter a vehicle, then we activated our pickaxe instead.
-                if (Time.fixedTime - _swingTimer > 1.5f)
+                var container = _mapManager.GetContainer(transform.position + _lastdir);
+                if (container != null)
                 {
-                    _swingTimer = Time.fixedTime;
-                    if (_stamina.Value > 15)
+                    if (Time.fixedTime - _useContainerTimer > 1f)
                     {
-                        AnimSetTrigger(_netBodyAnim, "Slash");
-                        SetStamina(_stamina.Value - 15);
+                        _useContainerTimer = Time.fixedTime;
+
+                        var desc = container.containerDesc;
+                        if (container.Open(_audioSource, desc.openClip, desc.lockClip))
+                        {
+                            if (container.shouldGenerateLoot)
+                            {
+                                if (!container.hasLoot)
+                                    container.GenerateRandomLoot(desc.minimumLootQuantity, desc.maximumLootQuantity);
+                            }
+
+                            if (container.hasLoot)
+                                container.UnpackLoot(transform);
+                        }
+                    }
+                }
+                else
+                {
+                    // Check if we activated our pickaxe.
+                    if (Time.fixedTime - _swingTimer > 1.5f)
+                    {
+                        _swingTimer = Time.fixedTime;
+                        if (_stamina.Value > 15)
+                        {
+                            AnimSetTrigger(_netBodyAnim, "Slash");
+                            SetStamina(_stamina.Value - 15);
+                        }
                     }
                 }
             }

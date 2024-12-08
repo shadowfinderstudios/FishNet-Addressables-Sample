@@ -2,7 +2,7 @@
 
 <img src="screenshot.jpg" width="1250px"><br>
 
-A FishNet showcase in Unity 2D URP with addressables created by Shadowfinder Studios. With 2D navmesh agent support using NavMeshPlus. The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
+A 2D URP FishNet showcase in Unity 6 with addressables created by Shadowfinder Studios. With 2D navmesh agent support using NavMeshPlus. The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
 
 Make sure to load the correct scene (Village1 or City) before running the relative Play Mode.
 

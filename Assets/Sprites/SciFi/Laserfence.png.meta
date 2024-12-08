@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Laserfence_0: 4639184750130006391
+      Laserfence_1: 4608251233496064002
+      Laserfence_2: 1495232283538153727
+      Laserfence_3: 5790188437048238629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

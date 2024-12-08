@@ -13,6 +13,7 @@ TagManager:
   - NPC
   - Intersection
   - Vehicle
+  - Container
   layers:
   - Default
   - TransparentFX

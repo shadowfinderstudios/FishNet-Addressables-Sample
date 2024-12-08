@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Loot
+  m_EditorClassIdentifier: Assembly-CSharp::Loot
+  lootItems:
+  - itemName: Gold Ore
+    icon: {fileID: 3267489796716658186, guid: 6551c2cb682dde44098db6ba96fe2515, type: 3}
+    prefab: {fileID: 2147195224262704031, guid: 51f3de860dfb2da4da18ac0774b9b3e1, type: 3}
+  - itemName: Gold Ingot
+    icon: {fileID: -789270085981297794, guid: 6551c2cb682dde44098db6ba96fe2515, type: 3}
+    prefab: {fileID: 8177098250863865231, guid: b379e85ed1ab0ec45ad3faed493436be, type: 3}
+  - itemName: Silver Ore
+    icon: {fileID: -7558097576578647096, guid: 6551c2cb682dde44098db6ba96fe2515, type: 3}
+    prefab: {fileID: 2987407031792464055, guid: 662766f99c670bb4fb5ceb9c62856a8d, type: 3}
+  - itemName: Silver Ingot
+    icon: {fileID: 7310834761641906395, guid: 6551c2cb682dde44098db6ba96fe2515, type: 3}
+    prefab: {fileID: 7370882421483141965, guid: e3c9dc4ae596dd749af1b53a7d18087c, type: 3}

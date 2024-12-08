@@ -15,8 +15,8 @@ public enum FloorType
     Water
 }
 
-[CreateAssetMenu(fileName = "TileDatas", menuName = "Scriptable Objects/TileDatas")]
-public class TileDatas : ScriptableObject
+[CreateAssetMenu(fileName = "TileSurface", menuName = "Scriptable Objects/TileSurface")]
+public class TileSurface : ScriptableObject
 {
     public TileBase[] tiles;
     public AudioClip[] clip;

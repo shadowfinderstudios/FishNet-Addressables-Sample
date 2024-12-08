@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Interior-Walls-Blue_0: 2510949753958771186
+      Interior-Walls-Blue_1: 8049219964249597966
+      Interior-Walls-Blue_2: 5364120423182083473
+      Interior-Walls-Blue_3: 8811809507833884904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
