@@ -4,6 +4,7 @@ using UnityEngine;
 using Action = Unity.Behavior.Action;
 using Unity.Properties;
 using UnityEngine.AI;
+using Shadowfinder.Sensors;
 
 [Serializable, GeneratePropertyBag]
 [NodeDescription(name: "DetectTargets", story: "[Agent] detects [Target]", category: "Action", id: "ecb4d0c2eaeb34dedf5a5bc2188baa46")]

@@ -1,5 +1,7 @@
-Unity Tilemap tutorial on scriptable tile footsteps:
+Tutorials that assisted:
+
 https://www.youtube.com/watch?v=7hgQSLGZDW4
+https://www.youtube.com/watch?v=Mb2oua3FjZg
 
 Art and Sound Credits:
 
@@ -232,4 +234,8 @@ UI Pack and Emote Pack
 CC0 By Kenney
 https://opengameart.org/content/ui-pack
 https://opengameart.org/content/emotes-pack
+
+GUI For Some Rpg Game
+CCBY By Jorge Avila
+https://opengameart.org/content/gui-for-some-rpg-game
 

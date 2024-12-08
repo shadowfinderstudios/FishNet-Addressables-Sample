@@ -1,6 +1,8 @@
-
-public interface IMineable
+namespace Shadowfinder.Gathering
 {
-    public void ResetResource();
-    public int MineResource(int damage);
+    public interface IMineable
+    {
+        public void ResetResource();
+        public int MineResource(int damage);
+    }
 }
