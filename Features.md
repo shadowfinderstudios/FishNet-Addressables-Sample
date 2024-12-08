@@ -14,4 +14,6 @@ Current examples are:
 * Dockworker behavior graph
 * City demo with car traffic
 * Rideable horse
+* NPC Emotions; currently random
+* Containers; e.g. chests, crates, barrels
 * TODO: Farming

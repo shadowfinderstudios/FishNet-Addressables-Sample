@@ -124,7 +124,33 @@ Showcase 13 - Rideable horse
 
 3. Ride around
 
-Showcase 14 - TODO: Farming
+Showcase 14 - NPC Emotions
+
+1. Watch the NPC, see their emotion change over time.
+
+2. TODO: handle alarm, thirst, etc
+
+Showcase 15 - Containers (W.I.P.)
+
+1. Walk up to a chest
+
+2. Press the use key E
+
+3. (Currently, in local chat it'll say what loot was generated.)
+
+4. TODO: Implement UI for inventory system.
+
+5. TODO: Implement spawning dropped items taken from containers.
+
+6. TODO: Implement storing into containers.
+
+7. TODO: Implement retrieving into player inventory from containers.
+
+8. TODO: Implement retrieving/storing to/from NPC inventory from containers.
+
+9. TODO: Implementing buying/selling of items via containers.
+
+Showcase 16 - TODO: Farming
 
 1. Buy seeds
 
