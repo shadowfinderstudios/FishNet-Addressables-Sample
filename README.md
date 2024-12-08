@@ -150,7 +150,17 @@ Showcase 15 - Containers (W.I.P.)
 
 9. TODO: Implementing buying/selling of items via containers.
 
-Showcase 16 - TODO: Farming
+Showcase 16 - Inventory (W.I.P.)
+
+1. Press I, inventory will open
+
+2. Drag drop items
+
+3. ?
+
+4. Press I again to close inventory
+
+Showcase ? - TODO: Farming
 
 1. Buy seeds
 

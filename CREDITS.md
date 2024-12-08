@@ -2,6 +2,7 @@ Tutorials that assisted:
 
 https://www.youtube.com/watch?v=7hgQSLGZDW4
 https://www.youtube.com/watch?v=Mb2oua3FjZg
+https://www.youtube.com/watch?v=kWRyZ3hb1Vc
 
 Art and Sound Credits:
 
@@ -62,7 +63,7 @@ https://opengameart.org/content/ships-with-ripple-effect
 
 surfaces_tileset
 CC0 By Shadowfinder Studios
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://github.com/shadowfinderstudios/FishNet-Showcase
 
 North-South Rowboat modifications
 CCBYSA By Shadowfinder Studios
@@ -79,8 +80,8 @@ CCBYSA Based on art originally by Tuomo Untinen. Adapted by Darkwall LKE.
 http://darkwalllke.com/
 
 LPC Rocks
-https://opengameart.org/content/lpc-rocks
 CCBYSA By bluecarrot16, Johann Charlot, Yar, Hyptosis, Evert, Lanea Zimmerman (Sharm), Guillaume Lecollinet, Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Jetrel, Hyptosis, Redshrike, Rayane Félix (RayaneFLX), Michele Bucelli (Buch)
+https://opengameart.org/content/lpc-rocks
 
 Retro Stereo
 CC0 By inog
@@ -115,12 +116,12 @@ https://opengameart.org/content/explosion-effects-and-more
 
 Fantasy MMORPG HUD & Mobile Controllers modifications (Cleaned up fill image)
 CCBY By Shadowfinder Studios, based on AliHamieh's mmorpg hud
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://github.com/shadowfinderstudios/FishNet-Showcase
 https://opengameart.org/content/fantasy-mmorpg-hud-mobile-controllers
 
 Dwarven Cursor modified (Redrew as a pressed cursor and resized)
 CCBYSA By Shadowfinder Studios, based on Jinn's Dwarven Cursor
-https://github.com/shadowfinderstudios/FishNet-Addressables-Showcase
+https://github.com/shadowfinderstudios/FishNet-Showcase
 https://opengameart.org/content/dwarven-cursor
 
 LPC Shadow
@@ -226,7 +227,8 @@ Door_Locked_03
 CC0 By skyumori
 https://freesound.org/people/skyumori/sounds/104531/
 
-Glitchedtones
+Door Lock 01 and 02
+CC0 By Glitchedtones
 https://freesound.org/people/Glitchedtones/sounds/322419/
 https://freesound.org/people/Glitchedtones/sounds/322418/
 

@@ -16,4 +16,5 @@ Current examples are:
 * Rideable horse
 * NPC Emotions; currently random
 * Containers; e.g. chests, crates, barrels
+* Inventory system WIP
 * TODO: Farming
