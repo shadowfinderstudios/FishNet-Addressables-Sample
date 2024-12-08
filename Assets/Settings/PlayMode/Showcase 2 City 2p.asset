@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a689d91966dfb46499fb63f130d9b905, type: 3}
-  m_Name: Showcase 1 Village
+  m_Name: Showcase 2 City 2p
   m_EditorClassIdentifier: 
   m_Description: 
   m_EnableEditors: 1
@@ -20,15 +20,15 @@ MonoBehaviour:
     m_Nodes:
     - Main Editor|0_run
     - Main Editor|0_deploy
-    m_PlayerTag: Village
-    m_InitialScene: {fileID: 102900000, guid: 09e47d7aa7ca6cb428f4339a6cc1b835, type: 3}
+    m_PlayerTag: City
+    m_InitialScene: {fileID: 102900000, guid: fc5ba090c788b9e4184222ca9be14bf7, type: 3}
   m_EditorInstances:
   - Name: Player 2
     <CorrespondingNodeId>k__BackingField: Player 2|1_run
     m_Nodes:
     - Player 2|1_run
     - Player 2|1_deploy
-    m_PlayerTag: Village
+    m_PlayerTag: City
     m_InitialScene: {fileID: 0}
     m_AdvancedConfiguration:
       StreamLogsToMainEditor: 0
