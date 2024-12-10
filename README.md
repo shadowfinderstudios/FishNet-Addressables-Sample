@@ -1,6 +1,6 @@
 # FishNet-Showcase
 
-LEFT HERE FOR POSTERITY - This code is no longer maintained and should be considered deprecated.
+LEFT HERE FOR POSTERITY 12/10/24 - This code is no longer maintained and should be considered deprecated.
 
 <img src="screenshot.jpg" width="1250px"><br>
 
