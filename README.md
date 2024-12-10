@@ -1,5 +1,7 @@
 # FishNet-Showcase
 
+LEFT HERE FOR POSTERITY - This code is no longer maintained and should be considered deprecated.
+
 <img src="screenshot.jpg" width="1250px"><br>
 
 A 2D URP FishNet showcase in Unity 6 with addressables created by Shadowfinder Studios. With 2D navmesh agent support using NavMeshPlus. The sample is set up to work with Unity Multiplayer Play Mode for quick testing.
